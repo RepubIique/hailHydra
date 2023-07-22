@@ -1,20 +1,13 @@
 import React from 'react';
 
 export const About = (props) => {
-  const imageStyle = {
-    backgroundImage: `url(${'img/about.jpg'})`,
-    height: '500px',
-    backgroundPosition: 'center left',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: '50%',
-    backgroundAttachment: 'fixed'
-  };
   return (
     <div id="about">
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-md-6">
-            <div style={imageStyle}></div>
+            {' '}
+            <img src="img/about.jpg" className="img-responsive" alt="" />{' '}
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-text">

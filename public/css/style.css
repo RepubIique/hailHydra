@@ -298,6 +298,14 @@ header .intro-text {
   font-weight: 300;
   padding-right: 8px;
 }
+#about img {
+  width: 520px;
+  height: 500px;
+  margin-top: 10px;
+  background: #fff;
+  border-right: 0;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+}
 #about p {
   line-height: 24px;
   margin: 30px 0;
