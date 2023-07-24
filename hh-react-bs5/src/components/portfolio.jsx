@@ -1,10 +1,11 @@
-import { Image } from './image';
+import { ImageComponent } from './image';
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 export const Portfolio = (props) => {
   return (
     <div id="portfolio" className="text-center">
-      <div className="container">
+      <Container>
         <div className="section-title">
           <h2>Portfolio</h2>
           <p>
@@ -12,25 +13,22 @@ export const Portfolio = (props) => {
             dapibus leonec.
           </p>
         </div>
-        <div className="row">
+        <Row>
           <div className="portfolio-items">
             {props.data
               ? props.data.map((d, i) => (
-                  <div
-                    key={`${d.title}-${i}`}
-                    className="col-sm-6 col-md-4 col-lg-4"
-                  >
-                    <Image
+                  <Col key={`${d.title}-${i}`} sm={6} md={4} lg={4}>
+                    <ImageComponent
                       title={d.title}
                       largeImage={d.largeImage}
                       smallImage={d.smallImage}
                     />
-                  </div>
+                  </Col>
                 ))
               : 'Loading...'}
           </div>
-        </div>
-      </div>
+        </Row>
+      </Container>
     </div>
   );
 };

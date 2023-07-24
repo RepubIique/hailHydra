@@ -1,16 +1,17 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 export const Clients = (props) => {
   return (
     <div id="testimonials">
-      <div className="container">
+      <Container>
         <div className="section-title text-center">
           <h2>What our clients say</h2>
         </div>
-        <div className="row">
+        <Row>
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-4">
+                <Col key={`${d.name}-${i}`} md={4}>
                   <div className="testimonial">
                     <div className="testimonial-image">
                       {' '}
@@ -21,11 +22,11 @@ export const Clients = (props) => {
                       <div className="testimonial-meta"> - {d.name} </div>
                     </div>
                   </div>
-                </div>
+                </Col>
               ))
             : 'loading'}
-        </div>
-      </div>
+        </Row>
+      </Container>
     </div>
   );
 };
