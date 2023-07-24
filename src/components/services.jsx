@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col,Image } from 'react-bootstrap';
 import '../styles/services.css';
 
 export const Services = (props) => {
@@ -18,7 +18,7 @@ export const Services = (props) => {
             ? props.data.map((d, i) => (
                 <Col md={4} key={`${d.name}-${i}`}>
                   {' '}
-                  <i className={d.icon}></i>
+                  <Image src={d.img} className='service-img' />
                   <div className="service-desc">
                     <h3>{d.name}</h3>
                     <p>{d.text}</p>
