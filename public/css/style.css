@@ -7,6 +7,7 @@ html {
   font-weight: 400;
   width: 100% !important;
   height: 100% !important;
+  overflow-x: hidden;
 }
 h2,
 h3,
@@ -139,6 +140,23 @@ hr {
 }
 .navbar-default .navbar-toggle:hover > .icon-bar {
   background-color: #608dfd;
+}
+
+@media (max-width: 991px) {
+  #menu.navbar-default .navbar-nav > li > a {
+    padding: 8px 10px;
+    margin: 9px 0;
+  }
+
+  #menu.navbar-default .navbar-nav > li > a:after {
+    left: 10px;
+    right: 10px;
+  }
+
+  /* Made hamburger menu bar color more visible */
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #000;
+  }
 }
 .section-title {
   margin-bottom: 70px;
@@ -310,6 +328,12 @@ header .intro-text {
   line-height: 24px;
   margin: 30px 0;
 }
+@media (max-width: 991px) {
+  #about img {
+    width: 100%;
+    height: auto;
+  }
+}
 /* Services Section */
 #services {
   padding: 100px 0;
@@ -459,6 +483,11 @@ header .intro-text {
 #team .thumbnail .caption {
   padding: 10px 0 0;
   color: #888;
+}
+@media (max-width: 991px) {
+  #team .team-img {
+    width: 100%;
+  }
 }
 /* Contact Section */
 #contact {
