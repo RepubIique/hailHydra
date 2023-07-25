@@ -1,19 +1,21 @@
 import { useState } from 'react'
 import React from 'react'
-import { Container, Row, Col, Form, Button, ListGroup } from 'react-bootstrap'
+import {
+    Container,
+    Row,
+    Col,
+    Form,
+    Button,
+    ListGroup,
+    Alert,
+} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../styles/contact.css'
-
 import {
     faMapMarker,
     faPhone,
     faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
-import {
-    faFacebook,
-    faTwitter,
-    faYoutube,
-} from '@fortawesome/free-brands-svg-icons'
 import GoogleMaps from './googleMaps'
 
 const initialState = {
@@ -24,15 +26,31 @@ const initialState = {
 
 export const Contact = (props) => {
     const [{ name, email, message }, setState] = useState(initialState)
+    const [file, setFile] = useState(null)
+    const [alertMsg, setAlertMsg] = useState('')
 
     const handleChange = (e) => {
         const { name, value } = e.target
         setState((prevState) => ({ ...prevState, [name]: value }))
     }
 
+    const handleFileChange = (e) => {
+        const selectedFile = e.target.files[0]
+        if (selectedFile && selectedFile.size > 5242880) {
+            // 5 MB in bytes
+            setAlertMsg(
+                'File is too large, please select a file less than 5MB.'
+            )
+            setFile(null) // reset the selected file
+        } else {
+            setFile(selectedFile)
+            setAlertMsg('')
+        }
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(name, email, message)
+        console.log(name, email, message, file) // Now, the file is also logged
     }
 
     return (
@@ -89,6 +107,17 @@ export const Contact = (props) => {
                                     onChange={handleChange}
                                 />
                             </Form.Group>
+                            <Form.Group controlId="file">
+                                <Form.Control
+                                    label="Attach a file"
+                                    type="file"
+                                    custom
+                                    onChange={handleFileChange}
+                                />
+                            </Form.Group>
+                            {alertMsg && (
+                                <Alert variant="danger">{alertMsg}</Alert>
+                            )}
                             <Button type="submit" variant="primary">
                                 Send Message
                             </Button>
@@ -101,7 +130,7 @@ export const Contact = (props) => {
                                 <p>
                                     <span>
                                         <FontAwesomeIcon icon={faMapMarker} />{' '}
-                                        Address
+                                        Address:
                                     </span>
                                     {props.data
                                         ? props.data.address
@@ -126,47 +155,6 @@ export const Contact = (props) => {
                                 </p>
                             </ListGroup.Item>
                         </ListGroup>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col md={12}>
-                        <div className="social">
-                            <ul>
-                                <li>
-                                    <a
-                                        href={
-                                            props.data
-                                                ? props.data.facebook
-                                                : '/'
-                                        }
-                                    >
-                                        <FontAwesomeIcon icon={faFacebook} />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href={
-                                            props.data
-                                                ? props.data.twitter
-                                                : '/'
-                                        }
-                                    >
-                                        <FontAwesomeIcon icon={faTwitter} />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a
-                                        href={
-                                            props.data
-                                                ? props.data.youtube
-                                                : '/'
-                                        }
-                                    >
-                                        <FontAwesomeIcon icon={faYoutube} />
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </Col>
                 </Row>
             </Container>

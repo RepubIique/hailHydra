@@ -58,8 +58,6 @@ ol {
 ul,
 ol {
     padding: 0;
-    webkit-padding: 0;
-    moz-padding: 0;
 }
 hr {
     height: 2px;
@@ -136,7 +134,7 @@ a:focus,
     outline-offset: none;
 }
 /* Features Section */
-#features {
+/* #features {
     background: #f6f6f6;
 }
 #features i.fa {
@@ -150,4 +148,4 @@ a:focus,
     border-radius: 50%;
     background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
-}
+} */
