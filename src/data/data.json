@@ -1,23 +1,24 @@
 {
     "Header": {
         "title": "Hydraulic Engineering, Design, Manufacture & Service",
-        "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+        "paragraph": "At Hydra Power Engineering Services, we harness the power of hydraulic technology to deliver cutting-edge solutions across various sectors. We merge top-notch engineering, design, and manufacturing with unparalleled customer service to bring you the best in hydraulic systems."
     },
     "About": {
         "paragraph": "Hydra Power Engineering Services Sdn. Bhd., in operation since 1994, offers premium hydraulic services to sectors including construction, offshore, agricultural, mobile, and industrial. Specializing in the design and manufacturing of hydraulic mechanical equipment, our expertise spans hydraulic cylinder fabrication, gear manufacturing, and various machining works. In addition to these, we handle steel fabrication tasks for diverse applications. Leveraging our two decades of experience, advanced facilities, and highly skilled staff, we deliver high-quality products, rapid response, punctual deliveries, and competitive pricing. Our primary commitment is to meet customers' needs and ensure their satisfaction, earning their trust to continually serve their business.",
         "Why": [
-            "Lorem ipsum dolor",
-            "Tempor incididunt",
-            "Lorem ipsum dolor",
-            "Incididunt ut labore"
+            "Two decades of proven industry experience",
+            "Expertise in diverse hydraulic and machining tasks",
+            "Consistently high-quality product delivery",
+            "Flexible and rapid response to customer needs"
         ],
         "Why2": [
-            "Aliquip ex ea commodo",
-            "Lorem ipsum dolor",
-            "Exercitation ullamco",
-            "Lorem ipsum dolor"
+            "Advanced, state-of-the-art facilities and equipment",
+            "Highly skilled and dedicated staff",
+            "Competitive pricing without compromising on quality",
+            "Strong commitment to punctuality and reliable deliveries"
         ]
     },
+
     "Portfolio": [
         {
             "title": "Project Title",
@@ -60,32 +61,32 @@
         {
             "img": "img/servicesimg/mill.jpg",
             "name": "Fabrication",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+            "text": "Our fabrication service is second to none. With our skilled team and state-of-the-art facilities, we handle steel fabrication tasks for diverse applications, ensuring durability and precision in each product we create."
+        },
+        {
+            "img": "img/servicesimg/milling.jpg",
+            "name": "Milling",
+            "text": "Our milling service delivers intricately designed and carefully manufactured components. We use the latest milling machines to bring your designs to life with extreme accuracy and quality."
         },
         {
             "img": "img/servicesimg/pipes.jpg",
-            "name": "Milling",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+            "name": "Hydraulic Cylinder Manufacturing",
+            "text": "With years of expertise, we manufacture hydraulic cylinders tailored to your specific needs. Our high-quality cylinders are designed to deliver superior performance and longevity in various operating environments."
         },
         {
-            "img": "img/testimonials/01.jpg",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+            "img": "img/servicesimg/gear.jpg",
+            "name": "Gear Manufacturing",
+            "text": "Our gear manufacturing services provide highly precise and durable gears designed for a wide range of applications. We use advanced technologies to ensure optimal functionality and prolonged service life."
         },
         {
-            "img": "img/testimonials/01.jpg",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+            "img": "img/servicesimg/design.jpg",
+            "name": "Design & Prototyping",
+            "text": "We offer comprehensive design and prototyping services to bring your hydraulic equipment ideas to reality. Our engineers work closely with clients to develop efficient and innovative solutions that meet their needs."
         },
         {
-            "img": "img/testimonials/01.jpg",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
-        },
-        {
-            "img": "img/testimonials/01.jpg",
-            "name": "Lorem ipsum dolor",
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+            "img": "img/servicesimg/maintenance.jpg",
+            "name": "Maintenance & Repair",
+            "text": "We understand the importance of minimizing downtime. That’s why we offer rapid and reliable maintenance and repair services, ensuring your hydraulic systems operate efficiently and trouble-free."
         }
     ],
     "Clients": [

@@ -10,8 +10,10 @@ export const Portfolio = (props) => {
                 <div className="section-title">
                     <h2>Portfolio</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                        duis sed dapibus leonec.
+                        "Showcasing two decades of superior craftsmanship in
+                        hydraulic solutions, spanning diverse sectors and
+                        featuring innovative designs, precise manufacturing, and
+                        consistent client satisfaction."
                     </p>
                 </div>
                 <Row>

@@ -9,8 +9,9 @@ export const Team = (props) => {
                 <Col md={{ span: 8, offset: 2 }} className="section-title">
                     <h2>Meet the Team</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                        duis sed dapibus leonec.
+                        A highly skilled and dedicated team, leveraging decades
+                        of combined experience to deliver superior quality and
+                        innovation in hydraulic engineering and services.
                     </p>
                 </Col>
                 <Row>
