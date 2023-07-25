@@ -25,8 +25,7 @@ export const Portfolio = (props) => {
                               >
                                   <ImageComponent
                                       title={d.title}
-                                      largeImage={d.largeImage}
-                                      smallImage={d.smallImage}
+                                      image={d.image} // using one image URL
                                   />
                               </Col>
                           ))
