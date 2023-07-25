@@ -1,0 +1,10 @@
+.googleMaps {
+    height: 40vh;
+    width: 100vw;
+    margin-bottom: 10vh;
+}
+
+.map-container {
+    height: 100%;
+    width: 100%;
+}
