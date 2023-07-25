@@ -22,7 +22,7 @@ export const Team = (props) => {
                                   sm={6}
                                   className="team"
                               >
-                                  <Card>
+                                  <Card border="white">
                                       <Image
                                           src={d.img}
                                           alt="..."

@@ -58,12 +58,12 @@
     ],
     "Services": [
         {
-            "img": "img/services/mill.jpg",
+            "img": "img/servicesimg/mill.jpg",
             "name": "Fabrication",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
         },
         {
-            "img": "img/services/pipes.jpg",
+            "img": "img/servicesimg/pipes.jpg",
             "name": "Milling",
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
         },
