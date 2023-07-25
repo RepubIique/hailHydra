@@ -1,18 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import '../styles/about.css'
 
 export const About = (props) => {
   return (
     <div id="about">
-      <Container>
         <Row>
           <Col xs={12} md={6}>
-            <Image
-              src="img/about.jpg"
-              className="img-responsive"
-              alt=""
-              fluid
-            />
+            <div className='champ'></div>
           </Col>
           <Col xs={12} md={6}>
             <div className="about-text">
@@ -44,7 +39,6 @@ export const About = (props) => {
             </div>
           </Col>
         </Row>
-      </Container>
     </div>
   );
 };
