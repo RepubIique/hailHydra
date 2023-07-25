@@ -92,33 +92,33 @@
     "Clients": [
         {
             "img": "img/testimonials/01.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "John Doe"
+            "text": "Hydra Power Engineering Services has been our go-to provider for hydraulic solutions. Their superior design and manufacturing capabilities are simply unmatched. The team is always ready to respond promptly and ensure punctual deliveries.",
+            "name": "John Doe, Construction Sector"
         },
         {
             "img": "img/testimonials/02.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "Johnathan Doe"
+            "text": "We have been working with Hydra Power Engineering Services since 2005. Their top-notch engineering and commitment to customer service have made them a reliable partner for our offshore projects. They always meet our needs and ensure our satisfaction.",
+            "name": "Johnathan Doe, Offshore Sector"
         },
         {
             "img": "img/testimonials/03.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "John Doe"
+            "text": "In the agricultural sector, efficiency and reliability are critical. Hydra Power Engineering Services provides us with high-quality hydraulic systems that we can count on. Their high level of expertise and professionalism is truly appreciated.",
+            "name": "John Doe, Agricultural Sector"
         },
         {
             "img": "img/testimonials/04.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "Johnathan Doe"
+            "text": "Hydra Power Engineering Services consistently delivers top-quality products. Their attention to detail, punctuality, and competitive pricing set them apart in the mobile and industrial sector. Their work on our hydraulic mechanical equipment has been stellar.",
+            "name": "Johnathan Doe, Mobile & Industrial Sector"
         },
         {
             "img": "img/testimonials/05.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "John Doe"
+            "text": "Working with Hydra Power Engineering Services has been a great experience. Their expertise in hydraulic cylinder fabrication, gear manufacturing, and machining works has significantly benefited our business. They have a highly skilled team that always delivers on time.",
+            "name": "John Doe, Hydraulic Equipment Manufacturing"
         },
         {
             "img": "img/testimonials/06.jpg",
-            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-            "name": "Johnathan Doe"
+            "text": "Hydra Power Engineering Services is an expert in steel fabrication tasks for diverse applications. They always ensure high-quality products and their customer service is always excellent. Their commitment to meeting customer needs is evident in every project they undertake.",
+            "name": "Johnathan Doe, Steel Fabrication Sector"
         }
     ],
     "Team": [
