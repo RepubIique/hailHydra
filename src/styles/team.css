@@ -2,6 +2,11 @@
 #team {
     padding: 100px 0;
 }
+.team-img {
+    height: 300px;
+    object-fit: cover; /* this ensures the aspect ratio of the image is preserved */
+}
+
 #team h4 {
     margin: 5px 0;
 }

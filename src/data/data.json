@@ -123,24 +123,29 @@
     ],
     "Team": [
         {
-            "img": "img/team/01.jpg",
-            "name": "John Doe",
-            "job": "Director"
+            "img": "img/team/Director.jpeg",
+            "name": "Tong Chu Hua",
+            "job": "Managing Director"
         },
         {
-            "img": "img/team/02.jpg",
-            "name": "Mike Doe",
-            "job": "Senior Designer"
+            "img": "img/team/GM.jpeg",
+            "name": "Sim Siaw Hock",
+            "job": "General Manager"
         },
         {
-            "img": "img/team/03.jpg",
-            "name": "Jane Doe",
-            "job": "Senior Designer"
+            "img": "img/team/ProductionManager.jpeg",
+            "name": "Eu Tian Jyh",
+            "job": "Production Manager"
         },
         {
-            "img": "img/team/04.jpg",
-            "name": "Karen Doe",
-            "job": "Project Manager"
+            "img": "img/team/ProcurementSpecialist.jpeg",
+            "name": "Tang Hong Moi",
+            "job": "Procurement Specialist"
+        },
+        {
+            "img": "img/team/AccountingManager.jpeg",
+            "name": "Lucy Tong Wen Ping",
+            "job": "Accounting Manager"
         }
     ],
     "Contact": {
