@@ -111,7 +111,6 @@ export const Contact = (props) => {
                                 <Form.Control
                                     label="Attach a file"
                                     type="file"
-                                    custom
                                     onChange={handleFileChange}
                                 />
                             </Form.Group>

@@ -15,19 +15,14 @@ export const Navigation = (props) => {
             className="bg-body-tertiary"
         >
             <Container>
-                <Navbar.Brand href="#home">
+                <Navbar.Brand href="#header">
                     <div style={{ display: 'flex', alignItems: 'center' }}>
                         <img
                             alt=""
-                            src="/img/logo.png"
-                            width="60"
+                            src="/img/flogo.png"
                             height="60"
                             className="d-inline-block align-top"
                         />{' '}
-                        <div style={{ marginLeft: '10px' }}>
-                            <div style={{ fontSize: '20px' }}>Hydra Power</div>
-                            <div style={{ fontSize: '14px' }}>Engineering</div>
-                        </div>
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
