@@ -34,8 +34,17 @@
 .champ {
     background: url(../../public/img/about.jpg) center right no-repeat;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Adjust the height as needed */
     background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 767px) {
+    .champ {
+        height: 400px;
+        background: url(../../public/img/about.jpg) center;
+        background-size: cover;
+    }
 }
 #about p {
     line-height: 24px;

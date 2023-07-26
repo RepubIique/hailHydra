@@ -8,10 +8,10 @@ export const About = (props) => {
     return (
         <div id="about">
             <Row>
-                <Col xs={12} md={6}>
+                <Col xs={12} lg={6}>
                     <div className="champ"></div>
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12} lg={6}>
                     <div className="about-text">
                         <h2>About Us</h2>
                         <p>
