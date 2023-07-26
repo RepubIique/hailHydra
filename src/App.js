@@ -13,7 +13,7 @@ import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 1000,
+    speed: 500,
     speedAsDuration: true,
 })
 

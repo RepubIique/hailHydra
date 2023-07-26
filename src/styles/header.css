@@ -7,6 +7,13 @@
     background-size: cover;
     background-attachment: fixed;
 }
+@media screen and (max-width: 600px) {
+    .intro {
+        background: url(../../public/img/CNC-m.gif);
+        width: 100%;
+        background-size: cover;
+    }
+}
 .intro .overlay {
     background: rgba(0, 0, 0, 0.2);
 }
