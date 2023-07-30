@@ -10,13 +10,13 @@ import {
     Alert,
 } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import '../styles/contact.css'
 import {
     faMapMarker,
     faPhone,
     faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
 import GoogleMaps from './googleMaps'
+import '../styles/contact.css'
 
 const initialState = {
     name: '',
