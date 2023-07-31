@@ -1,14 +1,5 @@
-import { useState } from 'react'
-import React from 'react'
-import {
-    Container,
-    Row,
-    Col,
-    Form,
-    Button,
-    ListGroup,
-    Alert,
-} from 'react-bootstrap'
+import React, { useState, useRef } from 'react'
+import { Container, Row, Col, Form, Button, ListGroup } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
     faMapMarker,
@@ -17,40 +8,63 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import GoogleMaps from './googleMaps'
 import '../styles/contact.css'
-
-const initialState = {
-    name: '',
-    email: '',
-    message: '',
-}
+import emailjs from '@emailjs/browser'
 
 export const Contact = (props) => {
-    const [{ name, email, message }, setState] = useState(initialState)
-    const [file, setFile] = useState(null)
-    const [alertMsg, setAlertMsg] = useState('')
+    const formRef = useRef()
+    const [form, setForm] = useState({
+        name: '',
+        email: '',
+        message: '',
+    })
+
+    const [loading, setLoading] = useState(false)
 
     const handleChange = (e) => {
-        const { name, value } = e.target
-        setState((prevState) => ({ ...prevState, [name]: value }))
-    }
+        const { target } = e
+        const { name, value } = target
 
-    const handleFileChange = (e) => {
-        const selectedFile = e.target.files[0]
-        if (selectedFile && selectedFile.size > 5242880) {
-            // 5 MB in bytes
-            setAlertMsg(
-                'File is too large, please select a file less than 5MB.'
-            )
-            setFile(null) // reset the selected file
-        } else {
-            setFile(selectedFile)
-            setAlertMsg('')
-        }
+        setForm({
+            ...form,
+            [name]: value,
+        })
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(name, email, message, file) // Now, the file is also logged
+        setLoading(true)
+
+        emailjs
+            .send(
+                process.env.VITE_APP_EMAILJS_SERVICE_ID,
+                process.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+                {
+                    from_name: form.name,
+                    to_name: 'HydraPower Engineering',
+                    from_email: form.email,
+                    to_email: 'kendrickbong1996@gmail.com',
+                    message: form.message,
+                },
+                process.env.VITE_APP_EMAILJS_PUBLIC_KEY
+            )
+            .then(
+                () => {
+                    setLoading(false)
+                    alert(
+                        'Thank you. We will get back to you as soon as possible.'
+                    )
+
+                    setForm({
+                        name: '',
+                        email: '',
+                        message: '',
+                    })
+                },
+                (error) => {
+                    setLoading(false)
+                    alert('Ahh, something went wrong. Please try again.')
+                }
+            )
     }
 
     return (
@@ -72,7 +86,7 @@ export const Contact = (props) => {
                                 following form
                             </p>
                         </div>
-                        <Form onSubmit={handleSubmit}>
+                        <Form onSubmit={handleSubmit} ref={formRef}>
                             <Row>
                                 <Col md={6}>
                                     <Form.Group controlId="name">
@@ -80,6 +94,7 @@ export const Contact = (props) => {
                                             type="text"
                                             name="name"
                                             placeholder="Name"
+                                            value={form.name}
                                             required
                                             onChange={handleChange}
                                         />
@@ -90,6 +105,7 @@ export const Contact = (props) => {
                                         <Form.Control
                                             type="email"
                                             name="email"
+                                            value={form.email}
                                             placeholder="Email"
                                             required
                                             onChange={handleChange}
@@ -101,24 +117,15 @@ export const Contact = (props) => {
                                 <Form.Control
                                     as="textarea"
                                     name="message"
+                                    value={form.message}
                                     rows={4}
                                     placeholder="Message"
                                     required
                                     onChange={handleChange}
                                 />
                             </Form.Group>
-                            <Form.Group controlId="file">
-                                <Form.Control
-                                    label="Attach a file"
-                                    type="file"
-                                    onChange={handleFileChange}
-                                />
-                            </Form.Group>
-                            {alertMsg && (
-                                <Alert variant="danger">{alertMsg}</Alert>
-                            )}
                             <Button type="submit" variant="primary">
-                                Send Message
+                                {loading ? 'Sending' : 'Send'}
                             </Button>
                         </Form>
                     </Col>
