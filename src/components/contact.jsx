@@ -42,7 +42,7 @@ export const Contact = (props) => {
                     from_name: form.name,
                     to_name: 'HydraPower Engineering',
                     from_email: form.email,
-                    to_email: 'kendrickbong1996@gmail.com',
+                    to_email: 'hydrapowerenginfo@gmail.com',
                     message: form.message,
                 },
                 process.env.VITE_APP_EMAILJS_PUBLIC_KEY
