@@ -128,7 +128,7 @@ export const Contact = (props) => {
                                 />
                             </Form.Group>
                             <br />
-                            <Button type="submit" variant="primary">
+                            <Button type="submit">
                                 {loading ? 'Sending' : 'Send'}
                             </Button>
                         </Form>

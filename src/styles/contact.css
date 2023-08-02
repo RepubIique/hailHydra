@@ -31,3 +31,49 @@
     padding-bottom: 20px;
     font-weight: 400;
 }
+/* Input Field Styling */
+#contact Form.Control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+#contact Form.Group {
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+#contact Button {
+    background-color: #f6f6f6;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: black;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+#contact Button:hover {
+    background-color: #5ca9fb;
+}
+
+/* Additional Typography Styling */
+#contact .section-title p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#contact .section-title h2 {
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact Form.Control,
+    #contact Button {
+        width: 50%;
+    }
+}
