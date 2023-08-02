@@ -17,12 +17,7 @@ export const Navigation = (props) => {
             <Container>
                 <Navbar.Brand href="#header">
                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <img
-                            alt=""
-                            src="/img/flogo.png"
-                            height="60"
-                            className="d-inline-block align-top"
-                        />{' '}
+                        <img alt="" src="/img/flogo.png" height="60" />
                     </div>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
