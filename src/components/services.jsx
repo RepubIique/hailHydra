@@ -19,11 +19,7 @@ export const Services = (props) => {
                         ? props.data.map((d, i) => (
                               <Col md={4} key={`${d.name}-${i}`}>
                                   {' '}
-                                  <Image
-                                      src={d.img}
-                                      roundedCircle
-                                      className="services-img"
-                                  />
+                                  <Image src={d.img} className="services-img" />
                                   <div className="service-desc">
                                       <h3>{d.name}</h3>
                                       <p>{d.text}</p>

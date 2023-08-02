@@ -22,7 +22,7 @@ export const Portfolio = (props) => {
                               <Col key={`${d.title}-${i}`} lg={4} md={4} sm={4}>
                                   <ImageComponent
                                       title={d.title}
-                                      image={d.image} // using one image URL
+                                      image={d.image}
                                   />
                               </Col>
                           ))
