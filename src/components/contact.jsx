@@ -88,7 +88,8 @@ export const Contact = (props) => {
                         </div>
                         <Form onSubmit={handleSubmit} ref={formRef}>
                             <Row>
-                                <Col md={6}>
+                                <Col>
+                                    {' '}
                                     <Form.Group controlId="name">
                                         <Form.Control
                                             type="text"
@@ -100,7 +101,8 @@ export const Contact = (props) => {
                                         />
                                     </Form.Group>
                                 </Col>
-                                <Col md={6}>
+                                <Col>
+                                    {' '}
                                     <Form.Group controlId="email">
                                         <Form.Control
                                             type="email"
@@ -113,6 +115,7 @@ export const Contact = (props) => {
                                     </Form.Group>
                                 </Col>
                             </Row>
+                            <br />
                             <Form.Group controlId="message">
                                 <Form.Control
                                     as="textarea"
@@ -124,6 +127,7 @@ export const Contact = (props) => {
                                     onChange={handleChange}
                                 />
                             </Form.Group>
+                            <br />
                             <Button type="submit" variant="primary">
                                 {loading ? 'Sending' : 'Send'}
                             </Button>
@@ -146,7 +150,8 @@ export const Contact = (props) => {
                             <ListGroup.Item>
                                 <p>
                                     <span>
-                                        <FontAwesomeIcon icon={faPhone} /> Phone
+                                        <FontAwesomeIcon icon={faPhone} />{' '}
+                                        Phone:
                                     </span>{' '}
                                     {props.data ? props.data.phone : 'loading'}
                                 </p>
@@ -155,7 +160,7 @@ export const Contact = (props) => {
                                 <p>
                                     <span>
                                         <FontAwesomeIcon icon={faEnvelope} />{' '}
-                                        Email
+                                        Email:
                                     </span>{' '}
                                     {props.data ? props.data.email : 'loading'}
                                 </p>
