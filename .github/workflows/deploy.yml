@@ -26,6 +26,13 @@ jobs:
 
             - name: Build project
               run: npm run build
+                  echo "$DEVOPS"
+              env:
+                  REACT_APP_EMAILJS_PUBLIC_KEY: ${{secrets.REACT_APP_EMAILJS_PUBLIC_KEY}}
+                  REACT_APP_EMAILJS_SERVICE_ID: ${{secrets.REACT_APP_EMAILJS_SERVICE_ID}}
+                  REACT_APP_EMAILJS_TEMPLATE_ID: ${{secrets.REACT_APP_EMAILJS_TEMPLATE_ID}}
+                  REACT_APP_GOOGLE_API_KEY: ${{secrets.REACT_APP_GOOGLE_API_KEY}}
+                  DEVOPS: ${{secrets.DEVOPS}}
 
             - name: Upload production-ready build files
               uses: actions/upload-artifact@v2
@@ -53,7 +60,3 @@ jobs:
                   publish_dir: ./build
                   publish_branch: gh-pages
                   cname: hydrapower.engineering
-                  REACT_APP_EMAILJS_PUBLIC_KEY: ${{secrets.REACT_APP_EMAILJS_PUBLIC_KEY}}
-                  REACT_APP_EMAILJS_SERVICE_ID: ${{secrets.REACT_APP_EMAILJS_SERVICE_ID}}
-                  REACT_APP_EMAILJS_TEMPLATE_ID: ${{secrets.REACT_APP_EMAILJS_TEMPLATE_ID}}
-                  REACT_APP_GOOGLE_API_KEY: ${{secrets.REACT_APP_GOOGLE_API_KEY}}
