@@ -6,6 +6,7 @@ const GoogleMaps = () => {
     const { isLoaded } = useLoadScript({
         googleMapsApiKey: process.env.REACT_APP_GOOGLE_API_KEY,
     })
+
     const center = useMemo(
         () => ({ lat: 4.44086440503711, lng: 114.00880734507545 }),
         []
@@ -19,13 +20,15 @@ const GoogleMaps = () => {
                 <GoogleMap
                     mapContainerClassName="map-container"
                     center={center}
-                    zoom={14}
+                    zoom={17}
+                    mapTypeId="hybrid"
                 >
                     <Marker
                         position={{
                             lat: 4.44086440503711,
                             lng: 114.00880734507545,
                         }}
+                        title="HydraPower Engineering"
                     />
                 </GoogleMap>
             )}
