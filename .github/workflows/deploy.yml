@@ -25,12 +25,12 @@ jobs:
                   install-command: npm install
 
             - name: Build project
-              run: npm run build
-              with:
+              env:
                   REACT_APP_EMAILJS_PUBLIC_KEY: ${{secrets.REACT_APP_EMAILJS_PUBLIC_KEY}}
                   REACT_APP_EMAILJS_SERVICE_ID: ${{secrets.REACT_APP_EMAILJS_SERVICE_ID}}
                   REACT_APP_EMAILJS_TEMPLATE_ID: ${{secrets.REACT_APP_EMAILJS_TEMPLATE_ID}}
                   REACT_APP_GOOGLE_API_KEY: ${{secrets.REACT_APP_GOOGLE_API_KEY}}
+              run: npm run build
 
             - name: Upload production-ready build files
               uses: actions/upload-artifact@v2
