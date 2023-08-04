@@ -66,11 +66,3 @@
 #contact .section-title h2 {
     font-weight: 600;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    #contact Form.Control,
-    #contact Button {
-        width: 50%;
-    }
-}
