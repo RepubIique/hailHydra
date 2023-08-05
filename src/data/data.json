@@ -21,40 +21,49 @@
 
     "Portfolio": [
         {
-            "title": "Project Title",
-            "image": "img/portfolio/01-large.jpg"
+            "title": "Precision Gearing",
+            "image": "img/portfolio/gears.jpg",
+            "description": "This project showcases our expertise in the fabrication of precise steel gears. We utilized advanced CNC machines to deliver gears with optimal dimensions and superior surface finish, used in a variety of industrial applications. Every gear we produced underwent rigorous quality checks to ensure flawless performance and extend lifespan, proving our commitment to quality and precision in every project we undertake."
         },
         {
-            "title": "Project Title",
-            "image": "img/portfolio/02-large.jpg"
+            "title": "Infrastructure Support Beams",
+            "image": "img/portfolio/steelbeams.jpg",
+            "description": "In this project, we produced steel beams for a large-scale infrastructure project. Each beam was crafted using high-grade steel, ensuring robustness and longevity. We collaborated closely with civil engineers to ensure our beams met the specific requirements of the project in terms of strength, weight, and durability. Our work contributed significantly to the structural integrity of the buildings and bridges involved."
         },
         {
-            "title": "Project Title",
-            "image": "img/portfolio/03-large.jpg"
+            "title": "Pasteurization Unit Construction",
+            "image": "img/portfolio/pasteurizer.jpg",
+            "description": "Our team designed and fabricated custom stainless steel pasteurization units for a renowned food and beverage company. The units were developed to maximize efficiency, safety, and compliance with stringent hygiene standards. We utilized advanced welding techniques to ensure leak-proof and easy-to-clean surfaces. Our bespoke solution resulted in improved production efficiency and product safety for our client."
         },
         {
-            "title": "Project Title",
-            "image": "img/portfolio/04-large.jpg"
+            "title": "Industrial Pipeline Systems",
+            "image": "img/portfolio/steelpipes.jpg",
+            "description": "For this project, we were tasked with producing high-quality, durable steel pipes for a large industrial plant. These pipes were crucial for the plant's operations, used for water delivery, gas transport, and waste disposal. We provided a comprehensive service that included the design, fabrication, and installation of the pipes, contributing to a safe and efficient industrial environment."
         },
         {
-            "title": "Project Title",
-            "image": "img/portfolio/05-large.jpg"
+            "title": "Large Industrial Gear Fabrication",
+            "image": "img/portfolio/biggear.jpg",
+            "description": "Our expertise in fabricating large gears for heavy machinery is showcased in this project. We worked meticulously to ensure every gear adhered to the specified dimensions and quality standards. Our commitment to quality and precision resulted in gears capable of withstanding rigorous industrial demands, helping to extend the operational life of our client's heavy machinery."
         },
         {
-            "title": "Project Title",
-            "image": "img/portfolio/06-large.jpg"
+            "title": "Factory Floor Installations",
+            "image": "img/portfolio/factoryfloor.jpg",
+            "description": "In this project, we offered turnkey solutions for a factory floor installation. Our comprehensive services included the design, manufacture, and installation of all steel components. We also ensured that our designs were ergonomic and complied with all safety standards, providing a safe and efficient environment for the factory workers. This project is a testament to our ability to handle complex industrial installations."
         },
         {
-            "title": "Project Title",
-            "image": "img/portfolio/07-large.jpg"
+            "title": "Construction Site Framework",
+            "image": "img/portfolio/constructionsite.jpg",
+            "description": "We created a robust steel framework for a construction site, demonstrating our ability to handle large-scale, demanding projects. From the initial design to the final installation, we ensured that every element was precisely crafted and thoroughly inspected. Our work provided the foundation for a safe and efficient construction process, and the resulting structure offered exceptional stability and durability."
         },
         {
-            "title": "Project Title",
-            "image": "img/portfolio/08-large.jpg"
+            "title": "Heat Exchanger Production",
+            "image": "img/portfolio/heatexchanger.jpg",
+            "description": "For this project, we designed and fabricated custom heat exchangers for a chemical processing plant. Each component was meticulously crafted to ensure efficient thermal transfer and longevity. Our team used advanced welding techniques to ensure the integrity of each piece and incorporated corrosion-resistant features to increase the heat exchanger's lifespan. Our work resulted in a significant boost in the plant's operational efficiency."
         },
         {
-            "title": "Project Title",
-            "image": "img/portfolio/09-large.jpg"
+            "title": "Refurbishment of Old Machinery",
+            "image": "img/portfolio/oldmachine.jpg",
+            "description": "This project involved the refurbishment of old industrial machinery. Our team replaced worn steel parts with newly fabricated components, extending the machine's operational lifespan and improving its efficiency. Each new component was precisely fabricated to fit seamlessly into the existing machinery, showcasing our skills in custom fabrication. This project highlights our commitment to sustainability and cost-effectiveness."
         }
     ],
     "Services": [
