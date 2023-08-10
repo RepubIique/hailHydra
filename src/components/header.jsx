@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import videoSourceMobile from '../assets/CNC-m.webm';
+import videoSourceMobile from '../assets/CNC-m.webm'
 import videoSourceDesktop from '../assets/CNC.webm'
 import '../styles/header.css'
 
 export const Header = (props) => {
-    // Determine which video source to use based on viewport width
-    const videoSource = window.innerWidth <= 600 ? videoSourceMobile : videoSourceDesktop;
+    const [videoSource, setVideoSource] = useState(videoSourceDesktop)
+
+    useEffect(() => {
+        setVideoSource(
+            window.innerWidth <= 600 ? videoSourceMobile : videoSourceDesktop
+        )
+
+        const handleResize = () => {
+            setVideoSource(
+                window.innerWidth <= 600
+                    ? videoSourceMobile
+                    : videoSourceDesktop
+            )
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    }, [])
 
     return (
         <header id="header">
@@ -24,9 +43,14 @@ export const Header = (props) => {
                                     <span></span>
                                 </h1>
                                 <p>
-                                    {props.data ? props.data.paragraph : 'Loading'}
+                                    {props.data
+                                        ? props.data.paragraph
+                                        : 'Loading'}
                                 </p>
-                                <Button className="btn-lg button" href="#contact">
+                                <Button
+                                    className="btn-lg button"
+                                    href="#contact"
+                                >
                                     Ask us how we can help
                                 </Button>
                             </Col>
@@ -35,5 +59,5 @@ export const Header = (props) => {
                 </div>
             </div>
         </header>
-    );
+    )
 }
