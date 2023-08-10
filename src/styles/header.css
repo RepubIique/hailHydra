@@ -1,21 +1,25 @@
 /* Header Section */
 .intro {
+    position: relative;
     width: 100%;
-    padding: 0;
-    background: url(../../public/img/CNC.gif) center center no-repeat;
-    background-color: #e5e5e5;
-    background-size: cover;
-    background-attachment: fixed;
+    height: 100%;
+    overflow: hidden;
 }
-@media screen and (max-width: 600px) {
-    .intro {
-        background: url(../../public/img/CNC-m.gif);
-        width: 100%;
-        background-size: cover;
-    }
+
+.intro video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    z-index: -1;
 }
-.intro .overlay {
-    background: rgba(0, 0, 0, 0.2);
+
+.overlay {
+    position: relative;
+    z-index: 1;
 }
 .intro h1 {
     font-family: 'Raleway', sans-serif;
