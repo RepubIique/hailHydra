@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import videoSourceMobile from '../assets/CNC-m.webm'
-import videoSourceDesktop from '../assets/CNC.webm'
+import videoSourceMobile from '../assets/CNC-m.mp4'
+import videoSourceDesktop from '../assets/CNC.mp4'
 import '../styles/header.css'
 
 export const Header = (props) => {
@@ -30,7 +30,7 @@ export const Header = (props) => {
     return (
         <header id="header">
             <div className="intro">
-                <video autoPlay muted loop>
+                <video autoPlay muted loop playsInline>
                     <source src={videoSource} type="video/webm" />
                     Your browser does not support the video tag.
                 </video>
