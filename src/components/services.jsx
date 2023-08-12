@@ -22,6 +22,8 @@ export const Services = (props) => {
                                   <img
                                       loading="lazy"
                                       src={d.img}
+                                      srcSet={`${d.imgm} 400w, ${d.img} 1200w`}
+                                      sizes="(max-width: 768px) 480px, 1200px"
                                       className="services-img"
                                       alt={d.alt}
                                   />

@@ -23,6 +23,7 @@ export const Portfolio = (props) => {
                                   <ImageComponent
                                       title={d.title}
                                       image={d.image}
+                                      imagem={d.imagem}
                                       description={d.description}
                                       alt={d.alt}
                                   />

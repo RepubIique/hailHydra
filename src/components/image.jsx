@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal } from 'react-bootstrap'
 
-export const ImageComponent = ({ title, image, description, alt }) => {
+export const ImageComponent = ({ title, image, imagem, description, alt }) => {
     const [show, setShow] = useState(false)
     const handleShow = () => setShow(true)
     const handleClose = () => setShow(false)
@@ -16,6 +16,8 @@ export const ImageComponent = ({ title, image, description, alt }) => {
                     <img
                         loading="lazy"
                         src={image}
+                        srcSet={`${imagem} 400w, ${image} 1200w`}
+                        sizes="(max-width: 768px) 480px, 1200px"
                         className="portfolio-img"
                         alt={alt}
                     />
@@ -30,6 +32,8 @@ export const ImageComponent = ({ title, image, description, alt }) => {
                         <img
                             loading="lazy"
                             src={image}
+                            srcSet={`${imagem} 400w, ${image} 1200w`}
+                            sizes="(max-width: 768px) 480px, 1200px"
                             className="portfolio-img"
                             alt={alt}
                             style={{ width: '100%' }}

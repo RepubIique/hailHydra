@@ -23,66 +23,77 @@
         {
             "title": "Precision Gearing",
             "image": "img/portfolio/gears.webp",
+            "imgm": "img/portfolio/gears-s.webp",
             "alt": "Precision gearing fabrication",
             "description": "This project showcases our expertise in the fabrication of precise steel gears. We utilized advanced CNC machines to deliver gears with optimal dimensions and superior surface finish, used in a variety of industrial applications. Every gear we produced underwent rigorous quality checks to ensure flawless performance and extend lifespan, proving our commitment to quality and precision in every project we undertake."
         },
         {
             "title": "Infrastructure Support Beams",
             "image": "img/portfolio/steelbeams.webp",
+            "imgm": "img/portfolio/steelbeams-s.webp",
             "alt": "Steel beams for infrastructure support",
             "description": "In this project, we produced steel beams for a large-scale infrastructure project. Each beam was crafted using high-grade steel, ensuring robustness and longevity. We collaborated closely with civil engineers to ensure our beams met the specific requirements of the project in terms of strength, weight, and durability. Our work contributed significantly to the structural integrity of the buildings and bridges involved."
         },
         {
             "title": "Pasteurization Unit Construction",
             "image": "img/portfolio/pasteurizer.webp",
+            "imgm": "img/portfolio/pasteurizer-s.webp",
             "alt": "Stainless steel pasteurization unit",
             "description": "Our team designed and fabricated custom stainless steel pasteurization units for a renowned food and beverage company. The units were developed to maximize efficiency, safety, and compliance with stringent hygiene standards. We utilized advanced welding techniques to ensure leak-proof and easy-to-clean surfaces. Our bespoke solution resulted in improved production efficiency and product safety for our client."
         },
         {
             "title": "Industrial Pipeline Systems",
             "image": "img/portfolio/steelpipes.webp",
+            "imgm": "img/portfolio/steelpipes-s.webp",
             "alt": "Industrial pipeline systems",
             "description": "For this project, we were tasked with producing high-quality, durable steel pipes for a large industrial plant. These pipes were crucial for the plant's operations, used for water delivery, gas transport, and waste disposal. We provided a comprehensive service that included the design, fabrication, and installation of the pipes, contributing to a safe and efficient industrial environment."
         },
         {
             "title": "Large Industrial Gear Fabrication",
             "image": "img/portfolio/biggear.webp",
+            "imgm": "img/portfolio/biggear-s.webp",
             "alt": "Large industrial gear",
             "description": "Our expertise in fabricating large gears for heavy machinery is showcased in this project. We worked meticulously to ensure every gear adhered to the specified dimensions and quality standards. Our commitment to quality and precision resulted in gears capable of withstanding rigorous industrial demands, helping to extend the operational life of our client's heavy machinery."
         },
         {
             "title": "Factory Floor Installations",
             "image": "img/portfolio/factoryfloor.webp",
+            "imgm": "img/portfolio/factoryfloor-s.webp",
             "alt": "Factory floor steel installations",
             "description": "In this project, we offered turnkey solutions for a factory floor installation. Our comprehensive services included the design, manufacture, and installation of all steel components. We also ensured that our designs were ergonomic and complied with all safety standards, providing a safe and efficient environment for the factory workers. This project is a testament to our ability to handle complex industrial installations."
         },
         {
             "title": "Construction Site Framework",
             "image": "img/portfolio/constructionsite.webp",
+            "imgm": "img/portfolio/constructionsite-s.webp",
             "alt": "Steel framework for construction site",
             "description": "We created a robust steel framework for a construction site, demonstrating our ability to handle large-scale, demanding projects. From the initial design to the final installation, we ensured that every element was precisely crafted and thoroughly inspected. Our work provided the foundation for a safe and efficient construction process, and the resulting structure offered exceptional stability and durability."
         },
         {
             "title": "Heat Exchanger Production",
             "image": "img/portfolio/heatexchanger.webp",
+            "imgm": "img/portfolio/heatexchanger-s.webp",
             "alt": "Heat exchanger for chemical processing",
             "description": "For this project, we designed and fabricated custom heat exchangers for a chemical processing plant. Each component was meticulously crafted to ensure efficient thermal transfer and longevity. Our team used advanced welding techniques to ensure the integrity of each piece and incorporated corrosion-resistant features to increase the heat exchanger's lifespan. Our work resulted in a significant boost in the plant's operational efficiency."
         },
         {
             "title": "Refurbishment of Old Machinery",
             "image": "img/portfolio/oldmachine.webp",
+            "imgm": "img/portfolio/oldmachine-s.webp",
             "alt": "Refurbished industrial machine",
             "description": "This project involved the refurbishment of old industrial machinery. Our team replaced worn steel parts with newly fabricated components, extending the machine's operational lifespan and improving its efficiency. Each new component was precisely fabricated to fit seamlessly into the existing machinery, showcasing our skills in custom fabrication. This project highlights our commitment to sustainability and cost-effectiveness."
         },
         {
             "title": "Hydraulic Cylinder Manufacturing",
             "image": "img/portfolio/pipes.webp",
+            "imgm": "img/portfolio/pipes-s.webp",
             "alt": "Hydraulic cylinder",
             "description": "With years of expertise, we manufacture hydraulic cylinders tailored to your specific needs. Our high-quality cylinders are designed to deliver superior performance and longevity in various operating environments."
         },
         {
             "title": "Gear Manufacturing",
             "image": "img/portfolio/gear.webp",
+            "imgm": "img/portfolio/gear-s.webp",
             "alt": "Manufactured gear",
             "description": "Our gear manufacturing services provide highly precise and durable gears designed for a wide range of applications. We use advanced technologies to ensure optimal functionality and prolonged service life."
         }
@@ -90,42 +101,49 @@
     "Services": [
         {
             "img": "img/servicesimg/mill.webp",
+            "imgm": "img/servicesimg/mill-s.webp",
             "alt": "Fabrication facility",
             "name": "Fabrication",
             "text": "Our fabrication service is second to none. With our skilled team and state-of-the-art facilities, we handle steel fabrication tasks for diverse applications, ensuring durability and precision in each product we create."
         },
         {
             "img": "img/servicesimg/milling.webp",
+            "imgm": "img/servicesimg/milling-s.webp",
             "alt": "CNC machining equipment",
             "name": "CNC Machining",
             "text": "Providing CNC lathe and milling for precise mass production to meet your needs."
         },
         {
             "img": "img/servicesimg/design.webp",
+            "imgm": "img/servicesimg/design-s.webp",
             "alt": "Product design and engineering",
             "name": "Product Design and Engineering",
             "text": "Assisting in the development of new products by working on design, prototyping, and engineering."
         },
         {
             "img": "img/servicesimg/maintenance.webp",
+            "imgm": "img/servicesimg/maintenance-s.webp",
             "alt": "Maintenance and repair tools",
             "name": "Maintenance & Repair",
             "text": "We understand the importance of minimizing downtime. That’s why we offer rapid and reliable maintenance and repair services, ensuring your hydraulic systems operate efficiently and trouble-free."
         },
         {
             "img": "img/servicesimg/warranty.webp",
+            "imgm": "img/servicesimg/warranty-s.webp",
             "alt": "Warranty services badge",
             "name": "Warranty Services",
             "text": "Providing warranties for products and handling related claims and repairs."
         },
         {
             "img": "img/servicesimg/safety.webp",
+            "imgm": "img/servicesimg/safety-s.webp",
             "alt": "Quality control and inspection",
             "name": "Quality Control and Inspection",
             "text": "Implementing rigorous quality control processes to ensure that products meet certain standards and specifications."
         },
         {
             "img": "img/servicesimg/sourcing.webp",
+            "imgm": "img/servicesimg/sourcing-s.webp",
             "alt": "Material sourcing",
             "name": "Material Sourcing",
             "text": "Identifying and procuring the necessary raw materials and components to fit with customers product specifications."
@@ -134,36 +152,42 @@
     "Clients": [
         {
             "img": "img/testimonials/01.webp",
+            "imgm": "img/testimonials/01-s.webp",
             "alt": "Picture of Lee Xian How",
             "text": "Hydra Power is a reliable manufacturer of hydraulic cylinders in the market. I am thoroughly impressed with the quality and durability of their products. The precision engineering and attention to detail are exceptional. Communication was smooth, and they delivered on time, making them a reliable choice.",
             "name": "Lee Xian How, Construction Sector"
         },
         {
             "img": "img/testimonials/02.webp",
+            "imgm": "img/testimonials/02-s.webp",
             "alt": "Picture of Wain Ng",
             "text": "We have been working with Hydra Power Engineering Services since 2005. Their top-notch engineering and commitment to customer service have made them a reliable partner for our offshore projects. They always meet our needs and ensure our satisfaction.",
             "name": "Wain Ng, Offshore Sector"
         },
         {
             "img": "img/testimonials/03.webp",
+            "imgm": "img/testimonials/03-s.webp",
             "alt": "Picture of Kenneth Lau",
             "text": "In the agricultural sector, efficiency and reliability are critical. Hydra Power Engineering Services provides us with high-quality hydraulic systems that we can count on. Their high level of expertise and professionalism is truly appreciated.",
             "name": "Kenneth Lau, Agricultural Sector"
         },
         {
             "img": "img/testimonials/04.webp",
+            "imgm": "img/testimonials/04-s.webp",
             "alt": "Picture of Yi Jao Chin",
             "text": "I am extremely satisfied for their expertise in gear manufacturing services. I had an urgent requirement for gears, and they rose to the occasion, delivering on time without any delays. The gears they provided were top quality. I highly recommend them for their efficiency, professionalism, and on time delivery.",
             "name": "Yi Kao Chin, Mobile & Industrial Sector"
         },
         {
             "img": "img/testimonials/05.webp",
+            "imgm": "img/testimonials/05-s.webp",
             "alt": "Picture of Calvin Ong",
             "text": "Working with Hydra Power Engineering Services has been a great experience. Their expertise in hydraulic cylinder fabrication, gear manufacturing, and machining works has significantly benefited our business. They have a highly skilled team that always delivers on time.",
             "name": "Calvin Ong, Hydraulic Equipment Manufacturing"
         },
         {
             "img": "img/testimonials/06.webp",
+            "imgm": "img/testimonials/06-s.webp",
             "alt": "Picture of Sheryl Lee",
             "text": "Hydra Power Engineering Services is an expert in steel fabrication tasks for diverse applications. They always ensure high-quality products and their customer service is always excellent. Their commitment to meeting customer needs is evident in every project they undertake.",
             "name": "Sheryl Lee, Steel Fabrication Sector"
@@ -172,30 +196,35 @@
     "Team": [
         {
             "img": "img/team/Director.webp",
+            "imgm": "img/team/Director-s.webp",
             "alt": "Picture of Managing Director",
             "name": "Tong Chu Hua",
             "job": "Managing Director"
         },
         {
             "img": "img/team/GM.webp",
+            "imgm": "img/team/GM-s.webp",
             "alt": "Picture of General Manager",
             "name": "Sim Siaw Hock",
             "job": "General Manager"
         },
         {
             "img": "img/team/ProductionManager.webp",
+            "imgm": "img/team/ProductionManager-s.webp",
             "alt": "Picture of Production Manager",
             "name": "Eu Tian Jyh",
             "job": "Production Manager"
         },
         {
             "img": "img/team/ProcurementSpecialist.webp",
+            "imgm": "img/team/ProcurementSpecialist-s.webp",
             "alt": "Picture of Procurement Specialist",
             "name": "Tang Hong Moi",
             "job": "Procurement Specialist"
         },
         {
             "img": "img/team/AccountingManager.webp",
+            "imgm": "img/team/AccountingManager-s.webp",
             "alt": "Picture of Accounting Manager",
             "name": "Lucy Tong Wen Ping",
             "job": "Accounting Manager"

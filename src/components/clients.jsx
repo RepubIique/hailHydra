@@ -16,7 +16,13 @@ export const Clients = (props) => {
                                   <div className="testimonial">
                                       <div className="testimonial-image">
                                           {' '}
-                                          <img src={d.img} alt={d.alt} />{' '}
+                                          <img
+                                              loading="lazy"
+                                              src={d.img}
+                                              alt={d.alt}
+                                              srcSet={`${d.imgm} 400w, ${d.img} 1200w`}
+                                              sizes="(max-width: 768px) 480px, 1200px"
+                                          />{' '}
                                       </div>
                                       <div className="testimonial-content">
                                           <p>"{d.text}"</p>
