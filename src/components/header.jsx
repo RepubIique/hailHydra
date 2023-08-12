@@ -20,6 +20,11 @@ export const Header = (props) => {
             )
         }
 
+        const videoElement = document.querySelector('video')
+        videoElement.addEventListener('loadeddata', () => {
+            videoElement.play()
+        })
+
         window.addEventListener('resize', handleResize)
 
         return () => {
