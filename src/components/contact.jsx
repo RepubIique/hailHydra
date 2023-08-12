@@ -5,6 +5,7 @@ import {
     faMapMarker,
     faPhone,
     faEnvelope,
+    faFax,
 } from '@fortawesome/free-solid-svg-icons'
 import GoogleMaps from './googleMaps'
 import '../styles/contact.css'
@@ -154,6 +155,14 @@ export const Contact = (props) => {
                                         Phone:
                                     </span>{' '}
                                     {props.data ? props.data.phone : 'loading'}
+                                </p>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                <p>
+                                    <span>
+                                        <FontAwesomeIcon icon={faFax} /> Fax:
+                                    </span>{' '}
+                                    {props.data ? props.data.fax : 'loading'}
                                 </p>
                             </ListGroup.Item>
                             <ListGroup.Item>

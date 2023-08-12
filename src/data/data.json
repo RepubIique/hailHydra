@@ -1,13 +1,13 @@
 {
     "Header": {
-        "title": "Hydraulic Engineering, Design, Manufacture & Service",
-        "paragraph": "At Hydra Power Engineering Services, we harness the power of hydraulic technology to deliver cutting-edge solutions across various sectors. We merge top-notch engineering, design, and manufacturing with unparalleled customer service to bring you the best in hydraulic systems."
+        "title": "Engineering, Design, Fabrication & Services",
+        "paragraph": "At Hydra Power Engineering Services, we employs cutting-edge solutions across various sectors. We strive to be more than just a fabricator; we aim to be a trusted partner in your success."
     },
     "About": {
-        "paragraph": "Hydra Power Engineering Services Sdn. Bhd., in operation since 1994, offers premium hydraulic services to sectors including construction, offshore, agricultural, mobile, and industrial. Specializing in the design and manufacturing of hydraulic mechanical equipment, our expertise spans hydraulic cylinder fabrication, gear manufacturing, and various machining works. In addition to these, we handle steel fabrication tasks for diverse applications. Leveraging our two decades of experience, advanced facilities, and highly skilled staff, we deliver high-quality products, rapid response, punctual deliveries, and competitive pricing. Our primary commitment is to meet customers' needs and ensure their satisfaction, earning their trust to continually serve their business.",
+        "paragraph": "Hydra Power Engineering Services Sdn. Bhd., in operation since 1994, offers comprehensive suite of solutions that encompass Engineering, Design, Fabrication, and Services to sectors including construction, offshore and agricultural. Our expertise spans across hydraulic cylinder, Gear cutting and various machining works. In addition, we handle steel fabrication tasks for diverse applications. Leveraging two decades of experience and highly skilled operator, we deliver high-quality products, rapid response, punctual deliveries, and competitive pricing. Our primary commitment is to meet customers' needs and ensure their satisfaction, earning their trust to continually service their business.",
         "Why": [
             "Two decades of proven industry experience",
-            "Expertise in diverse hydraulic and machining tasks",
+            "Expertise in diverse engineering and machining task",
             "Consistently high-quality product delivery",
             "Flexible and rapid response to customer needs"
         ],
@@ -64,6 +64,16 @@
             "title": "Refurbishment of Old Machinery",
             "image": "img/portfolio/oldmachine.jpg",
             "description": "This project involved the refurbishment of old industrial machinery. Our team replaced worn steel parts with newly fabricated components, extending the machine's operational lifespan and improving its efficiency. Each new component was precisely fabricated to fit seamlessly into the existing machinery, showcasing our skills in custom fabrication. This project highlights our commitment to sustainability and cost-effectiveness."
+        },
+        {
+            "title": "Hydraulic Cylinder Manufacturing",
+            "image": "img/portfolio/pipes.jpg",
+            "description": "With years of expertise, we manufacture hydraulic cylinders tailored to your specific needs. Our high-quality cylinders are designed to deliver superior performance and longevity in various operating environments."
+        },
+        {
+            "title": "Gear Manufacturing",
+            "image": "img/portfolio/gear.jpg",
+            "description": "Our gear manufacturing services provide highly precise and durable gears designed for a wide range of applications. We use advanced technologies to ensure optimal functionality and prolonged service life."
         }
     ],
     "Services": [
@@ -74,28 +84,33 @@
         },
         {
             "img": "img/servicesimg/milling.jpg",
-            "name": "Milling",
-            "text": "Our milling service delivers intricately designed and carefully manufactured components. We use the latest milling machines to bring your designs to life with extreme accuracy and quality."
-        },
-        {
-            "img": "img/servicesimg/pipes.jpg",
-            "name": "Hydraulic Cylinder Manufacturing",
-            "text": "With years of expertise, we manufacture hydraulic cylinders tailored to your specific needs. Our high-quality cylinders are designed to deliver superior performance and longevity in various operating environments."
-        },
-        {
-            "img": "img/servicesimg/gear.jpg",
-            "name": "Gear Manufacturing",
-            "text": "Our gear manufacturing services provide highly precise and durable gears designed for a wide range of applications. We use advanced technologies to ensure optimal functionality and prolonged service life."
+            "name": "CNC Machining",
+            "text": "Providing CNC lathe and milling for precise mass production to meet your needs."
         },
         {
             "img": "img/servicesimg/design.jpg",
-            "name": "Design & Prototyping",
-            "text": "We offer comprehensive design and prototyping services to bring your hydraulic equipment ideas to reality. Our engineers work closely with clients to develop efficient and innovative solutions that meet their needs."
+            "name": "Product Design and Engineering",
+            "text": "Assisting in the development of new products by working on design, prototyping, and engineering."
         },
         {
             "img": "img/servicesimg/maintenance.jpg",
             "name": "Maintenance & Repair",
             "text": "We understand the importance of minimizing downtime. That’s why we offer rapid and reliable maintenance and repair services, ensuring your hydraulic systems operate efficiently and trouble-free."
+        },
+        {
+            "img": "img/servicesimg/warranty.jpg",
+            "name": "Warranty Services",
+            "text": "Providing warranties for products and handling related claims and repairs."
+        },
+        {
+            "img": "img/servicesimg/safety.jpg",
+            "name": "Quality Control and Inspection",
+            "text": "Implementing rigorous quality control processes to ensure that products meet certain standards and specifications."
+        },
+        {
+            "img": "img/servicesimg/sourcing.jpg",
+            "name": "Material Sourcing",
+            "text": "Identifying and procuring the necessary raw materials and components to fit with customers product specifications."
         }
     ],
     "Clients": [
@@ -160,6 +175,7 @@
     "Contact": {
         "address": " Jalan Piasau, Piasau, 98000 Miri, Sarawak, Malaysia",
         "phone": "+60 85-655 431",
+        "fax": "085-656445",
         "email": "hydrapowerenginfo@gmail.com",
         "facebook": "fb.com",
         "twitter": "twitter.com",
