@@ -27,7 +27,7 @@ export const Navigation = (props) => {
         >
             <Container>
                 <Navbar.Brand href="#header">
-                    <img alt="" src="/img/flogo.png" height="60" />
+                    <img alt="Company Logo" src="/img/flogo.png" height="60" />
                 </Navbar.Brand>
                 <button
                     onClick={() => handleMenuClick()}

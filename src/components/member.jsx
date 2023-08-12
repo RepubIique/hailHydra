@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Container, Row, Image, Card } from 'react-bootstrap'
+import { Col, Container, Row, Card } from 'react-bootstrap'
 import '../styles/team.css'
 
 export const Member = (props) => {
@@ -24,7 +24,7 @@ export const Member = (props) => {
                                   className="team"
                               >
                                   <Card border="white">
-                                      <Image
+                                      <img
                                           loading="lazy"
                                           src={d.img}
                                           alt={d.alt}
