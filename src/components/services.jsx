@@ -23,6 +23,7 @@ export const Services = (props) => {
                                       loading="lazy"
                                       src={d.img}
                                       className="services-img"
+                                      alt={d.alt}
                                   />
                                   <div className="service-desc">
                                       <h3>{d.name}</h3>

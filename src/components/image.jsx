@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Image, Modal } from 'react-bootstrap'
 
-export const ImageComponent = ({ title, image, description }) => {
+export const ImageComponent = ({ title, image, description, alt }) => {
     const [show, setShow] = useState(false)
     const handleShow = () => setShow(true)
     const handleClose = () => setShow(false)
@@ -17,7 +17,7 @@ export const ImageComponent = ({ title, image, description }) => {
                         loading="lazy"
                         src={image}
                         className="portfolio-img"
-                        alt={title}
+                        alt={alt}
                     />
                 </div>
                 <Modal show={show} onHide={handleClose}>
@@ -31,7 +31,7 @@ export const ImageComponent = ({ title, image, description }) => {
                             loading="lazy"
                             src={image}
                             className="portfolio-img"
-                            alt={title}
+                            alt={alt}
                             style={{ width: '100%' }}
                         />
                         <Modal.Body>{description}</Modal.Body>

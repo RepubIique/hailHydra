@@ -24,6 +24,7 @@ export const Portfolio = (props) => {
                                       title={d.title}
                                       image={d.image}
                                       description={d.description}
+                                      alt={d.alt}
                                   />
                               </Col>
                           ))

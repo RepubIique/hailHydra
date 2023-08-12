@@ -27,7 +27,7 @@ export const Member = (props) => {
                                       <Image
                                           loading="lazy"
                                           src={d.img}
-                                          alt="..."
+                                          alt={d.alt}
                                           className="team-img"
                                       />
                                       <Card.Body>
