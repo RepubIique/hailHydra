@@ -25,6 +25,7 @@ export const Member = (props) => {
                               >
                                   <Card border="white">
                                       <Image
+                                          loading="lazy"
                                           src={d.img}
                                           alt="..."
                                           className="team-img"

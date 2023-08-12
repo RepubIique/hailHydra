@@ -13,7 +13,12 @@ export const ImageComponent = ({ title, image, description }) => {
                     <h4>{title}</h4>
                 </div>
                 <div className="image-container" onClick={handleShow}>
-                    <Image src={image} className="portfolio-img" alt={title} />
+                    <Image
+                        loading="lazy"
+                        src={image}
+                        className="portfolio-img"
+                        alt={title}
+                    />
                 </div>
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
@@ -23,6 +28,7 @@ export const ImageComponent = ({ title, image, description }) => {
                     </Modal.Header>
                     <Modal.Body>
                         <Image
+                            loading="lazy"
                             src={image}
                             className="portfolio-img"
                             alt={title}
