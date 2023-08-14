@@ -100,13 +100,6 @@
     ],
     "Services": [
         {
-            "img": "img/servicesimg/mill.webp",
-            "imgm": "img/servicesimg/mill-s.webp",
-            "alt": "Fabrication facility",
-            "name": "Fabrication",
-            "text": "Our fabrication service is second to none. With our skilled team and state-of-the-art facilities, we handle steel fabrication tasks for diverse applications, ensuring durability and precision in each product we create."
-        },
-        {
             "img": "img/servicesimg/milling.webp",
             "imgm": "img/servicesimg/milling-s.webp",
             "alt": "CNC machining equipment",
@@ -117,8 +110,8 @@
             "img": "img/servicesimg/design.webp",
             "imgm": "img/servicesimg/design-s.webp",
             "alt": "Product design and engineering",
-            "name": "Product Design and Engineering",
-            "text": "Assisting in the development of new products by working on design, prototyping, and engineering."
+            "name": "Product Design, Engineering & Fabrication",
+            "text": "We excel in product design, prototyping, and engineering. Coupled with our top-notch fabrication facilities, we ensure durability and precision in every product."
         },
         {
             "img": "img/servicesimg/maintenance.webp",
