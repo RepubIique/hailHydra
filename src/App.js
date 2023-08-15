@@ -8,15 +8,9 @@ import { Clients } from './components/clients'
 import { Member } from './components/member'
 import { Contact } from './components/contact'
 import JsonData from './data/data.json'
-import SmoothScroll from 'smooth-scroll'
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Product } from './components/product'
-
-export const scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 500,
-    speedAsDuration: true,
-})
 
 const App = () => {
     const [landingPageData, setLandingPageData] = useState({})
