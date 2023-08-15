@@ -1,8 +1,27 @@
 .product-img {
-    height: 50%;
+    display: block; /* Ensures the image takes up full width of its container */
     width: 100%;
-    object-fit: cover;
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+#product {
+    padding: 100px 0;
+    background: linear-gradient(to right, #3c80c1 0%, #81c3d7 100%);
+    color: #fff;
 }
 .product-body {
     text-align: center;
+}
+
+.products {
+    margin-bottom: 30px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }

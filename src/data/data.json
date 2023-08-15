@@ -231,12 +231,52 @@
     "Product": [
         {
             "name": "MILD STEEL",
-            "image": "img/portfolio/pipes-s.webp",
+            "image": "img/portfolio/heatexchanger.webp",
             "description": "Description for MILD STEEL"
         },
         {
             "name": "316 STAINLESS STEEL",
-            "image": "img/portfolio/pipes-s.webp",
+            "image": "img/portfolio/heatexchanger.webp",
+            "description": "Description for 316 STAINLESS STEEL"
+        },
+        {
+            "name": "MILD STEEL",
+            "image": "img/portfolio/heatexchanger.webp",
+            "description": "Description for MILD STEEL"
+        },
+        {
+            "name": "316 STAINLESS STEEL",
+            "image": "img/portfolio/heatexchanger.webp",
+            "description": "Description for 316 STAINLESS STEEL"
+        },
+        {
+            "name": "MILD STEEL",
+            "image": "img/portfolio/heatexchanger.webp",
+            "description": "Description for MILD STEEL"
+        },
+        {
+            "name": "316 STAINLESS STEEL",
+            "image": "img/portfolio/heatexchanger.webp",
+            "description": "Description for 316 STAINLESS STEEL"
+        },
+        {
+            "name": "MILD STEEL",
+            "image": "img/portfolio/heatexchanger.webp",
+            "description": "Description for MILD STEEL"
+        },
+        {
+            "name": "316 STAINLESS STEEL",
+            "image": "img/portfolio/heatexchanger.webp",
+            "description": "Description for 316 STAINLESS STEEL"
+        },
+        {
+            "name": "MILD STEEL",
+            "image": "img/portfolio/heatexchanger.webp",
+            "description": "Description for MILD STEEL"
+        },
+        {
+            "name": "316 STAINLESS STEEL",
+            "image": "img/portfolio/heatexchanger.webp",
             "description": "Description for 316 STAINLESS STEEL"
         }
     ]
