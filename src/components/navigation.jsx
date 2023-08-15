@@ -59,6 +59,13 @@ export const Navigation = (props) => {
                         </Nav.Link>
                         <Nav.Link
                             className="nav-link"
+                            href="#product"
+                            onClick={() => handleNavLinkClick('#product')}
+                        >
+                            Products
+                        </Nav.Link>
+                        <Nav.Link
+                            className="nav-link"
                             href="#about"
                             onClick={() => handleNavLinkClick('#about')}
                         >

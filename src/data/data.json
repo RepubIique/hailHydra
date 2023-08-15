@@ -18,7 +18,50 @@
             "Strong commitment to punctuality and reliable deliveries"
         ]
     },
-
+    "Services": [
+        {
+            "img": "img/servicesimg/milling.webp",
+            "imgm": "img/servicesimg/milling-s.webp",
+            "alt": "CNC machining equipment",
+            "name": "CNC Machining",
+            "text": "Providing CNC lathe and milling for precise mass production to meet your needs."
+        },
+        {
+            "img": "img/servicesimg/design.webp",
+            "imgm": "img/servicesimg/design-s.webp",
+            "alt": "Product design and engineering",
+            "name": "Product Design, Engineering & Fabrication",
+            "text": "We excel in product design, prototyping, and engineering. Coupled with our top-notch fabrication facilities, we ensure durability and precision in every product."
+        },
+        {
+            "img": "img/servicesimg/maintenance.webp",
+            "imgm": "img/servicesimg/maintenance-s.webp",
+            "alt": "Maintenance and repair tools",
+            "name": "Maintenance & Repair",
+            "text": "We understand the importance of minimizing downtime. That’s why we offer rapid and reliable maintenance and repair services, ensuring your hydraulic systems operate efficiently and trouble-free."
+        },
+        {
+            "img": "img/servicesimg/warranty.webp",
+            "imgm": "img/servicesimg/warranty-s.webp",
+            "alt": "Warranty services badge",
+            "name": "Warranty Services",
+            "text": "Providing warranties for products and handling related claims and repairs."
+        },
+        {
+            "img": "img/servicesimg/safety.webp",
+            "imgm": "img/servicesimg/safety-s.webp",
+            "alt": "Quality control and inspection",
+            "name": "Quality Control and Inspection",
+            "text": "Implementing rigorous quality control processes to ensure that products meet certain standards and specifications."
+        },
+        {
+            "img": "img/servicesimg/sourcing.webp",
+            "imgm": "img/servicesimg/sourcing-s.webp",
+            "alt": "Material sourcing",
+            "name": "Material Sourcing",
+            "text": "Identifying and procuring the necessary raw materials and components to fit with customers product specifications."
+        }
+    ],
     "Portfolio": [
         {
             "title": "Precision Gearing",
@@ -96,50 +139,6 @@
             "imgm": "img/portfolio/gear-s.webp",
             "alt": "Manufactured gear",
             "description": "Our gear manufacturing services provide highly precise and durable gears designed for a wide range of applications. We use advanced technologies to ensure optimal functionality and prolonged service life."
-        }
-    ],
-    "Services": [
-        {
-            "img": "img/servicesimg/milling.webp",
-            "imgm": "img/servicesimg/milling-s.webp",
-            "alt": "CNC machining equipment",
-            "name": "CNC Machining",
-            "text": "Providing CNC lathe and milling for precise mass production to meet your needs."
-        },
-        {
-            "img": "img/servicesimg/design.webp",
-            "imgm": "img/servicesimg/design-s.webp",
-            "alt": "Product design and engineering",
-            "name": "Product Design, Engineering & Fabrication",
-            "text": "We excel in product design, prototyping, and engineering. Coupled with our top-notch fabrication facilities, we ensure durability and precision in every product."
-        },
-        {
-            "img": "img/servicesimg/maintenance.webp",
-            "imgm": "img/servicesimg/maintenance-s.webp",
-            "alt": "Maintenance and repair tools",
-            "name": "Maintenance & Repair",
-            "text": "We understand the importance of minimizing downtime. That’s why we offer rapid and reliable maintenance and repair services, ensuring your hydraulic systems operate efficiently and trouble-free."
-        },
-        {
-            "img": "img/servicesimg/warranty.webp",
-            "imgm": "img/servicesimg/warranty-s.webp",
-            "alt": "Warranty services badge",
-            "name": "Warranty Services",
-            "text": "Providing warranties for products and handling related claims and repairs."
-        },
-        {
-            "img": "img/servicesimg/safety.webp",
-            "imgm": "img/servicesimg/safety-s.webp",
-            "alt": "Quality control and inspection",
-            "name": "Quality Control and Inspection",
-            "text": "Implementing rigorous quality control processes to ensure that products meet certain standards and specifications."
-        },
-        {
-            "img": "img/servicesimg/sourcing.webp",
-            "imgm": "img/servicesimg/sourcing-s.webp",
-            "alt": "Material sourcing",
-            "name": "Material Sourcing",
-            "text": "Identifying and procuring the necessary raw materials and components to fit with customers product specifications."
         }
     ],
     "Clients": [
@@ -228,5 +227,17 @@
         "phone": "+60 85-655 431",
         "fax": "085-656445",
         "email": "hydrapowerenginfo@gmail.com"
-    }
+    },
+    "Product": [
+        {
+            "name": "MILD STEEL",
+            "image": "img/portfolio/pipes-s.webp",
+            "description": "Description for MILD STEEL"
+        },
+        {
+            "name": "316 STAINLESS STEEL",
+            "image": "img/portfolio/pipes-s.webp",
+            "description": "Description for 316 STAINLESS STEEL"
+        }
+    ]
 }
