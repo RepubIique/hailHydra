@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <Container>
-                <Row>
+                {/* <Row>
                     <Col md={6}>
                         <h5>Company Name</h5>
                         <p>
@@ -55,12 +55,12 @@ const Footer = () => {
                             LinkedIn
                         </a>
                     </Col>
-                </Row>
+                </Row> */}
                 <Row>
                     <Col className="text-center">
                         <p>
-                            &copy; {new Date().getFullYear()} Company Name. All
-                            rights reserved.
+                            &copy; {new Date().getFullYear()} HydraPower
+                            Engineering & Services. All rights reserved.
                         </p>
                     </Col>
                 </Row>

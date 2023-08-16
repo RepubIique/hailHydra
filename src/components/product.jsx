@@ -28,14 +28,12 @@ export const Product = (props) => {
                     {props.data
                         ? props.data.map((product, index) => (
                               <Col
+                                  md={4}
+                                  sm={2}
                                   key={`${product.name}-${index}`}
                                   className="products"
                               >
-                                  <Card
-                                      className="card"
-                                      style={{ width: '15rem', height: '100%' }}
-                                      border="white"
-                                  >
+                                  <Card className="card" border="white">
                                       <Card.Img
                                           className="product-img"
                                           variant="top"
