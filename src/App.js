@@ -12,6 +12,7 @@ import JsonData from './data/data.json'
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Product } from './components/product'
+import Footer from './components/footer'
 
 const App = () => {
     const [landingPageData, setLandingPageData] = useState({})
@@ -42,6 +43,7 @@ const App = () => {
                     element={<Product data={landingPageData.Product} />}
                 />
             </Routes>
+            <Footer />
         </Router>
     )
 }

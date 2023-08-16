@@ -30,7 +30,7 @@ export const Navigation = (props) => {
             expanded={menuActive}
         >
             <Container>
-                <Navbar.Brand href="#header">
+                <Navbar.Brand onClick={() => handleNavLinkClick('header')}>
                     <img alt="Company Logo" src="/img/flogo.png" height="60" />
                 </Navbar.Brand>
                 <button
