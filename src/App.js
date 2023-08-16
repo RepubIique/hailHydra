@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Navigation } from './components/navigation'
 import { Header } from './components/header'
 import { About } from './components/about'
@@ -19,18 +20,29 @@ const App = () => {
     }, [])
 
     return (
-        <div>
+        <Router>
             <Navigation />
-            <Header data={landingPageData.Header} />
-            {/* <Features data={landingPageData.Features} /> */}
-            <Services data={landingPageData.Services} />
-            <About data={landingPageData.About} />
-            <Portfolio data={landingPageData.Portfolio} />
-            <Product data={landingPageData.Product} />
-            <Clients data={landingPageData.Clients} />
-            <Member data={landingPageData.Team} />
-            <Contact data={landingPageData.Contact} />
-        </div>
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <>
+                            <Header data={landingPageData.Header} />
+                            <Services data={landingPageData.Services} />
+                            <About data={landingPageData.About} />
+                            <Portfolio data={landingPageData.Portfolio} />
+                            <Clients data={landingPageData.Clients} />
+                            <Member data={landingPageData.Team} />
+                            <Contact data={landingPageData.Contact} />
+                        </>
+                    }
+                />
+                <Route
+                    path="/product"
+                    element={<Product data={landingPageData.Product} />}
+                />
+            </Routes>
+        </Router>
     )
 }
 
