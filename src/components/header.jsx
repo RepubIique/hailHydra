@@ -35,7 +35,7 @@ export const Header = (props) => {
     return (
         <header id="header">
             <div className="intro">
-                <video autoplay muted playsinline loop>
+                <video autoPlay muted playsInline loop>
                     <source src={videoSource} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>

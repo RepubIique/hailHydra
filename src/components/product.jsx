@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Card } from 'react-bootstrap'
 import '../styles/product.css'
+import { ProductBreadcrumb } from './productBreadcrumbs'
 
 export const Product = (props) => {
     return (
@@ -9,7 +10,7 @@ export const Product = (props) => {
                 <Row>
                     <Col>
                         <div className="section-title">
-                            <h2>Products</h2>
+                            <ProductBreadcrumb title={'Products'} />
                             <p>
                                 Browse, shop or get a quote on over 2,000 steel
                                 products right here. Select from the products

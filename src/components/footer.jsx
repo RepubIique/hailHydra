@@ -59,7 +59,7 @@ const Footer = () => {
                 <Row>
                     <Col className="text-center">
                         <p>
-                            &copy; {new Date().getFullYear()} HydraPower
+                            &copy; {new Date().getFullYear()} HYDRAPOWER
                             Engineering & Services. All rights reserved.
                         </p>
                     </Col>

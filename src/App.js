@@ -26,6 +26,7 @@ const App = () => {
             <Routes>
                 <Route
                     path="/"
+                    className="main-content"
                     element={
                         <>
                             <Header data={landingPageData.Header} />
@@ -41,7 +42,14 @@ const App = () => {
                 <Route
                     path="/product"
                     element={<Product data={landingPageData.Product} />}
-                />
+                >
+                    {/* <Route path=":productName" element={<ProductDetail />}>
+                        <Route
+                            path=":variantName"
+                            element={<VariantDetail />}
+                        />
+                    </Route> */}
+                </Route>
             </Routes>
             <Footer />
         </Router>

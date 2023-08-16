@@ -230,43 +230,50 @@
     },
     "Product": [
         {
-            "name": "Round Bar",
-            "image": "img/portfolio/heatexchanger.webp",
+            "name": "steel",
+            "image": "",
             "variants": [
                 {
-                    "name": "1045"
+                    "name": "Round Bar",
+                    "image": "img/portfolio/heatexchanger.webp",
+                    "variants": [
+                        {
+                            "name": "S45C",
+                            "overview": "S45C is a medium strength steel commonly used in a variety of mechanical applications. Known for its excellent tensile properties and good surface hardness, it's a popular choice for many manufacturers in different industries. S45C is versatile, durable, and responds well to heat treatment, making it a dependable option for many projects.",
+                            "keyFeatures": [
+                                {
+                                    "name": "Medium Carbon Steel",
+                                    "description": "With a carbon content of 0.45%, S45C is designed for a balance between strength and ductility."
+                                }
+                            ],
+                            "commonApplication": [
+                                "Gears and shafts",
+                                "Bolts, nuts, and studs",
+                                "Machine parts and components",
+                                "Tool bodies and blades",
+                                "Mold bases",
+                                "Structural parts in automobiles"
+                            ],
+                            "availability": "Our S45C steel is available in various forms such as barrel, bars, and rods, ensuring that we cater to a wide range of needs. Custom sizing and specifications can be arranged upon request.",
+                            "conclusion": "S45C steel offers a blend of strength, durability, and versatility that makes it a prime choice for numerous applications. Whether you're in the business of manufacturing automotive parts, machinery, or tools, S45C is a reliable steel grade that can meet diverse demands. Trust in its consistent quality and performance for your next project."
+                        }
+                    ]
                 },
                 {
-                    "name": "S45C",
-                    "overview": "S45C is a medium strength steel commonly used in a variety of mechanical applications. Known for its excellent tensile properties and good surface hardness, it's a popular choice for many manufacturers in different industries. S45C is versatile, durable, and responds well to heat treatment, making it a dependable option for many projects.",
-                    "keyFeatures": [
-                        {
-                            "name": "Medium Carbon Steel",
-                            "description": "With a carbon content of 0.45%, S45C is designed for a balance between strength and ductility."
-                        }
-                    ],
-                    "commonApplication": [
-                        "Gears and shafts",
-                        "Bolts, nuts, and studs",
-                        "Machine parts and components",
-                        "Tool bodies and blades",
-                        "Mold bases",
-                        "Structural parts in automobiles"
-                    ],
-                    "availability": "Our S45C steel is available in various forms such as barrel, bars, and rods, ensuring that we cater to a wide range of needs. Custom sizing and specifications can be arranged upon request.",
-                    "conclusion": "S45C steel offers a blend of strength, durability, and versatility that makes it a prime choice for numerous applications. Whether you're in the business of manufacturing automotive parts, machinery, or tools, S45C is a reliable steel grade that can meet diverse demands. Trust in its consistent quality and performance for your next project."
+                    "name": "Hollow Bar",
+                    "image": "img/portfolio/heatexchanger.webp",
+                    "description": "Description for 316 STAINLESS STEEL"
+                },
+                {
+                    "name": "Chrome Bar",
+                    "image": "img/portfolio/heatexchanger.webp",
+                    "description": "Description for MILD STEEL"
                 }
             ]
         },
         {
-            "name": "Hollow Bar",
-            "image": "img/portfolio/heatexchanger.webp",
-            "description": "Description for 316 STAINLESS STEEL"
-        },
-        {
-            "name": "Chrome Bar",
-            "image": "img/portfolio/heatexchanger.webp",
-            "description": "Description for MILD STEEL"
+            "name": "gear",
+            "image": ""
         }
     ]
 }

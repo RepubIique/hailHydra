@@ -91,6 +91,23 @@ hr {
     font-size: 18px;
 }
 
+.main-content {
+    min-height: calc(
+        100vh - 100px
+    ); /* Adjust 100px to match the height of your footer */
+    position: relative;
+    padding-bottom: 100px; /* Space for the footer */
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+}
+
+.breadcrumbs h2 {
+    color: white;
+    text-decoration: none;
+}
 /* Features Section */
 /* #features {
     background: #f6f6f6;
