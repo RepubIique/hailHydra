@@ -30,12 +30,12 @@ export const Header = (props) => {
         return () => {
             window.removeEventListener('resize', handleResize)
         }
-    }, [])
+    }, [videoSource])
 
     return (
         <header id="header">
             <div className="intro">
-                <video autoPlay muted loop playsInline>
+                <video autoPlay muted playsInline loop>
                     <source src={videoSource} type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>

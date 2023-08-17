@@ -18,7 +18,50 @@
             "Strong commitment to punctuality and reliable deliveries"
         ]
     },
-
+    "Services": [
+        {
+            "img": "img/servicesimg/milling.webp",
+            "imgm": "img/servicesimg/milling-s.webp",
+            "alt": "CNC machining equipment",
+            "name": "CNC Machining",
+            "text": "Providing CNC lathe and milling for precise mass production to meet your needs."
+        },
+        {
+            "img": "img/servicesimg/design.webp",
+            "imgm": "img/servicesimg/design-s.webp",
+            "alt": "Product design and engineering",
+            "name": "Product Design, Engineering & Fabrication",
+            "text": "We excel in product design, prototyping, and engineering. Coupled with our top-notch fabrication facilities, we ensure durability and precision in every product."
+        },
+        {
+            "img": "img/servicesimg/maintenance.webp",
+            "imgm": "img/servicesimg/maintenance-s.webp",
+            "alt": "Maintenance and repair tools",
+            "name": "Maintenance & Repair",
+            "text": "We understand the importance of minimizing downtime. That’s why we offer rapid and reliable maintenance and repair services, ensuring your hydraulic systems operate efficiently and trouble-free."
+        },
+        {
+            "img": "img/servicesimg/warranty.webp",
+            "imgm": "img/servicesimg/warranty-s.webp",
+            "alt": "Warranty services badge",
+            "name": "Warranty Services",
+            "text": "Providing warranties for products and handling related claims and repairs."
+        },
+        {
+            "img": "img/servicesimg/safety.webp",
+            "imgm": "img/servicesimg/safety-s.webp",
+            "alt": "Quality control and inspection",
+            "name": "Quality Control and Inspection",
+            "text": "Implementing rigorous quality control processes to ensure that products meet certain standards and specifications."
+        },
+        {
+            "img": "img/servicesimg/sourcing.webp",
+            "imgm": "img/servicesimg/sourcing-s.webp",
+            "alt": "Material sourcing",
+            "name": "Material Sourcing",
+            "text": "Identifying and procuring the necessary raw materials and components to fit with customers product specifications."
+        }
+    ],
     "Portfolio": [
         {
             "title": "Precision Gearing",
@@ -96,50 +139,6 @@
             "imgm": "img/portfolio/gear-s.webp",
             "alt": "Manufactured gear",
             "description": "Our gear manufacturing services provide highly precise and durable gears designed for a wide range of applications. We use advanced technologies to ensure optimal functionality and prolonged service life."
-        }
-    ],
-    "Services": [
-        {
-            "img": "img/servicesimg/milling.webp",
-            "imgm": "img/servicesimg/milling-s.webp",
-            "alt": "CNC machining equipment",
-            "name": "CNC Machining",
-            "text": "Providing CNC lathe and milling for precise mass production to meet your needs."
-        },
-        {
-            "img": "img/servicesimg/design.webp",
-            "imgm": "img/servicesimg/design-s.webp",
-            "alt": "Product design and engineering",
-            "name": "Product Design, Engineering & Fabrication",
-            "text": "We excel in product design, prototyping, and engineering. Coupled with our top-notch fabrication facilities, we ensure durability and precision in every product."
-        },
-        {
-            "img": "img/servicesimg/maintenance.webp",
-            "imgm": "img/servicesimg/maintenance-s.webp",
-            "alt": "Maintenance and repair tools",
-            "name": "Maintenance & Repair",
-            "text": "We understand the importance of minimizing downtime. That’s why we offer rapid and reliable maintenance and repair services, ensuring your hydraulic systems operate efficiently and trouble-free."
-        },
-        {
-            "img": "img/servicesimg/warranty.webp",
-            "imgm": "img/servicesimg/warranty-s.webp",
-            "alt": "Warranty services badge",
-            "name": "Warranty Services",
-            "text": "Providing warranties for products and handling related claims and repairs."
-        },
-        {
-            "img": "img/servicesimg/safety.webp",
-            "imgm": "img/servicesimg/safety-s.webp",
-            "alt": "Quality control and inspection",
-            "name": "Quality Control and Inspection",
-            "text": "Implementing rigorous quality control processes to ensure that products meet certain standards and specifications."
-        },
-        {
-            "img": "img/servicesimg/sourcing.webp",
-            "imgm": "img/servicesimg/sourcing-s.webp",
-            "alt": "Material sourcing",
-            "name": "Material Sourcing",
-            "text": "Identifying and procuring the necessary raw materials and components to fit with customers product specifications."
         }
     ],
     "Clients": [
@@ -228,5 +227,53 @@
         "phone": "+60 85-655 431",
         "fax": "085-656445",
         "email": "hydrapowerenginfo@gmail.com"
-    }
+    },
+    "Product": [
+        {
+            "name": "steel",
+            "image": "",
+            "variants": [
+                {
+                    "name": "Round Bar",
+                    "image": "img/portfolio/heatexchanger.webp",
+                    "variants": [
+                        {
+                            "name": "S45C",
+                            "overview": "S45C is a medium strength steel commonly used in a variety of mechanical applications. Known for its excellent tensile properties and good surface hardness, it's a popular choice for many manufacturers in different industries. S45C is versatile, durable, and responds well to heat treatment, making it a dependable option for many projects.",
+                            "keyFeatures": [
+                                {
+                                    "name": "Medium Carbon Steel",
+                                    "description": "With a carbon content of 0.45%, S45C is designed for a balance between strength and ductility."
+                                }
+                            ],
+                            "commonApplication": [
+                                "Gears and shafts",
+                                "Bolts, nuts, and studs",
+                                "Machine parts and components",
+                                "Tool bodies and blades",
+                                "Mold bases",
+                                "Structural parts in automobiles"
+                            ],
+                            "availability": "Our S45C steel is available in various forms such as barrel, bars, and rods, ensuring that we cater to a wide range of needs. Custom sizing and specifications can be arranged upon request.",
+                            "conclusion": "S45C steel offers a blend of strength, durability, and versatility that makes it a prime choice for numerous applications. Whether you're in the business of manufacturing automotive parts, machinery, or tools, S45C is a reliable steel grade that can meet diverse demands. Trust in its consistent quality and performance for your next project."
+                        }
+                    ]
+                },
+                {
+                    "name": "Hollow Bar",
+                    "image": "img/portfolio/heatexchanger.webp",
+                    "description": "Description for 316 STAINLESS STEEL"
+                },
+                {
+                    "name": "Chrome Bar",
+                    "image": "img/portfolio/heatexchanger.webp",
+                    "description": "Description for MILD STEEL"
+                }
+            ]
+        },
+        {
+            "name": "gear",
+            "image": ""
+        }
+    ]
 }

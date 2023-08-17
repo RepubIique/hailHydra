@@ -2,7 +2,6 @@ body,
 html {
     font-family: 'Open Sans', sans-serif;
     text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
     color: #777;
     font-weight: 400;
     width: 100% !important;
@@ -90,6 +89,24 @@ hr {
 }
 .section-title p {
     font-size: 18px;
+}
+
+.main-content {
+    min-height: calc(
+        100vh - 100px
+    ); /* Adjust 100px to match the height of your footer */
+    position: relative;
+    padding-bottom: 100px; /* Space for the footer */
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Features Section */
