@@ -6,16 +6,16 @@ export const ProductBreadcrumb = ({}) => {
     const { productName, variantName, subVariantName } = useParams()
 
     return (
-        <Breadcrumb>
+        <Breadcrumb className="breadcrumbs">
             <Breadcrumb.Item linkAs={Link} linkProps={{ to: '/products' }}>
-                <h2>Product</h2>
+                Product
             </Breadcrumb.Item>
             {productName && (
                 <Breadcrumb.Item
                     linkAs={Link}
                     linkProps={{ to: `/products/${productName}` }}
                 >
-                    <h2>{productName}</h2>
+                    {productName}
                 </Breadcrumb.Item>
             )}
             {variantName && (
@@ -25,7 +25,7 @@ export const ProductBreadcrumb = ({}) => {
                         to: `/products/${productName}/${variantName}`,
                     }}
                 >
-                    <h2>{variantName}</h2>
+                    {variantName}
                 </Breadcrumb.Item>
             )}
             {subVariantName && (
@@ -35,7 +35,7 @@ export const ProductBreadcrumb = ({}) => {
                         to: `/products/${productName}/${variantName}/${subVariantName}`,
                     }}
                 >
-                    <h2>{subVariantName}</h2>
+                    {subVariantName}
                 </Breadcrumb.Item>
             )}
         </Breadcrumb>

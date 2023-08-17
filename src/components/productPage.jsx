@@ -55,6 +55,7 @@ export const ProductPage = (props) => {
     }
 
     const handleSubVariantClick = (subVariant) => {
+        setCurrentSubVariant(subVariant)
         navigate(
             `/products/${currentProduct.name}/${currentVariant.name}/${subVariant.name}`
         )
@@ -79,11 +80,15 @@ export const ProductPage = (props) => {
                         <Row>
                             <Col>
                                 <div className="section-title">
-                                    <ProductBreadcrumb
-                                        productName={currentProduct?.name}
-                                        variantName={currentVariant}
-                                        subVariantName={currentSubVariant}
-                                    />
+                                    <h2>
+                                        {' '}
+                                        <ProductBreadcrumb
+                                            productName={currentProduct?.name}
+                                            variantName={currentVariant}
+                                            subVariantName={currentSubVariant}
+                                        />
+                                    </h2>
+
                                     <p>
                                         Browse, shop or get a quote on over
                                         2,000 steel products right here. Select

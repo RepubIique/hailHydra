@@ -104,10 +104,11 @@ hr {
     justify-content: center;
 }
 
-.breadcrumbs h2 {
-    color: white;
+.breadcrumb-item a {
     text-decoration: none;
+    color: black;
 }
+
 /* Features Section */
 /* #features {
     background: #f6f6f6;
