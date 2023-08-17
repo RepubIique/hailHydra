@@ -4,32 +4,23 @@ import '../styles/product.css'
 import { ProductBreadcrumb } from './productBreadcrumbs'
 import { useNavigate, useParams } from 'react-router-dom'
 
+const RenderCard = ({ item, onClick }) => (
+    <Col className="products">
+        <Card className="card" border="white" onClick={onClick}>
+            <Card.Img className="product-img" variant="top" src={item.image} />
+            <Card.Body className="product-body">
+                <Card.Title>{item.name}</Card.Title>
+            </Card.Body>
+        </Card>
+    </Col>
+)
+
 export const ProductPage = (props) => {
     const [currentProduct, setCurrentProduct] = useState(null)
     const [currentVariant, setCurrentVariant] = useState(null)
     const [currentSubVariant, setCurrentSubVariant] = useState(null)
     const navigate = useNavigate()
     const { productName, variantName, subVariantName } = useParams()
-
-    const handleProductClick = (product) => {
-        setCurrentProduct(product)
-        setCurrentVariant(null)
-        setCurrentSubVariant(null)
-        navigate(`/products/${product.name}`)
-    }
-
-    const handleVariantClick = (variant) => {
-        setCurrentVariant(variant)
-        setCurrentSubVariant(null)
-        navigate(`/products/${currentProduct.name}/${variant.name}`)
-    }
-
-    const handleSubVariantClick = (subVariant) => {
-        setCurrentSubVariant(subVariant)
-        navigate(
-            `/products/${currentProduct.name}/${currentVariant.name}/${subVariant.name}`
-        )
-    }
 
     useEffect(() => {
         if (props.data) {
@@ -50,7 +41,33 @@ export const ProductPage = (props) => {
                 setCurrentSubVariant(subVariant)
             }
         }
-    }, [productName, variantName, subVariantName, props.data, navigate])
+    }, [productName, variantName, subVariantName, props.data])
+
+    const handleProductClick = (product) => {
+        setCurrentProduct(product)
+        setCurrentVariant(null)
+        navigate(`/products/${product.name}`)
+    }
+
+    const handleVariantClick = (variant) => {
+        setCurrentVariant(variant)
+        navigate(`/products/${currentProduct.name}/${variant.name}`)
+    }
+
+    const handleSubVariantClick = (subVariant) => {
+        navigate(
+            `/products/${currentProduct.name}/${currentVariant.name}/${subVariant.name}`
+        )
+    }
+
+    const renderItems = (items, clickHandler) =>
+        items.map((item, index) => (
+            <RenderCard
+                key={index}
+                item={item}
+                onClick={() => clickHandler(item)}
+            />
+        ))
 
     return (
         <>
@@ -88,88 +105,17 @@ export const ProductPage = (props) => {
                                     {/* Code to render the selected sub-variant details */}
                                 </div>
                             ) : currentVariant ? (
-                                // Render sub-variants of selected variant
-                                currentVariant.variants.map(
-                                    (subVariant, index) => (
-                                        <Col key={index} className="products">
-                                            <Card
-                                                className="card"
-                                                border="white"
-                                                onClick={() =>
-                                                    handleSubVariantClick(
-                                                        subVariant
-                                                    )
-                                                }
-                                            >
-                                                <Card.Img
-                                                    className="product-img"
-                                                    variant="top"
-                                                    src={subVariant.image}
-                                                />
-                                                <Card.Body className="product-body">
-                                                    <Card.Title>
-                                                        {subVariant.name}
-                                                    </Card.Title>
-                                                </Card.Body>
-                                            </Card>
-                                        </Col>
-                                    )
+                                renderItems(
+                                    currentVariant.variants,
+                                    handleSubVariantClick
                                 )
                             ) : currentProduct ? (
-                                // Render variants of selected product
-                                currentProduct.variants.map(
-                                    (variant, index) => (
-                                        <Col key={index} className="products">
-                                            <Card
-                                                className="card"
-                                                border="white"
-                                                onClick={() =>
-                                                    handleVariantClick(variant)
-                                                }
-                                            >
-                                                <Card.Img
-                                                    className="product-img"
-                                                    variant="top"
-                                                    src={variant.image}
-                                                />
-                                                <Card.Body className="product-body">
-                                                    <Card.Title>
-                                                        {variant.name}
-                                                    </Card.Title>
-                                                </Card.Body>
-                                            </Card>
-                                        </Col>
-                                    )
+                                renderItems(
+                                    currentProduct.variants,
+                                    handleVariantClick
                                 )
                             ) : (
-                                // Render product list
-                                props.data?.map((product, index) => (
-                                    <Col
-                                        md={4}
-                                        sm={2}
-                                        key={`${product.name}-${index}`}
-                                        className="products"
-                                    >
-                                        <Card
-                                            className="card"
-                                            border="white"
-                                            onClick={() =>
-                                                handleProductClick(product)
-                                            }
-                                        >
-                                            <Card.Img
-                                                className="product-img"
-                                                variant="top"
-                                                src={product.image}
-                                            />
-                                            <Card.Body className="product-body">
-                                                <Card.Title>
-                                                    {product.name}
-                                                </Card.Title>
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                ))
+                                renderItems(props.data, handleProductClick)
                             )}
                         </Row>
                     </Container>
