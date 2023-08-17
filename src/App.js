@@ -11,7 +11,7 @@ import { Contact } from './components/contact'
 import JsonData from './data/data.json'
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Product } from './components/product'
+import { ProductPage } from './components/productPage'
 import Footer from './components/footer'
 
 const App = () => {
@@ -40,16 +40,9 @@ const App = () => {
                     }
                 />
                 <Route
-                    path="/product"
-                    element={<Product data={landingPageData.Product} />}
-                >
-                    {/* <Route path=":productName" element={<ProductDetail />}>
-                        <Route
-                            path=":variantName"
-                            element={<VariantDetail />}
-                        />
-                    </Route> */}
-                </Route>
+                    path="/products/:productName?/:variantName?/:subVariantName?"
+                    element={<ProductPage data={landingPageData.Product} />}
+                />
             </Routes>
             <Footer />
         </Router>

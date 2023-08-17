@@ -54,7 +54,7 @@ export const Navigation = (props) => {
                         >
                             Services
                         </Nav.Link>
-                        <Link className="nav-link" to="/product">
+                        <Link className="nav-link" to="/products">
                             Products
                         </Link>
                         <Nav.Link onClick={() => handleNavLinkClick('about')}>
