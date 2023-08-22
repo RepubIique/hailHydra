@@ -38,16 +38,13 @@
     position: relative;
     z-index: 1;
 }
+
 @media (max-width: 767px) {
     .champ {
         height: 400px;
-        background: url(../../public/img/about.webp) center;
+        background-position: center;
         background-size: cover;
     }
-}
-
-.lazy-load {
-    background-image: url(../../public/img/about.webp);
 }
 
 #about p {

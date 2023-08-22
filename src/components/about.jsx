@@ -1,28 +1,19 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 import '../styles/about.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import champImg from '../assets/about.webp'
 
 export const About = (props) => {
-    const champRef = useRef(null)
-
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                champRef.current.classList.add('lazy-load')
-            }
-        })
-
-        observer.observe(champRef.current)
-
-        return () => observer.disconnect()
-    }, [])
     return (
         <div id="about">
             <Row>
                 <Col xs={12} lg={6}>
-                    <div className="champ" ref={champRef}></div>
+                    <div
+                        className="champ"
+                        style={{ backgroundImage: `url(${champImg})` }}
+                    ></div>
                 </Col>
                 <Col xs={12} lg={6}>
                     <div className="about-text">
