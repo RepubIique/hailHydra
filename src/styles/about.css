@@ -41,7 +41,7 @@
 
 @media (max-width: 767px) {
     .champ {
-        height: 400px;
+        height: auto;
         background-position: center;
         background-size: cover;
     }
