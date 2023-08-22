@@ -32,7 +32,12 @@ export const Navigation = (props) => {
         >
             <Container>
                 <Navbar.Brand onClick={() => handleNavLinkClick('header')}>
-                    <img alt="Company Logo" src="/img/flogo.png" height="60" />
+                    <img
+                        loading="lazy"
+                        alt="Company Logo"
+                        src="/img/flogo.webp"
+                        height="60"
+                    />
                 </Navbar.Brand>
                 <button
                     onClick={handleMenuClick}
