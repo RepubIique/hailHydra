@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../styles/services.css'
 
-export const Services = (props) => {
+export default function Services(props) {
     return (
         <div id="services" className="text-center">
             <Container>

@@ -3,7 +3,7 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import '../styles/portfolio.css'
 
-export const Portfolio = (props) => {
+export default function Portfolio(props) {
     return (
         <div id="portfolio" className="text-center">
             <Container>

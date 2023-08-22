@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Navigation } from './components/navigation'
 import { Header } from './components/header'
-import { About } from './components/about'
-import { Services } from './components/services'
-import { Portfolio } from './components/portfolio'
 import { Clients } from './components/clients'
 import { Member } from './components/member'
 import { Contact } from './components/contact'
@@ -13,6 +10,10 @@ import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { ProductPage } from './components/productPage'
 import Footer from './components/footer'
+
+const About = React.lazy(() => import('./components/about'))
+const Services = React.lazy(() => import('./components/services'))
+const Portfolio = React.lazy(() => import('./components/portfolio'))
 
 const App = () => {
     const [landingPageData, setLandingPageData] = useState({})
@@ -26,17 +27,18 @@ const App = () => {
             <Routes>
                 <Route
                     path="/"
-                    className="main-content"
                     element={
-                        <>
+                        <div className="main-content">
                             <Header data={landingPageData.Header} />
-                            <Services data={landingPageData.Services} />
-                            <About data={landingPageData.About} />
-                            <Portfolio data={landingPageData.Portfolio} />
+                            <React.Suspense fallback={<div>Loading...</div>}>
+                                <Services data={landingPageData.Services} />
+                                <About data={landingPageData.About} />
+                                <Portfolio data={landingPageData.Portfolio} />
+                            </React.Suspense>
                             <Clients data={landingPageData.Clients} />
                             <Member data={landingPageData.Team} />
                             <Contact data={landingPageData.Contact} />
-                        </>
+                        </div>
                     }
                 />
                 <Route

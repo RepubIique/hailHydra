@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import champImg from '../assets/about.webp'
 
-export const About = (props) => {
+export default function About(props) {
     return (
         <div id="about">
             <Row>
