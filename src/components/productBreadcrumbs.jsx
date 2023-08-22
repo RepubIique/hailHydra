@@ -2,7 +2,7 @@ import React from 'react'
 import { Breadcrumb } from 'react-bootstrap'
 import { Link, useParams } from 'react-router-dom'
 
-export const ProductBreadcrumb = ({}) => {
+export const ProductBreadcrumb = () => {
     const { productName, variantName, subVariantName } = useParams()
 
     return (

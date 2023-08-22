@@ -41,7 +41,7 @@ export const ProductPage = (props) => {
                 setCurrentSubVariant(subVariant)
             }
         }
-    }, [productName, variantName, subVariantName, props.data])
+    }, [productName, variantName, subVariantName, currentVariant, props.data])
 
     const handleProductClick = (product) => {
         setCurrentProduct(product)
