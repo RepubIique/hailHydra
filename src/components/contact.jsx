@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, Suspense, useCallback } from 'react'
 import { Container, Row, Col, Form, Button, ListGroup } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
@@ -7,9 +7,47 @@ import {
     faEnvelope,
     faFax,
 } from '@fortawesome/free-solid-svg-icons'
-import GoogleMaps from './googleMaps'
+import LazyGoogleMaps from './lazyLoadGoogleMaps'
 import '../styles/contact.css'
 import emailjs from '@emailjs/browser'
+
+const ContactInfo = React.memo(({ data }) => (
+    <ListGroup>
+        <ListGroup.Item>
+            <h3>Contact Info</h3>
+            <p>
+                <span>
+                    <FontAwesomeIcon icon={faMapMarker} /> Address:
+                </span>
+                {data ? data.address : 'loading'}
+            </p>
+        </ListGroup.Item>
+        <ListGroup.Item>
+            <p>
+                <span>
+                    <FontAwesomeIcon icon={faPhone} /> Phone:
+                </span>{' '}
+                {data ? data.phone : 'loading'}
+            </p>
+        </ListGroup.Item>
+        <ListGroup.Item>
+            <p>
+                <span>
+                    <FontAwesomeIcon icon={faFax} /> Fax:
+                </span>{' '}
+                {data ? data.fax : 'loading'}
+            </p>
+        </ListGroup.Item>
+        <ListGroup.Item>
+            <p>
+                <span>
+                    <FontAwesomeIcon icon={faEnvelope} /> Email:
+                </span>{' '}
+                {data ? data.email : 'loading'}
+            </p>
+        </ListGroup.Item>
+    </ListGroup>
+))
 
 export const Contact = (props) => {
     const formRef = useRef()
@@ -21,52 +59,58 @@ export const Contact = (props) => {
 
     const [loading, setLoading] = useState(false)
 
-    const handleChange = (e) => {
-        const { target } = e
-        const { name, value } = target
+    const handleChange = useCallback(
+        (e) => {
+            const { target } = e
+            const { name, value } = target
 
-        setForm({
-            ...form,
-            [name]: value,
-        })
-    }
+            setForm({
+                ...form,
+                [name]: value,
+            })
+        },
+        [form]
+    )
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setLoading(true)
+    const handleSubmit = useCallback(
+        (e) => {
+            e.preventDefault()
+            setLoading(true)
 
-        emailjs
-            .send(
-                process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-                {
-                    from_name: form.name,
-                    to_name: 'HydraPower Engineering',
-                    from_email: form.email,
-                    to_email: 'hydrapowerenginfo@gmail.com',
-                    message: form.message,
-                },
-                process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-            )
-            .then(
-                () => {
-                    setLoading(false)
-                    alert(
-                        'Thank you. We will get back to you as soon as possible.'
-                    )
+            emailjs
+                .send(
+                    process.env.REACT_APP_EMAILJS_SERVICE_ID,
+                    process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                    {
+                        from_name: form.name,
+                        to_name: 'HydraPower Engineering',
+                        from_email: form.email,
+                        to_email: 'hydrapowerenginfo@gmail.com',
+                        message: form.message,
+                    },
+                    process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+                )
+                .then(
+                    () => {
+                        setLoading(false)
+                        alert(
+                            'Thank you. We will get back to you as soon as possible.'
+                        )
 
-                    setForm({
-                        name: '',
-                        email: '',
-                        message: '',
-                    })
-                },
-                (error) => {
-                    setLoading(false)
-                    alert('Ahh, something went wrong. Please try again.')
-                }
-            )
-    }
+                        setForm({
+                            name: '',
+                            email: '',
+                            message: '',
+                        })
+                    },
+                    (error) => {
+                        setLoading(false)
+                        alert('Ahh, something went wrong. Please try again.')
+                    }
+                )
+        },
+        [form]
+    )
 
     return (
         <div id="contact" className="text-center">
@@ -75,7 +119,9 @@ export const Contact = (props) => {
                     <h2>Contact Us</h2>
                 </Col>
                 <Row>
-                    <GoogleMaps />
+                    <Suspense fallback={<div>Loading map...</div>}>
+                        <LazyGoogleMaps />
+                    </Suspense>
                 </Row>
                 <Row>
                     <Col md={8}>
@@ -135,46 +181,7 @@ export const Contact = (props) => {
                         </Form>
                     </Col>
                     <Col md={{ span: 3, offset: 1 }} className="contact-info">
-                        <ListGroup>
-                            <ListGroup.Item>
-                                <h3>Contact Info</h3>
-                                <p>
-                                    <span>
-                                        <FontAwesomeIcon icon={faMapMarker} />{' '}
-                                        Address:
-                                    </span>
-                                    {props.data
-                                        ? props.data.address
-                                        : 'loading'}
-                                </p>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                <p>
-                                    <span>
-                                        <FontAwesomeIcon icon={faPhone} />{' '}
-                                        Phone:
-                                    </span>{' '}
-                                    {props.data ? props.data.phone : 'loading'}
-                                </p>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                <p>
-                                    <span>
-                                        <FontAwesomeIcon icon={faFax} /> Fax:
-                                    </span>{' '}
-                                    {props.data ? props.data.fax : 'loading'}
-                                </p>
-                            </ListGroup.Item>
-                            <ListGroup.Item>
-                                <p>
-                                    <span>
-                                        <FontAwesomeIcon icon={faEnvelope} />{' '}
-                                        Email:
-                                    </span>{' '}
-                                    {props.data ? props.data.email : 'loading'}
-                                </p>
-                            </ListGroup.Item>
-                        </ListGroup>
+                        <ContactInfo data={props.data} />
                     </Col>
                 </Row>
             </Container>
