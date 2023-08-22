@@ -89,26 +89,89 @@ export const ProductPage = (props) => {
                                         />
                                     </h2>
 
-                                    <p>
-                                        Browse, shop or get a quote on over
-                                        2,000 steel products right here. Select
-                                        from the products below and start your
-                                        online steel order or quote.
-                                    </p>
-                                    <p>
-                                        We help you get the right steel for your
-                                        next project here online or Contact Us
-                                        with any questions.
-                                    </p>
+                                    {currentSubVariant ? (
+                                        <div></div>
+                                    ) : (
+                                        <div>
+                                            <p>
+                                                Browse, shop or get a quote on
+                                                over 2,000 steel products right
+                                                here. Select from the products
+                                                below and start your online
+                                                steel order or quote.
+                                            </p>
+                                            <p>
+                                                We help you get the right steel
+                                                for your next project here
+                                                online or Contact Us with any
+                                                questions.
+                                            </p>
+                                        </div>
+                                    )}
                                 </div>
                             </Col>
                         </Row>
                         <Row>
                             {currentSubVariant ? (
                                 // Render sub-variant details here
-                                <div>
-                                    {/* Code to render the selected sub-variant details */}
-                                </div>
+                                <Container>
+                                    <Row>
+                                        <Col>
+                                            <h2>{currentSubVariant.name}</h2>
+
+                                            <p>{currentSubVariant.overview}</p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <h3>Key Features</h3>
+                                            <ul>
+                                                {currentSubVariant.keyFeatures.map(
+                                                    (feature, index) => (
+                                                        <li key={index}>
+                                                            <strong>
+                                                                {feature.name}:{' '}
+                                                            </strong>
+                                                            {
+                                                                feature.description
+                                                            }
+                                                        </li>
+                                                    )
+                                                )}
+                                            </ul>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <h3>Common Applications</h3>
+                                            <ul>
+                                                {currentSubVariant.commonApplication.map(
+                                                    (application, index) => (
+                                                        <li key={index}>
+                                                            {application}
+                                                        </li>
+                                                    )
+                                                )}
+                                            </ul>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <h3>Availability</h3>
+                                            <p>
+                                                {currentSubVariant.availability}
+                                            </p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col>
+                                            <h3>Conclusion</h3>
+                                            <p>
+                                                {currentSubVariant.conclusion}
+                                            </p>
+                                        </Col>
+                                    </Row>
+                                </Container>
                             ) : currentVariant ? (
                                 renderItems(
                                     currentVariant.variants,
