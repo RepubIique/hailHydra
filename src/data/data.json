@@ -238,13 +238,120 @@
                     "image": "img/portfolio/heatexchanger.webp",
                     "variants": [
                         {
-                            "name": "S45C",
+                            "name": "1045/S45C",
                             "image": "",
                             "overview": "S45C is a medium strength steel commonly used in a variety of mechanical applications. Known for its excellent tensile properties and good surface hardness, it's a popular choice for many manufacturers in different industries. S45C is versatile, durable, and responds well to heat treatment, making it a dependable option for many projects.",
                             "keyFeatures": [
                                 {
                                     "name": "Medium Carbon Steel",
                                     "description": "With a carbon content of 0.45%, S45C is designed for a balance between strength and ductility."
+                                },
+                                {
+                                    "name": "Heat Treatment Response",
+                                    "description": "This steel is well-suited for heat treatment, allowing for hardness customization depending on your needs."
+                                },
+                                {
+                                    "name": "Excellent Tensile Strength",
+                                    "description": "S45C has commendable tensile properties, ensuring it can withstand substantial mechanical stresses."
+                                },
+                                {
+                                    "name": "Good Surface Hardness:",
+                                    "description": "Its natural resistance to wear makes it apt for applications requiring high durability and resistance to abrasion."
+                                },
+                                {
+                                    "name": "Machinability",
+                                    "description": "S45C steel exhibits good machinability, allowing manufacturers to shape and mold as needed for specific applications."
+                                },
+                                {
+                                    "name": "Weldability",
+                                    "description": "While it's advisable to take precautions when welding, with the right techniques, S45C can be effectively joined to other components."
+                                }
+                            ],
+                            "commonApplication": [
+                                "Gears and shafts",
+                                "Bolts, nuts, and studs",
+                                "Machine parts and components",
+                                "Tool bodies and blades",
+                                "Mold bases",
+                                "Structural parts in automobiles"
+                            ],
+                            "availability": "Our S45C steel is available in various forms such as barrel, bars, and rods, ensuring that we cater to a wide range of needs. Custom sizing and specifications can be arranged upon request.",
+                            "conclusion": "S45C steel offers a blend of strength, durability, and versatility that makes it a prime choice for numerous applications. Whether you're in the business of manufacturing automotive parts, machinery, or tools, S45C is a reliable steel grade that can meet diverse demands. Trust in its consistent quality and performance for your next project."
+                        },
+                        {
+                            "name": "709/4140",
+                            "image": "",
+                            "overview": "709 steel, also known as chromoly steel, is a chromium-molybdenum alloy steel recognized for its outstanding strength, toughness, and versatility. With its exceptional hardness and resistance to wear, it has been extensively utilized in various industrial applications, making it one of the preferred choices for manufacturers worldwide.",
+                            "keyFeatures": [
+                                {
+                                    "name": "Alloyed for Excellence",
+                                    "description": "With chromium and molybdenum as primary alloying elements, 709 steel boasts enhanced hardness, strength, and wear resistance."
+                                },
+                                {
+                                    "name": "Heat Treatment Response",
+                                    "description": "709 is renowned for its adaptability to different heat treatments, allowing users to achieve a diverse range of mechanical properties depending on requirements."
+                                },
+                                {
+                                    "name": "High Tensile & Yield Strength",
+                                    "description": "Designed to withstand significant stresses, this steel showcases excellent tensile and yield strengths, ensuring durability in demanding scenarios."
+                                },
+                                {
+                                    "name": "Superior Hardness",
+                                    "description": "The steels inherent hardness properties make it resistant to wear and abrasion, even in high friction environments."
+                                },
+                                {
+                                    "name": "Machinability",
+                                    "description": "709 offers good machinability in the annealed condition, allowing for efficient processing and design flexibility."
+                                },
+                                {
+                                    "name": "Weldability",
+                                    "description": "While preheating and post-weld procedures are recommended, 709 steel can be effectively welded using appropriate techniques."
+                                }
+                            ],
+                            "commonApplication": [
+                                "Axles and shafts",
+                                "Bolts, nuts, and gears",
+                                "Tooling and drill rods",
+                                "Machine parts, especially in the oil and gas industry",
+                                "Structural components in motor engines and aircraft"
+                            ],
+                            "availability": "We offer 709 steel in various forms, including bars and rods, tailored to meet your project requirements. Custom dimensions and specifications can be arranged upon request.",
+                            "conclusion": "709 steel stands as a benchmark in the world of alloy steels, blending unparalleled strength with adaptability. Whether you’re embarking on a large-scale industrial project or require precision parts for intricate applications, 709 steel promises performance that never compromises on quality."
+                        }
+                    ]
+                },
+                {
+                    "name": "Hollow Bar",
+                    "image": "img/portfolio/heatexchanger.webp",
+                    "variants": [
+                        {
+                            "name": "1045/S45C",
+                            "image": "",
+                            "overview": "S45C is a medium strength steel commonly used in a variety of mechanical applications. Known for its excellent tensile properties and good surface hardness, it's a popular choice for many manufacturers in different industries. S45C is versatile, durable, and responds well to heat treatment, making it a dependable option for many projects.",
+                            "keyFeatures": [
+                                {
+                                    "name": "Medium Carbon Steel",
+                                    "description": "With a carbon content of 0.45%, S45C is designed for a balance between strength and ductility."
+                                },
+                                {
+                                    "name": "Heat Treatment Response",
+                                    "description": "This steel is well-suited for heat treatment, allowing for hardness customization depending on your needs."
+                                },
+                                {
+                                    "name": "Excellent Tensile Strength",
+                                    "description": "S45C has commendable tensile properties, ensuring it can withstand substantial mechanical stresses."
+                                },
+                                {
+                                    "name": "Good Surface Hardness:",
+                                    "description": "Its natural resistance to wear makes it apt for applications requiring high durability and resistance to abrasion."
+                                },
+                                {
+                                    "name": "Machinability",
+                                    "description": "S45C steel exhibits good machinability, allowing manufacturers to shape and mold as needed for specific applications."
+                                },
+                                {
+                                    "name": "Weldability",
+                                    "description": "While it's advisable to take precautions when welding, with the right techniques, S45C can be effectively joined to other components."
                                 }
                             ],
                             "commonApplication": [
@@ -261,14 +368,51 @@
                     ]
                 },
                 {
-                    "name": "Hollow Bar",
-                    "image": "img/portfolio/heatexchanger.webp",
-                    "description": "Description for 316 STAINLESS STEEL"
-                },
-                {
                     "name": "Chrome Bar",
                     "image": "img/portfolio/heatexchanger.webp",
-                    "description": "Description for MILD STEEL"
+                    "variants": [
+                        {
+                            "name": "1045/S45C",
+                            "image": "",
+                            "overview": "S45C is a medium strength steel commonly used in a variety of mechanical applications. Known for its excellent tensile properties and good surface hardness, it's a popular choice for many manufacturers in different industries. S45C is versatile, durable, and responds well to heat treatment, making it a dependable option for many projects.",
+                            "keyFeatures": [
+                                {
+                                    "name": "Medium Carbon Steel",
+                                    "description": "With a carbon content of 0.45%, S45C is designed for a balance between strength and ductility."
+                                },
+                                {
+                                    "name": "Heat Treatment Response",
+                                    "description": "This steel is well-suited for heat treatment, allowing for hardness customization depending on your needs."
+                                },
+                                {
+                                    "name": "Excellent Tensile Strength",
+                                    "description": "S45C has commendable tensile properties, ensuring it can withstand substantial mechanical stresses."
+                                },
+                                {
+                                    "name": "Good Surface Hardness:",
+                                    "description": "Its natural resistance to wear makes it apt for applications requiring high durability and resistance to abrasion."
+                                },
+                                {
+                                    "name": "Machinability",
+                                    "description": "S45C steel exhibits good machinability, allowing manufacturers to shape and mold as needed for specific applications."
+                                },
+                                {
+                                    "name": "Weldability",
+                                    "description": "While it's advisable to take precautions when welding, with the right techniques, S45C can be effectively joined to other components."
+                                }
+                            ],
+                            "commonApplication": [
+                                "Gears and shafts",
+                                "Bolts, nuts, and studs",
+                                "Machine parts and components",
+                                "Tool bodies and blades",
+                                "Mold bases",
+                                "Structural parts in automobiles"
+                            ],
+                            "availability": "Our S45C steel is available in various forms such as barrel, bars, and rods, ensuring that we cater to a wide range of needs. Custom sizing and specifications can be arranged upon request.",
+                            "conclusion": "S45C steel offers a blend of strength, durability, and versatility that makes it a prime choice for numerous applications. Whether you're in the business of manufacturing automotive parts, machinery, or tools, S45C is a reliable steel grade that can meet diverse demands. Trust in its consistent quality and performance for your next project."
+                        }
+                    ]
                 }
             ]
         },
