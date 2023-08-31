@@ -8,7 +8,7 @@ import { Contact } from './components/contact'
 import JsonData from './data/data.json'
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { ProductPage } from './components/productPage'
+import { ProductList } from './components/productList'
 import Footer from './components/footer'
 
 const About = React.lazy(() => import('./components/about'))
@@ -43,7 +43,7 @@ const App = () => {
                 />
                 <Route
                     path="/products/:productName?/:variantName?/:subVariantName?"
-                    element={<ProductPage data={landingPageData.Product} />}
+                    element={<ProductList data={landingPageData.Product} />}
                 />
             </Routes>
             <Footer />
