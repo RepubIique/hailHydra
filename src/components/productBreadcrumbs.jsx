@@ -5,13 +5,6 @@ import { Link, useParams } from 'react-router-dom'
 export const ProductBreadcrumb = () => {
     const { productName, variantName, subVariantName } = useParams()
 
-    // Debugging: Log the current route parameters
-    console.log('Current Params: ', {
-        productName,
-        variantName,
-        subVariantName,
-    })
-
     return (
         <Breadcrumb className="breadcrumbs">
             <Breadcrumb.Item linkAs={Link} linkProps={{ to: '/products' }}>
