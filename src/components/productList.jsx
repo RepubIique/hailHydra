@@ -58,7 +58,7 @@ export const ProductList = (props) => {
         )
     }
 
-    const renderItems = (items, clickHandler) =>
+    const renderCard = (items, clickHandler) =>
         items.map((item, index) => (
             <ProductCard
                 key={index}
@@ -113,17 +113,17 @@ export const ProductList = (props) => {
                                 // Render sub-variant details here
                                 <ProductPage props={currentSubVariant} />
                             ) : currentVariant ? (
-                                renderItems(
+                                renderCard(
                                     currentVariant.variants,
                                     handleSubVariantClick
                                 )
                             ) : currentProduct ? (
-                                renderItems(
+                                renderCard(
                                     currentProduct.variants,
                                     handleVariantClick
                                 )
                             ) : (
-                                renderItems(props.data, handleProductClick)
+                                renderCard(props.data, handleProductClick)
                             )}
                         </Row>
                     </Container>
