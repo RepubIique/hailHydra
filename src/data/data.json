@@ -231,15 +231,15 @@
     "Product": [
         {
             "name": "steel",
-            "image": "",
+            "image": "img/portfolio/biggear.webp",
             "variants": [
                 {
                     "name": "Round Bar",
-                    "image": "img/portfolio/heatexchanger.webp",
+                    "image": "../img/products/round.png",
                     "variants": [
                         {
-                            "name": "1045/S45C",
-                            "image": "",
+                            "name": "S45C",
+                            "image": "../../../img/products/hollow.png",
                             "overview": "S45C is a medium strength steel commonly used in a variety of mechanical applications. Known for its excellent tensile properties and good surface hardness, it's a popular choice for many manufacturers in different industries. S45C is versatile, durable, and responds well to heat treatment, making it a dependable option for many projects.",
                             "keyFeatures": [
                                 {
@@ -279,7 +279,7 @@
                             "conclusion": "S45C steel offers a blend of strength, durability, and versatility that makes it a prime choice for numerous applications. Whether you're in the business of manufacturing automotive parts, machinery, or tools, S45C is a reliable steel grade that can meet diverse demands. Trust in its consistent quality and performance for your next project."
                         },
                         {
-                            "name": "709/4140",
+                            "name": "709",
                             "image": "",
                             "overview": "709 steel, also known as chromoly steel, is a chromium-molybdenum alloy steel recognized for its outstanding strength, toughness, and versatility. With its exceptional hardness and resistance to wear, it has been extensively utilized in various industrial applications, making it one of the preferred choices for manufacturers worldwide.",
                             "keyFeatures": [
@@ -322,11 +322,11 @@
                 },
                 {
                     "name": "Hollow Bar",
-                    "image": "img/portfolio/heatexchanger.webp",
+                    "image": "../img/products/hollow.png",
                     "variants": [
                         {
-                            "name": "1045/S45C",
-                            "image": "",
+                            "name": "S45C",
+                            "image": "../../img/products/hollow.png",
                             "overview": "S45C is a medium strength steel commonly used in a variety of mechanical applications. Known for its excellent tensile properties and good surface hardness, it's a popular choice for many manufacturers in different industries. S45C is versatile, durable, and responds well to heat treatment, making it a dependable option for many projects.",
                             "keyFeatures": [
                                 {
@@ -369,10 +369,10 @@
                 },
                 {
                     "name": "Chrome Bar",
-                    "image": "img/portfolio/heatexchanger.webp",
+                    "image": "../img/products/chrome.png",
                     "variants": [
                         {
-                            "name": "1045/S45C",
+                            "name": "S45C",
                             "image": "",
                             "overview": "S45C is a medium strength steel commonly used in a variety of mechanical applications. Known for its excellent tensile properties and good surface hardness, it's a popular choice for many manufacturers in different industries. S45C is versatile, durable, and responds well to heat treatment, making it a dependable option for many projects.",
                             "keyFeatures": [
@@ -415,10 +415,6 @@
                     ]
                 }
             ]
-        },
-        {
-            "name": "gear",
-            "image": ""
         }
     ]
 }

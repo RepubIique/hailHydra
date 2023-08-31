@@ -117,8 +117,14 @@ export const ProductPage = (props) => {
                                 <Container>
                                     <Row>
                                         <Col>
+                                            <img
+                                                loading="lazy"
+                                                src={currentSubVariant.image}
+                                                alt={currentSubVariant.alt}
+                                            />
+                                        </Col>
+                                        <Col>
                                             <h2>{currentSubVariant.name}</h2>
-
                                             <p>{currentSubVariant.overview}</p>
                                         </Col>
                                     </Row>

@@ -60,9 +60,9 @@ export const Navigation = (props) => {
                         >
                             Services
                         </Nav.Link>
-                        {/* <Link className="nav-link" to="/products">
+                        <Link className="nav-link" to="/products">
                             Products
-                        </Link> */}
+                        </Link>
                         <Nav.Link onClick={() => handleNavLinkClick('about')}>
                             About
                         </Nav.Link>
