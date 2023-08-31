@@ -23,6 +23,9 @@ export const ProductList = (props) => {
                     (v) => v.name === variantName
                 )
                 setCurrentVariant(variant)
+            } else if (!variantName) {
+                // Handle the case where variantName becomes undefined
+                setCurrentVariant(null)
             }
 
             if (subVariantName && currentVariant) {
@@ -30,6 +33,9 @@ export const ProductList = (props) => {
                     (v) => v.name === subVariantName
                 )
                 setCurrentSubVariant(subVariant)
+            } else if (!subVariantName) {
+                // Handle the case where subVariantName becomes undefined
+                setCurrentSubVariant(null)
             }
         }
     }, [productName, variantName, subVariantName, currentVariant, props.data])
