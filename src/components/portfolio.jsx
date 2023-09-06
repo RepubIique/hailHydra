@@ -1,6 +1,6 @@
 import { ImageComponent } from './image'
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Carousel } from 'react-bootstrap'
 import '../styles/portfolio.css'
 
 export default function Portfolio(props) {
@@ -16,10 +16,13 @@ export default function Portfolio(props) {
                         consistent client satisfaction."
                     </p>
                 </div>
-                <Row>
+                <Carousel>
                     {props.data
                         ? props.data.map((d, i) => (
-                              <Col key={`${d.title}-${i}`} lg={4} md={4} sm={4}>
+                              <Carousel.Item
+                                  interval={1000}
+                                  key={`${d.title}-${i}`}
+                              >
                                   <ImageComponent
                                       title={d.title}
                                       image={d.image}
@@ -27,10 +30,10 @@ export default function Portfolio(props) {
                                       description={d.description}
                                       alt={d.alt}
                                   />
-                              </Col>
+                              </Carousel.Item>
                           ))
                         : 'Loading...'}
-                </Row>
+                </Carousel>
             </Container>
         </div>
     )

@@ -11,7 +11,7 @@
     position: relative;
     margin: 0;
 }
-.hover-bg .hover-text {
+/* .hover-bg .hover-text {
     position: absolute;
     text-align: center;
     margin: 0 auto;
@@ -21,7 +21,7 @@
         rgba(99, 114, 255, 0.8) 0%,
         rgba(92, 169, 251, 0.8) 100%
     );
-    padding: 30% 0 0;
+    padding: 50% 0 0;
     height: 100%;
     width: 100%;
     opacity: 0;
@@ -43,10 +43,10 @@
 }
 .hover-bg:hover .hover-text {
     opacity: 1;
-}
+} */
 .image-container {
     width: 100%; /* Or any other size */
-    height: 300px;
+    height: 500px;
     overflow: hidden; /* This will make sure any part of the image that doesn't fit into the container is not shown */
 }
 
