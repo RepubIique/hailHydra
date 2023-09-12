@@ -343,7 +343,7 @@
                         },
                         {
                             "name": "4140 | 709 | EN19",
-                            "image": "",
+                            "image": "../../../img/products/round.png",
                             "overview": "709 steel, also known as chromoly steel, is a chromium-molybdenum alloy steel recognized for its outstanding strength, toughness, and versatility. With its exceptional hardness and resistance to wear, it has been extensively utilized in various industrial applications, making it one of the preferred choices for manufacturers worldwide.",
                             "keyFeatures": [
                                 {
@@ -537,6 +537,12 @@
                             ],
 
                             "availability": "We offer 709 steel in various forms, including bars and rods, tailored to meet your project requirements. Custom dimensions and specifications can be arranged upon request.",
+                            "relatedSpecifications": {
+                                "Japan": "JIS SCM440H",
+                                "Europe": "1.7225",
+                                "Great Britain": "709M40 | EN19",
+                                "Germany": "42CrMoS4"
+                            },
                             "conclusion": "709 steel stands as a benchmark in the world of alloy steels, blending unparalleled strength with adaptability. Whether you’re embarking on a large-scale industrial project or require precision parts for intricate applications, 709 steel promises performance that never compromises on quality."
                         }
                     ]

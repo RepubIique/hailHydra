@@ -110,7 +110,6 @@ export const ProductList = (props) => {
                         </Row>
                         <Row>
                             {currentSubVariant ? (
-                                // Render sub-variant details here
                                 <ProductPage props={currentSubVariant} />
                             ) : currentVariant ? (
                                 renderCard(

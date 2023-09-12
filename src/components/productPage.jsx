@@ -237,12 +237,6 @@ export const ProductPage = ({ props }) => (
 
         <br />
         <Row>
-            <Col>
-                <Card className="product-card">
-                    <h3 className="product-title">Availability</h3>
-                    <p>{props.availability}</p>
-                </Card>
-            </Col>
             {props.relatedSpecifications ? (
                 <Col>
                     <Card className="product-card">
@@ -262,7 +256,12 @@ export const ProductPage = ({ props }) => (
                     </Card>
                 </Col>
             ) : null}
-
+            <Col>
+                <Card className="product-card">
+                    <h3 className="product-title">Availability</h3>
+                    <p>{props.availability}</p>
+                </Card>
+            </Col>
             <Col>
                 <Card className="product-card">
                     <h3 className="product-title">Conclusion</h3>
