@@ -239,7 +239,7 @@
                     "variants": [
                         {
                             "name": "1045 | S45C | EN9 Carbon Steel",
-                            "image": "../../../img/products/hollow.png",
+                            "image": "../../../img/products/1045.png",
                             "overview": "S45C is a medium carbon steel under the Japanese standard JIS G4051. With a carbon content of 0.42%-0.48%, it is commonly used in machinery manufacturing. S45C is known for its good strength and hardness properties, and it can be hardened through quenching and tempered processes. Typical applications include gears, shafts, and bolts. Depending on its intended use, S45C may undergo various heat treatments such as annealing, hardening, and tempering to achieve desired mechanical properties.",
                             "keyFeatures": [
                                 {
@@ -343,7 +343,7 @@
                         },
                         {
                             "name": "4140 | 709 | EN19",
-                            "image": "../../../img/products/round.png",
+                            "image": "../../../img/products/4140.png",
                             "overview": "709 steel, also known as chromoly steel, is a chromium-molybdenum alloy steel recognized for its outstanding strength, toughness, and versatility. With its exceptional hardness and resistance to wear, it has been extensively utilized in various industrial applications, making it one of the preferred choices for manufacturers worldwide.",
                             "keyFeatures": [
                                 {

@@ -91,17 +91,12 @@ export const ProductList = (props) => {
                                     ) : (
                                         <div>
                                             <p>
-                                                Browse, shop or get a quote on
-                                                over 2,000 steel products right
-                                                here. Select from the products
-                                                below and start your online
-                                                steel order or quote.
-                                            </p>
-                                            <p>
-                                                We help you get the right steel
-                                                for your next project here
-                                                online or Contact Us with any
-                                                questions.
+                                                We stock vast variety of steels
+                                                to meet every requirement. Reach
+                                                out for a bespoke steel and we
+                                                help you get the right steel for
+                                                your next project. Please
+                                                contact us or quote.
                                             </p>
                                         </div>
                                     )}
