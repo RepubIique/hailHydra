@@ -230,7 +230,7 @@
     },
     "Product": [
         {
-            "name": "Round Bar",
+            "name": "Round | Hollow Bar",
             "image": "../img/products/round.png",
             "variants": [
                 {
@@ -544,14 +544,324 @@
             ]
         },
         {
-            "name": "Hollow Bar",
-            "image": "../img/products/hollow.png",
-            "variants": []
-        },
-        {
             "name": "Chrome Bar",
             "image": "../img/products/chrome.png",
-            "variants": []
+            "variants": [
+                {
+                    "name": "1045 | S45C | EN9 Carbon Steel",
+                    "image": "../../../img/products/hollow.png",
+                    "overview": "S45C is a medium carbon steel under the Japanese standard JIS G4051. With a carbon content of 0.42%-0.48%, it is commonly used in machinery manufacturing. S45C is known for its good strength and hardness properties, and it can be hardened through quenching and tempered processes. Typical applications include gears, shafts, and bolts. Depending on its intended use, S45C may undergo various heat treatments such as annealing, hardening, and tempering to achieve desired mechanical properties.",
+                    "keyFeatures": [
+                        {
+                            "name": "Medium Carbon Steel",
+                            "description": "With a carbon content of 0.42%-0.48%, S45C is designed for a balance between strength and ductility."
+                        },
+                        {
+                            "name": "Heat Treatment Response",
+                            "description": "This steel is well-suited for heat treatment, allowing for hardness customization depending on your needs. It supports annealing and hardening processes."
+                        },
+                        {
+                            "name": "Excellent Tensile Strength",
+                            "description": "S45C has commendable tensile properties, with a tensile strength ranging from 705 to 900 Mpa, ensuring it can withstand substantial mechanical stresses."
+                        },
+                        {
+                            "name": "Good Surface Hardness",
+                            "description": "Its natural resistance to wear, with Brinell hardness ranging between 170 and 210 HB, makes it apt for applications requiring high durability and resistance to abrasion."
+                        },
+                        {
+                            "name": "Machinability",
+                            "description": "S45C steel exhibits good machinability, allowing manufacturers to shape and mold as needed for specific applications."
+                        },
+                        {
+                            "name": "Weldability",
+                            "description": "While it's advisable to take precautions when welding, with the right techniques, S45C can be effectively joined to other components."
+                        }
+                    ],
+                    "commonApplication": [
+                        "Gears and shafts",
+                        "Bolts, nuts, and studs",
+                        "Machine parts and components",
+                        "Tool bodies and blades",
+                        "Mold bases",
+                        "Structural parts in automobiles"
+                    ],
+                    "availability": "Our S45C steel is available in various forms such as barrel, bars, and rods, ensuring that we cater to a wide range of needs. Custom sizing and specifications can be arranged upon request.",
+                    "chemicalComposition": {
+                        "Carbon": "0.42-0.48%",
+                        "Silicon": "0.15-0.35%",
+                        "Manganese": "0.6-0.90%",
+                        "Phosphorus": "up to 0.035%",
+                        "Sulphur": "up to 0.035%",
+                        "Nickel": "up to 0.2%",
+                        "Chromium": "up to 0.2%",
+                        "Copper": "up to 0.30%"
+                    },
+                    "mechanicalProperties": {
+                        "TensileStrength": "705-900 Mpa",
+                        "YieldStrength": "350-550 Mpa",
+                        "ElongationIn50mm": "up to 17%",
+                        "ImpactCharpy": "up to 30 J",
+                        "HardnessBrinell": "170-210 HB"
+                    },
+                    "heatTreatment": {
+                        "Annealing": {
+                            "temperature": "680-710°C (1256-1310°F)",
+                            "duration": "Depends on thickness",
+                            "cooling": "Slow furnace cool to 500°C (932°F) then air cool"
+                        },
+                        "Hardening": {
+                            "preheatTemperature": "550-650°C (1022-1202°F)",
+                            "hardeningTemperature": "820-860°C (1508-1580°F)",
+                            "cooling": "Quench in water or oil for rapid cooling"
+                        },
+                        "Nitriding": {
+                            "temperature": "500-550°C (932-1022°F)",
+                            "atmosphere": "Ammonia gas and dissociated ammonia",
+                            "duration": "10 to 80 hours depending on required case depth"
+                        },
+                        "Normalizing": {
+                            "temperature": "840-880°C (1544-1616°F)",
+                            "cooling": "Cool in still air to room temperature"
+                        },
+                        "StressRelieving": {
+                            "temperature": "550-650°C (1022-1202°F)",
+                            "duration": "2 hours",
+                            "cooling": "Slow cooling"
+                        },
+                        "Tempering": {
+                            "temperatureRange": "400-700°C (752-1292°F)",
+                            "duration": "At least 1 hour",
+                            "cooling": "Air cool to room temperature"
+                        },
+                        "Machining": {
+                            "note": "Easier to machine S45C in the annealed or normalized condition. Carbide-tipped tools recommended due to steel’s hardness."
+                        },
+                        "Welding": {
+                            "precautions": "Care must be taken to prevent the formation of brittle phases in the heat-affected zone.",
+                            "preheatTemperature": "150-400°C (302-752°F) based on thickness and complexity of the part",
+                            "electrodes": "Use low-hydrogen electrodes",
+                            "postWeldTreatment": "May be necessary to relieve stress and reduce hardness in the heat-affected zone"
+                        }
+                    },
+                    "relatedSpecifications": {
+                        "Japan": "JIS G4051 S45C",
+                        "Europe": "EN10083-2 - 1.1191",
+                        "USA": "ASTM A29/A29M-91 1045",
+                        "Germany": "W.Nr 1.1191 CK45"
+                    },
+                    "conclusion": "S45C steel offers a blend of strength, durability, and versatility that makes it a prime choice for numerous applications. Whether you're in the business of manufacturing automotive parts, machinery, or tools, S45C is a reliable steel grade that can meet diverse demands. Trust in its consistent quality and performance for your next project."
+                }
+            ]
+        },
+        {
+            "name": "709 | 4140",
+            "image": "../img/products/4140.png",
+            "variants": [
+                {
+                    "name": "4140 | 709 | EN19",
+                    "image": "../../../img/products/4140.png",
+                    "overview": "709 steel, also known as chromoly steel, is a chromium-molybdenum alloy steel recognized for its outstanding strength, toughness, and versatility. With its exceptional hardness and resistance to wear, it has been extensively utilized in various industrial applications, making it one of the preferred choices for manufacturers worldwide.",
+                    "keyFeatures": [
+                        {
+                            "name": "Alloyed for Excellence",
+                            "description": "With chromium and molybdenum as primary alloying elements, 709 steel boasts enhanced hardness, strength, and wear resistance."
+                        },
+                        {
+                            "name": "Heat Treatment Response",
+                            "description": "709 is renowned for its adaptability to different heat treatments, allowing users to achieve a diverse range of mechanical properties depending on requirements."
+                        },
+                        {
+                            "name": "High Tensile & Yield Strength",
+                            "description": "Designed to withstand significant stresses, this steel showcases excellent tensile and yield strengths, ensuring durability in demanding scenarios."
+                        },
+                        {
+                            "name": "Superior Hardness",
+                            "description": "The steels inherent hardness properties make it resistant to wear and abrasion, even in high friction environments."
+                        },
+                        {
+                            "name": "Machinability",
+                            "description": "709 offers good machinability in the annealed condition, allowing for efficient processing and design flexibility."
+                        },
+                        {
+                            "name": "Weldability",
+                            "description": "While preheating and post-weld procedures are recommended, 709 steel can be effectively welded using appropriate techniques."
+                        }
+                    ],
+                    "chemicalComposition": {
+                        "Carbon": "0.38-0.43%",
+                        "Silicon": "0.15-0.35%",
+                        "Manganese": "0.75-1.00%",
+                        "Phosphorus": "up to 0.030%",
+                        "Sulphur": "up to 0.030%",
+                        "Copper": "up to 0.06%",
+                        "Nickel": "up to 0.04%",
+                        "Chromium": "0.80-1.10%",
+                        "Molydenum": "0.15-0,25%"
+                    },
+                    "mechanicalPropertiesTable": [
+                        {
+                            "condition": "R",
+                            "rulingSection_mm": 250,
+                            "tensileStrength_Mpa": {
+                                "min": 700,
+                                "max": 850
+                            },
+                            "yieldStrength_Mpa": {
+                                "min": 480
+                            },
+                            "elongation_percent": {
+                                "min": 15
+                            },
+                            "izodImpact_J": {
+                                "min": 34
+                            },
+                            "charpyImpact_J": {
+                                "min": 28
+                            },
+                            "hardnessBrinell_HB": {
+                                "min": 201,
+                                "max": 255
+                            }
+                        },
+                        {
+                            "condition": "S",
+                            "rulingSection_mm": 250,
+                            "tensileStrength_Mpa": {
+                                "min": 770,
+                                "max": 930
+                            },
+                            "yieldStrength_Mpa": {
+                                "min": 540
+                            },
+                            "elongation_percent": {
+                                "min": 13
+                            },
+                            "izodImpact_J": {
+                                "min": 27
+                            },
+                            "charpyImpact_J": {
+                                "min": 22
+                            },
+                            "hardnessBrinell_HB": {
+                                "min": 233,
+                                "max": 277
+                            }
+                        },
+                        {
+                            "condition": "T",
+                            "rulingSection_mm": 100,
+                            "tensileStrength_Mpa": {
+                                "min": 850,
+                                "max": 1000
+                            },
+                            "yieldStrength_Mpa": {
+                                "min": 655
+                            },
+                            "elongation_percent": {
+                                "min": 13
+                            },
+                            "izodImpact_J": {
+                                "min": 54
+                            },
+                            "charpyImpact_J": {
+                                "min": 50
+                            },
+                            "hardnessBrinell_HB": {
+                                "min": 248,
+                                "max": 302
+                            }
+                        },
+                        {
+                            "condition": "U",
+                            "rulingSection_mm": 63,
+                            "tensileStrength_Mpa": {
+                                "min": 930,
+                                "max": 1080
+                            },
+                            "yieldStrength_Mpa": {
+                                "min": 740
+                            },
+                            "elongation_percent": {
+                                "min": 12
+                            },
+                            "izodImpact_J": {
+                                "min": 47
+                            },
+                            "charpyImpact_J": {
+                                "min": 42
+                            },
+                            "hardnessBrinell_HB": {
+                                "min": 269,
+                                "max": 331
+                            }
+                        },
+                        {
+                            "condition": "V",
+                            "rulingSection_mm": 30,
+                            "tensileStrength_Mpa": {
+                                "min": 1000,
+                                "max": 1150
+                            },
+                            "yieldStrength_Mpa": {
+                                "min": 835
+                            },
+                            "elongation_percent": {
+                                "min": 12
+                            },
+                            "izodImpact_J": {
+                                "min": 47
+                            },
+                            "charpyImpact_J": {
+                                "min": 42
+                            },
+                            "hardnessBrinell_HB": {
+                                "min": 293,
+                                "max": 352
+                            }
+                        },
+                        {
+                            "condition": "W",
+                            "rulingSection_mm": 20,
+                            "tensileStrength_Mpa": {
+                                "min": 1080,
+                                "max": 1230
+                            },
+                            "yieldStrength_Mpa": {
+                                "min": 925
+                            },
+                            "elongation_percent": {
+                                "min": 12
+                            },
+                            "izodImpact_J": {
+                                "min": 40
+                            },
+                            "charpyImpact_J": {
+                                "min": 35
+                            },
+                            "hardnessBrinell_HB": {
+                                "min": 311,
+                                "max": 375
+                            }
+                        }
+                    ],
+                    "commonApplication": [
+                        "Axles and shafts",
+                        "Bolts, nuts, and gears",
+                        "Tooling and drill rods",
+                        "Machine parts, especially in the oil and gas industry",
+                        "Structural components in motor engines and aircraft"
+                    ],
+
+                    "availability": "We offer 709 steel in various forms, including bars and rods, tailored to meet your project requirements. Custom dimensions and specifications can be arranged upon request.",
+                    "relatedSpecifications": {
+                        "Japan": "JIS SCM440H",
+                        "Europe": "1.7225",
+                        "Great Britain": "709M40 | EN19",
+                        "Germany": "42CrMoS4"
+                    },
+                    "conclusion": "709 steel stands as a benchmark in the world of alloy steels, blending unparalleled strength with adaptability. Whether you’re embarking on a large-scale industrial project or require precision parts for intricate applications, 709 steel promises performance that never compromises on quality."
+                }
+            ]
         }
     ]
 }
