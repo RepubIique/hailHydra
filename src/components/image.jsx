@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import { Modal } from 'react-bootstrap'
 
 export const ImageComponent = React.memo(
     ({ title, image, imagem, description, alt }) => {
+        // eslint-disable-next-line
         const [show, setShow] = useState(false)
         const handleShow = () => setShow(true)
-        const handleClose = () => setShow(false)
+        // const handleClose = () => setShow(false)
 
         return (
             <div className="portfolio-item">
@@ -23,7 +23,7 @@ export const ImageComponent = React.memo(
                             alt={alt}
                         />
                     </div>
-                    <Modal show={show} onHide={handleClose}>
+                    {/* <Modal show={show} onHide={handleClose}>
                         <Modal.Header closeButton>
                             <Modal.Title style={{ colour: '#3C80C1' }}>
                                 {title}
@@ -41,7 +41,7 @@ export const ImageComponent = React.memo(
                             />
                             <Modal.Body>{description}</Modal.Body>
                         </Modal.Body>
-                    </Modal>
+                    </Modal> */}
                 </div>
             </div>
         )

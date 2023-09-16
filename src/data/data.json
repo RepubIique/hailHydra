@@ -64,81 +64,52 @@
     ],
     "Portfolio": [
         {
-            "title": "Precision Gearing",
-            "image": "img/portfolio/gears.webp",
-            "imgm": "img/portfolio/gears-s.webp",
-            "alt": "Precision gearing fabrication",
-            "description": "This project showcases our expertise in the fabrication of precise steel gears. We utilized advanced CNC machines to deliver gears with optimal dimensions and superior surface finish, used in a variety of industrial applications. Every gear we produced underwent rigorous quality checks to ensure flawless performance and extend lifespan, proving our commitment to quality and precision in every project we undertake."
+            "title": "Gear Shaft",
+            "image": "img/portfolio/gearshaft.webp",
+            "imgm": "img/portfolio/gearshaft-m.webp",
+            "alt": "Gear shaft for vehicle"
         },
         {
-            "title": "Infrastructure Support Beams",
-            "image": "img/portfolio/steelbeams.webp",
-            "imgm": "img/portfolio/steelbeams-s.webp",
-            "alt": "Steel beams for infrastructure support",
-            "description": "In this project, we produced steel beams for a large-scale infrastructure project. Each beam was crafted using high-grade steel, ensuring robustness and longevity. We collaborated closely with civil engineers to ensure our beams met the specific requirements of the project in terms of strength, weight, and durability. Our work contributed significantly to the structural integrity of the buildings and bridges involved."
+            "title": "Gear Shaft",
+            "image": "img/portfolio/gearshaft2.webp",
+            "imgm": "img/portfolio/gearshaft2-m.webp",
+            "alt": "Gear shaft for vehicle"
         },
         {
-            "title": "Pasteurization Unit Construction",
-            "image": "img/portfolio/pasteurizer.webp",
-            "imgm": "img/portfolio/pasteurizer-s.webp",
-            "alt": "Stainless steel pasteurization unit",
-            "description": "Our team designed and fabricated custom stainless steel pasteurization units for a renowned food and beverage company. The units were developed to maximize efficiency, safety, and compliance with stringent hygiene standards. We utilized advanced welding techniques to ensure leak-proof and easy-to-clean surfaces. Our bespoke solution resulted in improved production efficiency and product safety for our client."
+            "title": "Spur Gear",
+            "image": "img/portfolio/spurgear.webp",
+            "imgm": "img/portfolio/spurgear-m.webp",
+            "alt": "Spur Gear for vehicle"
         },
         {
-            "title": "Industrial Pipeline Systems",
-            "image": "img/portfolio/steelpipes.webp",
-            "imgm": "img/portfolio/steelpipes-s.webp",
-            "alt": "Industrial pipeline systems",
-            "description": "For this project, we were tasked with producing high-quality, durable steel pipes for a large industrial plant. These pipes were crucial for the plant's operations, used for water delivery, gas transport, and waste disposal. We provided a comprehensive service that included the design, fabrication, and installation of the pipes, contributing to a safe and efficient industrial environment."
+            "title": "Spur Gear",
+            "image": "img/portfolio/spurgear2.webp",
+            "imgm": "img/portfolio/spurgear2-m.webp",
+            "alt": "Spur Gear for vehicle"
         },
         {
-            "title": "Large Industrial Gear Fabrication",
-            "image": "img/portfolio/biggear.webp",
-            "imgm": "img/portfolio/biggear-s.webp",
-            "alt": "Large industrial gear",
-            "description": "Our expertise in fabricating large gears for heavy machinery is showcased in this project. We worked meticulously to ensure every gear adhered to the specified dimensions and quality standards. Our commitment to quality and precision resulted in gears capable of withstanding rigorous industrial demands, helping to extend the operational life of our client's heavy machinery."
+            "title": "Trailer",
+            "image": "img/portfolio/trailer.webp",
+            "imgm": "img/portfolio/trailer-m.webp",
+            "alt": "Custom Trailer for Garbage Truck"
         },
         {
-            "title": "Factory Floor Installations",
-            "image": "img/portfolio/factoryfloor.webp",
-            "imgm": "img/portfolio/factoryfloor-s.webp",
-            "alt": "Factory floor steel installations",
-            "description": "In this project, we offered turnkey solutions for a factory floor installation. Our comprehensive services included the design, manufacture, and installation of all steel components. We also ensured that our designs were ergonomic and complied with all safety standards, providing a safe and efficient environment for the factory workers. This project is a testament to our ability to handle complex industrial installations."
+            "title": "Trailer",
+            "image": "img/portfolio/trailer2.webp",
+            "imgm": "img/portfolio/trailer2-m.webp",
+            "alt": "Custom Trailer for Garbage Truck"
         },
         {
-            "title": "Construction Site Framework",
-            "image": "img/portfolio/constructionsite.webp",
-            "imgm": "img/portfolio/constructionsite-s.webp",
-            "alt": "Steel framework for construction site",
-            "description": "We created a robust steel framework for a construction site, demonstrating our ability to handle large-scale, demanding projects. From the initial design to the final installation, we ensured that every element was precisely crafted and thoroughly inspected. Our work provided the foundation for a safe and efficient construction process, and the resulting structure offered exceptional stability and durability."
+            "title": "Gear Shaft",
+            "image": "img/portfolio/gearshaft3.webp",
+            "imgm": "img/portfolio/gearshaft3-m.webp",
+            "alt": "Gear shaft for vehicle"
         },
         {
-            "title": "Heat Exchanger Production",
-            "image": "img/portfolio/heatexchanger.webp",
-            "imgm": "img/portfolio/heatexchanger-s.webp",
-            "alt": "Heat exchanger for chemical processing",
-            "description": "For this project, we designed and fabricated custom heat exchangers for a chemical processing plant. Each component was meticulously crafted to ensure efficient thermal transfer and longevity. Our team used advanced welding techniques to ensure the integrity of each piece and incorporated corrosion-resistant features to increase the heat exchanger's lifespan. Our work resulted in a significant boost in the plant's operational efficiency."
-        },
-        {
-            "title": "Refurbishment of Old Machinery",
-            "image": "img/portfolio/oldmachine.webp",
-            "imgm": "img/portfolio/oldmachine-s.webp",
-            "alt": "Refurbished industrial machine",
-            "description": "This project involved the refurbishment of old industrial machinery. Our team replaced worn steel parts with newly fabricated components, extending the machine's operational lifespan and improving its efficiency. Each new component was precisely fabricated to fit seamlessly into the existing machinery, showcasing our skills in custom fabrication. This project highlights our commitment to sustainability and cost-effectiveness."
-        },
-        {
-            "title": "Hydraulic Cylinder Manufacturing",
-            "image": "img/portfolio/pipes.webp",
-            "imgm": "img/portfolio/pipes-s.webp",
-            "alt": "Hydraulic cylinder",
-            "description": "With years of expertise, we manufacture hydraulic cylinders tailored to your specific needs. Our high-quality cylinders are designed to deliver superior performance and longevity in various operating environments."
-        },
-        {
-            "title": "Gear Manufacturing",
-            "image": "img/portfolio/gear.webp",
-            "imgm": "img/portfolio/gear-s.webp",
-            "alt": "Manufactured gear",
-            "description": "Our gear manufacturing services provide highly precise and durable gears designed for a wide range of applications. We use advanced technologies to ensure optimal functionality and prolonged service life."
+            "title": "Gear Shaft",
+            "image": "img/portfolio/gearshaft4.webp",
+            "imgm": "img/portfolio/gearshaft4-m.webp",
+            "alt": "Gear shaft for vehicle"
         }
     ],
     "Clients": [
@@ -235,7 +206,7 @@
             "variants": [
                 {
                     "name": "1045 | S45C | EN9 Carbon Steel",
-                    "image": "../../../img/products/hollow.png",
+                    "image": "../../../img/products/1045.2.webp",
                     "overview": "S45C is a medium carbon steel under the Japanese standard JIS G4051. With a carbon content of 0.42%-0.48%, it is commonly used in machinery manufacturing. S45C is known for its good strength and hardness properties, and it can be hardened through quenching and tempered processes. Typical applications include gears, shafts, and bolts. Depending on its intended use, S45C may undergo various heat treatments such as annealing, hardening, and tempering to achieve desired mechanical properties.",
                     "keyFeatures": [
                         {
@@ -839,7 +810,7 @@
             "variants": [
                 {
                     "name": "1045 | S45C | EN9 Carbon Steel",
-                    "image": "../../../img/products/hollow.png",
+                    "image": "../../../img/products/1045.webp",
                     "overview": "S45C is a medium carbon steel that adheres to the Japanese standard JIS G4051. It is characterized by a carbon content ranging from 0.42% to 0.48%, making it a popular choice in machinery manufacturing. The steel boasts a typical hard chrome-plated surface hardness of HV 1000 - 1150, which is known for its extremely smooth surface finish. This feature, combined with excellent wear and corrosion resistance, grants it a high level of durability. Moreover, the base material offers good strength and impact properties, enhancing its utility in various applications.S45C also offers good machinability and reasonable weldability, making it a versatile material in manufacturing. It is extensively used in the hydraulic and pneumatic industries, and finds applications in other sectors as well.",
                     "commonApplication": [
                         "Agricultural Equipment",
