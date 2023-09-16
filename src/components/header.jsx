@@ -1,44 +1,47 @@
-import React, { useState, useEffect } from 'react'
+/* eslint-disable jsx-a11y/alt-text */
+import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import videoSourceMobile from '../assets/CNC-m.mp4'
-import videoSourceDesktop from '../assets/CNC.mp4'
+// import videoSourceMobile from '../assets/CNC-m.mp4'
+// import videoSourceDesktop from '../assets/CNC.mp4'
+import bg from '../assets/background.png'
 import '../styles/header.css'
 
 export const Header = (props) => {
-    const [videoSource, setVideoSource] = useState(videoSourceDesktop)
+    // const [videoSource, setVideoSource] = useState(videoSourceDesktop)
 
-    useEffect(() => {
-        setVideoSource(
-            window.innerWidth <= 600 ? videoSourceMobile : videoSourceDesktop
-        )
+    // useEffect(() => {
+    //     setVideoSource(
+    //         window.innerWidth <= 600 ? videoSourceMobile : videoSourceDesktop
+    //     )
 
-        const handleResize = () => {
-            setVideoSource(
-                window.innerWidth <= 600
-                    ? videoSourceMobile
-                    : videoSourceDesktop
-            )
-        }
+    //     const handleResize = () => {
+    //         setVideoSource(
+    //             window.innerWidth <= 600
+    //                 ? videoSourceMobile
+    //                 : videoSourceDesktop
+    //         )
+    //     }
 
-        const videoElement = document.querySelector('video')
-        videoElement.addEventListener('loadeddata', () => {
-            videoElement.play()
-        })
+    //     const videoElement = document.querySelector('video')
+    //     videoElement.addEventListener('loadeddata', () => {
+    //         videoElement.play()
+    //     })
 
-        window.addEventListener('resize', handleResize)
+    //     window.addEventListener('resize', handleResize)
 
-        return () => {
-            window.removeEventListener('resize', handleResize)
-        }
-    }, [videoSource])
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize)
+    //     }
+    // }, [videoSource])
 
     return (
         <header id="header">
             <div className="intro">
-                <video autoPlay muted playsInline loop>
+                {/* <video autoPlay muted playsInline loop>
                     <source src={videoSource} type="video/mp4" />
                     Your browser does not support the video tag.
-                </video>
+                </video> */}
+                <img loading="lazy" src={bg} className="header-image" />
                 <div className="overlay">
                     <Container>
                         <Row className="justify-content-md-center">

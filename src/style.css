@@ -96,7 +96,6 @@ hr {
         100vh - 100px
     ); /* Adjust 100px to match the height of your footer */
     position: relative;
-    padding-bottom: 100px; /* Space for the footer */
 }
 
 .breadcrumbs {
