@@ -840,42 +840,19 @@
                 {
                     "name": "1045 | S45C | EN9 Carbon Steel",
                     "image": "../../../img/products/hollow.png",
-                    "overview": "S45C is a medium carbon steel under the Japanese standard JIS G4051. With a carbon content of 0.42%-0.48%, it is commonly used in machinery manufacturing. S45C is known for its good strength and hardness properties, and it can be hardened through quenching and tempered processes. Typical applications include gears, shafts, and bolts. Depending on its intended use, S45C may undergo various heat treatments such as annealing, hardening, and tempering to achieve desired mechanical properties.",
-                    "keyFeatures": [
-                        {
-                            "name": "Medium Carbon Steel",
-                            "description": "With a carbon content of 0.42%-0.48%, S45C is designed for a balance between strength and ductility."
-                        },
-                        {
-                            "name": "Heat Treatment Response",
-                            "description": "This steel is well-suited for heat treatment, allowing for hardness customization depending on your needs. It supports annealing and hardening processes."
-                        },
-                        {
-                            "name": "Excellent Tensile Strength",
-                            "description": "S45C has commendable tensile properties, with a tensile strength ranging from 705 to 900 Mpa, ensuring it can withstand substantial mechanical stresses."
-                        },
-                        {
-                            "name": "Good Surface Hardness",
-                            "description": "Its natural resistance to wear, with Brinell hardness ranging between 170 and 210 HB, makes it apt for applications requiring high durability and resistance to abrasion."
-                        },
-                        {
-                            "name": "Machinability",
-                            "description": "S45C steel exhibits good machinability, allowing manufacturers to shape and mold as needed for specific applications."
-                        },
-                        {
-                            "name": "Weldability",
-                            "description": "While it's advisable to take precautions when welding, with the right techniques, S45C can be effectively joined to other components."
-                        }
-                    ],
+                    "overview": "S45C is a medium carbon steel that adheres to the Japanese standard JIS G4051. It is characterized by a carbon content ranging from 0.42% to 0.48%, making it a popular choice in machinery manufacturing. The steel boasts a typical hard chrome-plated surface hardness of HV 1000 - 1150, which is known for its extremely smooth surface finish. This feature, combined with excellent wear and corrosion resistance, grants it a high level of durability. Moreover, the base material offers good strength and impact properties, enhancing its utility in various applications.S45C also offers good machinability and reasonable weldability, making it a versatile material in manufacturing. It is extensively used in the hydraulic and pneumatic industries, and finds applications in other sectors as well.",
                     "commonApplication": [
-                        "Gears and shafts",
-                        "Bolts, nuts, and studs",
-                        "Machine parts and components",
-                        "Tool bodies and blades",
-                        "Mold bases",
-                        "Structural parts in automobiles"
+                        "Agricultural Equipment",
+                        "Compressors",
+                        "Car Jacks and other Transport Lifting Equipment",
+                        "Food Processing Equipment",
+                        "Hoists",
+                        "Mining and other Earth Moving Equipment",
+                        "Machine Tools",
+                        "Mechanical Tools and Equipment",
+                        "Rods and Shafts (Various)",
+                        "Waste Disposal Transport and Equipment"
                     ],
-                    "availability": "Our S45C steel is available in various forms such as barrel, bars, and rods, ensuring that we cater to a wide range of needs. Custom sizing and specifications can be arranged upon request.",
                     "chemicalComposition": {
                         "Carbon": "0.42-0.48%",
                         "Silicon": "0.15-0.35%",
@@ -893,45 +870,10 @@
                         "ImpactCharpy": "up to 30 J",
                         "HardnessBrinell": "170-210 HB"
                     },
-                    "heatTreatment": {
-                        "Annealing": {
-                            "temperature": "680-710°C (1256-1310°F)",
-                            "duration": "Depends on thickness",
-                            "cooling": "Slow furnace cool to 500°C (932°F) then air cool"
-                        },
-                        "Hardening": {
-                            "preheatTemperature": "550-650°C (1022-1202°F)",
-                            "hardeningTemperature": "820-860°C (1508-1580°F)",
-                            "cooling": "Quench in water or oil for rapid cooling"
-                        },
-                        "Nitriding": {
-                            "temperature": "500-550°C (932-1022°F)",
-                            "atmosphere": "Ammonia gas and dissociated ammonia",
-                            "duration": "10 to 80 hours depending on required case depth"
-                        },
-                        "Normalizing": {
-                            "temperature": "840-880°C (1544-1616°F)",
-                            "cooling": "Cool in still air to room temperature"
-                        },
-                        "StressRelieving": {
-                            "temperature": "550-650°C (1022-1202°F)",
-                            "duration": "2 hours",
-                            "cooling": "Slow cooling"
-                        },
-                        "Tempering": {
-                            "temperatureRange": "400-700°C (752-1292°F)",
-                            "duration": "At least 1 hour",
-                            "cooling": "Air cool to room temperature"
-                        },
-                        "Machining": {
-                            "note": "Easier to machine S45C in the annealed or normalized condition. Carbide-tipped tools recommended due to steel’s hardness."
-                        },
-                        "Welding": {
-                            "precautions": "Care must be taken to prevent the formation of brittle phases in the heat-affected zone.",
-                            "preheatTemperature": "150-400°C (302-752°F) based on thickness and complexity of the part",
-                            "electrodes": "Use low-hydrogen electrodes",
-                            "postWeldTreatment": "May be necessary to relieve stress and reduce hardness in the heat-affected zone"
-                        }
+                    "hardChromePlating": {
+                        "Surface Hardness": "HV 1000 -1150",
+                        "Surface Smnoothness umRA (Microns)": "0.10-0.30",
+                        "Surface Deposit (mm)": "0.025-0.050"
                     },
                     "relatedSpecifications": {
                         "Japan": "JIS G4051 S45C",
@@ -939,7 +881,12 @@
                         "USA": "ASTM A29/A29M-91 1045",
                         "Germany": "W.Nr 1.1191 CK45"
                     },
-                    "conclusion": "S45C steel offers a blend of strength, durability, and versatility that makes it a prime choice for numerous applications. Whether you're in the business of manufacturing automotive parts, machinery, or tools, S45C is a reliable steel grade that can meet diverse demands. Trust in its consistent quality and performance for your next project."
+                    "others": {
+                        "Sawing": "S45C induction hardened hard chrome plated bar, due to the extreme hardness of the induction hardened case, requires special cutting blades or grinding equipment.",
+                        "Machining": "S45C induction hardened hard chrome plated bar, due to the extreme hardness of the induction hardened case, requires *ceramic tipped machine tools. Having removed the induction hardened case, the core has very good machinability, similar to S45C standard bar. To protect the polished chrome surface, soft materials such as copper, aluminium or mild steel should be used as clamping materials and any particles of hard chrome should be removed immediately to avoid scratching. Otherwise all machining operations may be carried out satisfactorily"
+                    },
+                    "conclusion": "S45C steel offers a blend of strength, durability, and versatility that makes it a prime choice for numerous applications. Whether you're in the business of manufacturing automotive parts, machinery, or tools, S45C is a reliable steel grade that can meet diverse demands. Trust in its consistent quality and performance for your next project.",
+                    "availability": "Our S45C steel is available in various forms such as barrel, bars, and rods, ensuring that we cater to a wide range of needs. Custom sizing and specifications can be arranged upon request."
                 }
             ]
         }

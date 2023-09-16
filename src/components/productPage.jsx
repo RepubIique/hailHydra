@@ -35,21 +35,23 @@ export const ProductPage = ({ props }) => (
             </Col>
         </Row>
         <br />
-        <Row>
-            <Col>
-                <Card className="product-card">
-                    <h3 className="product-title">Key Features</h3>
-                    <ul className="product-list">
-                        {props.keyFeatures.map((feature, index) => (
-                            <li key={index}>
-                                <strong>{feature.name}: </strong>
-                                {feature.description}
-                            </li>
-                        ))}
-                    </ul>
-                </Card>
-            </Col>
-        </Row>
+        {props.keyFeatures ? (
+            <Row>
+                <Col>
+                    <Card className="product-card">
+                        <h3 className="product-title">Key Features</h3>
+                        <ul className="product-list">
+                            {props.keyFeatures.map((feature, index) => (
+                                <li key={index}>
+                                    <strong>{feature.name}: </strong>
+                                    {feature.description}
+                                </li>
+                            ))}
+                        </ul>
+                    </Card>
+                </Col>
+            </Row>
+        ) : null}
         <br />
         <Row>
             <Col>
@@ -234,7 +236,18 @@ export const ProductPage = ({ props }) => (
                 </Col>
             </Row>
         ) : null}
-
+        {props.others ? (
+            <Row>
+                <Card className="product-card">
+                    {Object.entries(props.others).map(([key, value], index) => (
+                        <div key={index} md={6}>
+                            <h5>{key}</h5>
+                            <p>{value}</p>
+                        </div>
+                    ))}
+                </Card>
+            </Row>
+        ) : null}
         <br />
         <Row>
             {props.relatedSpecifications ? (
