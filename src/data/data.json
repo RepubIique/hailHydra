@@ -70,23 +70,12 @@
             "alt": "Gear shaft for vehicle"
         },
         {
-            "title": "Gear Shaft",
-            "image": "img/portfolio/gearshaft2.webp",
-            "imgm": "img/portfolio/gearshaft2-m.webp",
-            "alt": "Gear shaft for vehicle"
-        },
-        {
             "title": "Spur Gear",
             "image": "img/portfolio/spurgear.webp",
             "imgm": "img/portfolio/spurgear-m.webp",
             "alt": "Spur Gear for vehicle"
         },
-        {
-            "title": "Spur Gear",
-            "image": "img/portfolio/spurgear2.webp",
-            "imgm": "img/portfolio/spurgear2-m.webp",
-            "alt": "Spur Gear for vehicle"
-        },
+
         {
             "title": "Trailer",
             "image": "img/portfolio/trailer.webp",
@@ -100,16 +89,10 @@
             "alt": "Custom Trailer for Garbage Truck"
         },
         {
-            "title": "Gear Shaft",
-            "image": "img/portfolio/gearshaft3.webp",
-            "imgm": "img/portfolio/gearshaft3-m.webp",
-            "alt": "Gear shaft for vehicle"
-        },
-        {
-            "title": "Gear Shaft",
-            "image": "img/portfolio/gearshaft4.webp",
-            "imgm": "img/portfolio/gearshaft4-m.webp",
-            "alt": "Gear shaft for vehicle"
+            "title": "Trailer",
+            "image": "img/portfolio/trailer3.webp",
+            "imgm": "img/portfolio/trailer3-m.webp",
+            "alt": "Custom Trailer for Garbage Truck"
         }
     ],
     "Clients": [
@@ -194,7 +177,7 @@
         }
     ],
     "Contact": {
-        "address": " Jalan Piasau, Piasau, 98000 Miri, Sarawak, Malaysia",
+        "address": " 1391, Ground Floor, Jalan Usaha, Kawasan Perindustrian Piasau Jaya, Lutong, 98000, Miri, Sarawak",
         "phone": "+60 85-655 431",
         "fax": "085-656445",
         "email": "hydrapowerenginfo@gmail.com"
