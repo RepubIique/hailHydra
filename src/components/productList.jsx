@@ -13,6 +13,9 @@ export const ProductList = (props) => {
     const { productName, variantName } = useParams()
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+    useEffect(() => {
         if (props.data) {
             const product = props.data.find((p) => p.name === productName)
             setCurrentProduct(product)

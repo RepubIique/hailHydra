@@ -43,7 +43,12 @@ const App = () => {
                 />
                 <Route
                     path="/products/:productName?/:variantName?/:subVariantName?"
-                    element={<ProductList data={landingPageData.Product} />}
+                    element={
+                        <div>
+                            <ProductList data={landingPageData.Product} />
+                            <Contact data={landingPageData.Contact} />
+                        </div>
+                    }
                 />
             </Routes>
             <Footer />
