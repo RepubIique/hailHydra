@@ -6,8 +6,6 @@ import { Clients } from './components/clients'
 import { Member } from './components/member'
 import { Contact } from './components/contact'
 import JsonData from './data/data.json'
-import './style.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { ProductList } from './components/productList'
 import Footer from './components/footer'
 

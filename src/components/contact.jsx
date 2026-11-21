@@ -79,8 +79,8 @@ export const Contact = (props) => {
 
             emailjs
                 .send(
-                    process.env.REACT_APP_EMAILJS_SERVICE_ID,
-                    process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+                    import.meta.env.REACT_APP_EMAILJS_SERVICE_ID,
+                    import.meta.env.REACT_APP_EMAILJS_TEMPLATE_ID,
                     {
                         from_name: form.name,
                         to_name: 'HydraPower Engineering',
@@ -88,7 +88,7 @@ export const Contact = (props) => {
                         to_email: 'hydrapowerenginfo@gmail.com',
                         message: form.message,
                     },
-                    process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+                    import.meta.env.REACT_APP_EMAILJS_PUBLIC_KEY
                 )
                 .then(
                     () => {

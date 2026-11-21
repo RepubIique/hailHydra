@@ -12,17 +12,16 @@ jobs:
 
         steps:
             - name: Checkout repo
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
 
             - name: Setup Node
-              uses: actions/setup-node@v1
+              uses: actions/setup-node@v4
               with:
-                  node-version: 16
+                  node-version: 22
+                  cache: npm
 
             - name: Install dependencies
-              uses: bahmutov/npm-install@v1
-              with:
-                  install-command: npm install
+              run: npm ci
 
             - name: Build project
               run: npm run build
@@ -32,8 +31,13 @@ jobs:
                   REACT_APP_EMAILJS_TEMPLATE_ID: ${{secrets.REACT_APP_EMAILJS_TEMPLATE_ID}}
                   REACT_APP_GOOGLE_API_KEY: ${{secrets.REACT_APP_GOOGLE_API_KEY}}
 
+            # GitHub Pages cannot rewrite URLs, so deep links such as
+            # /products/Bronze get the app shell back and route client-side.
+            - name: Add SPA fallback for deep links
+              run: cp build/index.html build/404.html
+
             - name: Upload production-ready build files
-              uses: actions/upload-artifact@v2
+              uses: actions/upload-artifact@v4
               with:
                   name: production-files
                   path: ./build
@@ -46,13 +50,13 @@ jobs:
 
         steps:
             - name: Download artifact
-              uses: actions/download-artifact@v2
+              uses: actions/download-artifact@v4
               with:
                   name: production-files
                   path: ./build
 
             - name: Deploy to GitHub Pages
-              uses: peaceiris/actions-gh-pages@v3
+              uses: peaceiris/actions-gh-pages@v4
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./build

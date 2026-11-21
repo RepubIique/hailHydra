@@ -1,6 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
+// Load order matters: Bootstrap first, then the design tokens, then the
+// shared layer. Component stylesheets are imported by the components
+// themselves and therefore land last.
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
+import './style.css'
+
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
