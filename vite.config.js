@@ -21,10 +21,10 @@ export default defineConfig({
         port: 3000,
     },
 
-    // `vite preview` is used to show the built site for review over Tailscale;
-    // without this the hostname is rejected with a 403.
+    // `vite preview` is used to show the built site for review — over Tailscale
+    // and via a temporary Cloudflare tunnel, whose hostname is random per run.
     preview: {
-        allowedHosts: ['macpro.tailf4baee.ts.net', '100.99.28.1'],
+        allowedHosts: ['macpro.tailf4baee.ts.net', '100.99.28.1', '.trycloudflare.com'],
     },
 
     test: {
