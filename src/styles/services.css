@@ -1,39 +1,71 @@
-/* Services Section */
+/* ==========================================================================
+   Services
+   ========================================================================== */
+
 #services {
-    padding: 100px 0;
-    background: linear-gradient(to right, #3c80c1 0%, #81c3d7 100%);
-    color: #fff;
+    background: var(--navy-800);
 }
-#services .service-desc {
-    margin: 10px 10px 20px;
-}
-#services h2 {
-    color: #fff;
-}
-#services .section-title h2::after {
-    position: absolute;
+
+/* Soft brand light so the large flat panel doesn't read as dead space */
+#services::before {
     content: '';
-    background: rgba(255, 255, 255, 0.3);
-    height: 4px;
-    width: 60px;
-    bottom: 0;
-    margin-left: -30px;
-    left: 50%;
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        60% 55% at 50% 0%,
+        rgba(92, 169, 251, 0.12) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
 }
+
+#services .container {
+    position: relative;
+}
+
 .services-img {
-    width: 240px;
-    height: 240px;
-    padding: 20px 5px;
+    width: clamp(170px, 18vw, 230px);
+    height: clamp(170px, 18vw, 230px);
+    object-fit: cover;
     border-radius: 50%;
+    border: 3px solid var(--line-strong);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.35s ease, border-color 0.35s ease;
 }
-#services h3 {
-    font-weight: 500;
-    padding: 5px 0;
-    color: #fff;
+
+#services .col-md-4:hover .services-img {
+    transform: translateY(-6px);
+    border-color: rgba(92, 169, 251, 0.6);
 }
-#services p {
-    color: rgba(255, 255, 255, 0.75);
-}
+
 #services .service-desc {
-    margin-bottom: 40px;
+    margin: 22px 8px 44px;
+}
+
+#services h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 12px;
+}
+
+#services p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+#services .section-title p {
+    color: var(--ink-soft);
+}
+
+#services .section-title h2 {
+    color: var(--ink);
+}
+
+@media (max-width: 767.98px) {
+    #services .services-img {
+        width: 170px;
+        height: 170px;
+    }
 }

@@ -1,68 +1,139 @@
-/* Contact Section */
+/* ==========================================================================
+   Contact
+   ========================================================================== */
+
 #contact {
-    padding: 100px 0 60px;
-    background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+    background: var(--navy-900);
+    padding: 96px 0 80px;
+    overflow: hidden;
 }
-#contact .section-title {
-    margin-bottom: 40px;
-}
-#contact .section-title p {
-    font-size: 16px;
-}
-#contact h2 {
-    color: #fff;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-}
-#contact .section-title h2::after {
-    position: absolute;
+
+#contact::before {
     content: '';
-    background: rgba(255, 255, 255, 0.3);
-    height: 4px;
-    width: 60px;
-    bottom: 0;
-    left: 50%;
-}
-#contact h3 {
-    margin-top: 30px;
-    margin-bottom: 25px;
-    padding-bottom: 20px;
-    font-weight: 400;
-}
-/* Input Field Styling */
-#contact Form.Control {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        55% 50% at 50% 0%,
+        rgba(99, 114, 255, 0.14) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
 }
 
-#contact Form.Group {
-    margin-bottom: 20px;
+#contact .container {
+    position: relative;
 }
 
-/* Button Styling */
-#contact Button {
-    background-color: #f6f6f6;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    color: black;
-    margin-bottom: 20px;
+#contact .section-title {
+    margin-bottom: 36px;
 }
 
-#contact Button:hover {
-    background-color: #5ca9fb;
+#contact h2 {
+    color: var(--ink);
 }
 
-/* Additional Typography Styling */
 #contact .section-title p {
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 60ch;
+    margin: 0 auto;
 }
 
-#contact .section-title h2 {
+#contact .list-group-item h3 {
+    margin: 0 0 10px;
+    padding: 0;
+    border: 0;
+    font-size: 1.1rem;
     font-weight: 600;
+    color: var(--ink);
+}
+
+/* --- form ----------------------------------------------------------------
+   The previous selectors were `#contact Form.Control` and `#contact Button`.
+   `Form.Control` is an invalid element selector so neither rule ever
+   applied, leaving the inputs and button on stock Bootstrap styling. */
+
+#contact .form-control {
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    color: var(--ink);
+    padding: 12px 14px;
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+#contact .form-control::placeholder {
+    color: var(--muted-dim);
+}
+
+#contact .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.07);
+    border-color: var(--brand);
+    color: #fff;
+    box-shadow: 0 0 0 4px rgba(92, 169, 251, 0.16);
+}
+
+#contact .form-group {
+    margin-bottom: 20px;
+}
+
+#contact .btn {
+    background: var(--brand-grad);
+    border: 0;
+    color: #fff;
+    padding: 12px 32px;
+    box-shadow: var(--glow);
+    margin-bottom: 20px;
+}
+
+#contact .btn:hover,
+#contact .btn:focus {
+    color: #fff;
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+/* --- contact details ---------------------------------------------------- */
+
+#contact .list-group {
+    --bs-list-group-bg: transparent;
+    --bs-list-group-border-color: transparent;
+    --bs-list-group-color: var(--ink-soft);
+}
+
+#contact .list-group-item {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 14px 0;
+    color: var(--ink-soft);
+}
+
+#contact .list-group-item:first-child {
+    border-top: 1px solid var(--line);
+}
+
+#contact .list-group-item p {
+    margin: 0;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+}
+
+#contact .list-group-item p span {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--brand);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767.98px) {
+    .contact-info {
+        margin-top: 40px;
+    }
 }

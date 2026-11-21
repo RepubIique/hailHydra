@@ -20,7 +20,7 @@ export default function Portfolio(props) {
                     {props.data
                         ? props.data.map((d, i) => (
                               <Carousel.Item
-                                  interval={1000}
+                                  interval={6000}
                                   key={`${d.title}-${i}`}
                               >
                                   <ImageComponent

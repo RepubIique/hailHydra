@@ -1,126 +1,196 @@
-body,
-html {
-    font-family: 'Open Sans', sans-serif;
-    text-rendering: optimizeLegibility !important;
-    color: #777;
-    font-weight: 400;
-    width: 100% !important;
-    height: 100% !important;
-}
+/* ==========================================================================
+   Shared typography and components
+   ========================================================================== */
+
+h1,
 h2,
 h3,
-h4 {
-    font-family: 'Raleway', sans-serif;
-}
-h2 {
-    text-transform: uppercase;
-    margin: 0 0 20px;
-    font-weight: 800;
-    font-size: 36px;
-    color: #333;
-}
-h3 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
-}
-h4 {
-    font-size: 18px;
-    color: #333;
-    font-weight: 600;
-}
+h4,
 h5 {
+    font-family: var(--font-display);
+    color: var(--ink);
+    line-height: 1.25;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
     text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 650;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 0.95rem;
     font-weight: 700;
-    line-height: 20px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
+
 p {
-    font-size: 15px;
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-top: 0;
 }
-p.intro {
-    margin: 12px 0 0;
-    line-height: 24px;
-}
+
 a {
-    color: #608dfd;
-    font-weight: 400;
+    color: var(--brand);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
+
 a:hover,
 a:focus {
+    color: #8ec4ff;
     text-decoration: none;
-    color: #608dfd;
 }
+
 ul,
 ol {
     list-style: none;
-}
-ul,
-ol {
     padding: 0;
+    margin: 0;
 }
+
 hr {
-    height: 2px;
-    width: 70px;
-    text-align: center;
-    position: relative;
-    background: #1e7a46;
-    margin-bottom: 20px;
+    height: 3px;
+    width: 64px;
     border: 0;
+    border-radius: 2px;
+    background: var(--brand-grad);
+    margin: 0 auto 28px;
+    opacity: 1;
+}
+
+/* --------------------------------------------------------------- sections */
+
+/* Every major band sits on a navy surface; the alternation gives rhythm
+   without relying on bright background colours. */
+#services,
+#portfolio,
+#testimonials,
+#team,
+#about,
+#contact {
+    position: relative;
+    padding: 96px 0;
+}
+
+#services,
+#testimonials {
+    background: var(--navy-800);
+}
+
+#portfolio,
+#about {
+    background: var(--navy-900);
+}
+
+#team {
+    background: var(--navy-850);
 }
 
 .section-title {
-    margin-bottom: 70px;
+    margin-bottom: 56px;
 }
+
 .section-title h2 {
     position: relative;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-}
-.section-title h2::after {
-    position: absolute;
-    content: '';
-    background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
-    height: 4px;
-    width: 60px;
-    bottom: 0;
-    margin-left: -30px;
-    left: 50%;
-}
-.section-title p {
-    font-size: 18px;
+    padding-bottom: 20px;
+    margin-bottom: 22px;
 }
 
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 64px;
+    height: 3px;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    background: var(--brand-grad);
+}
+
+.section-title p {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 62ch;
+    margin: 0 auto;
+}
+
+#about .section-title h2::after {
+    left: 0;
+    transform: none;
+}
+
+/* ---------------------------------------------------------------- buttons */
+
+.btn {
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 0.7rem 1.6rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-primary,
+#header .btn {
+    background: var(--brand-grad);
+    border: 0;
+    color: #fff;
+    box-shadow: var(--glow);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+#header .btn:hover,
+#header .btn:focus {
+    color: #fff;
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+.btn-lg {
+    padding: 0.9rem 2.1rem;
+    font-size: 1rem;
+}
+
+/* ------------------------------------------------------------------ misc */
+
 .main-content {
-    min-height: calc(
-        100vh - 100px
-    ); /* Adjust 100px to match the height of your footer */
     position: relative;
 }
 
+/* Bootstrap's breadcrumb styling assumes a light page */
 .breadcrumbs {
     display: flex;
     justify-content: center;
 }
 
-.breadcrumb-item a {
-    text-decoration: none;
-    color: black;
+.breadcrumb {
+    --bs-breadcrumb-divider-color: var(--muted-dim);
+    --bs-breadcrumb-item-active-color: var(--ink-soft);
+    margin-bottom: 0;
 }
 
-/* Features Section */
-/* #features {
-    background: #f6f6f6;
+.breadcrumb-item a {
+    color: var(--brand);
+    text-decoration: none;
 }
-#features i.fa {
-    font-size: 38px;
-    margin-bottom: 20px;
-    transition: all 0.5s;
-    color: #fff;
-    width: 100px;
-    height: 100px;
-    padding: 30px 0;
-    border-radius: 50%;
-    background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
-} */
+
+.breadcrumb-item.active {
+    color: var(--ink-soft);
+}

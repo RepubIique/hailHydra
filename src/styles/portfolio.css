@@ -1,57 +1,135 @@
-/* Portfolio Section */
+/* ==========================================================================
+   Portfolio
+   ========================================================================== */
+
 #portfolio {
-    padding: 100px 0;
+    background: var(--navy-900);
 }
+
 .portfolio-item {
-    margin: 1px -15px 0 -14px;
+    margin: 0;
     padding: 0;
 }
+
 .portfolio-item .hover-bg {
-    overflow: hidden;
     position: relative;
-    margin: 0;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-lg);
+    background: var(--navy-950);
 }
-/* .hover-bg .hover-text {
-    position: absolute;
-    text-align: center;
-    margin: 0 auto;
-    color: #fff;
-    background: linear-gradient(
-        to right,
-        rgba(99, 114, 255, 0.8) 0%,
-        rgba(92, 169, 251, 0.8) 100%
-    );
-    padding: 50% 0 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: all 0.5s;
-}
-.hover-bg .hover-text > h4 {
-    opacity: 0;
-    color: #fff;
-    transform: translateY(100%);
-    transition: all 0.3s;
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-.hover-bg:hover .hover-text > h4 {
-    opacity: 1;
-    transform: translateY(0);
-}
-.hover-bg:hover .hover-text {
-    opacity: 1;
-} */
+
 .image-container {
-    width: 100%; /* Or any other size */
-    height: 600px;
-    overflow: hidden; /* This will make sure any part of the image that doesn't fit into the container is not shown */
+    width: 100%;
+    /* Was a hard 600px, which cropped tall photos and wasted space on short
+       ones. A fixed ratio scales cleanly instead. */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    overflow: hidden;
 }
 
 .portfolio-img {
-    width: 100%; /* The image will scale to the width of the container */
-    height: 100%; /* The image will scale to the height of the container */
-    object-fit: cover; /* This will make sure the image covers the whole area of the container, cropping if necessary */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.portfolio-item .hover-bg:hover .portfolio-img {
+    transform: scale(1.05);
+}
+
+/* The caption used to be positioned off-screen by CSS that was later
+   commented out, so the title leaked out below the image as stray text.
+   It is now a legible caption bar, so the information stays visible. */
+.portfolio-item .hover-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    /* Kept shallow because the indicators now live at the top of the frame */
+    padding: 48px 24px 20px;
+    background: linear-gradient(
+        180deg,
+        rgba(6, 11, 20, 0) 0%,
+        rgba(6, 11, 20, 0.85) 60%,
+        rgba(6, 11, 20, 0.96) 100%
+    );
+    text-align: left;
+    cursor: pointer;
+}
+
+.portfolio-item .hover-text > h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Carousel controls on a dark page */
+#portfolio .carousel-control-prev,
+#portfolio .carousel-control-next {
+    width: 8%;
+    opacity: 0.6;
+}
+
+#portfolio .carousel-control-prev:hover,
+#portfolio .carousel-control-next:hover {
+    opacity: 1;
+}
+
+/* Bootstrap emits .carousel-indicators BEFORE .carousel-inner, so the
+   caption overlay (also z-index 2, later in the DOM) paints straight over
+   them. Sitting them at the bottom of the frame therefore hides them no
+   matter how they are coloured. They get their own pill at the top of the
+   image, where nothing overlaps and they stay legible on any photo. */
+#portfolio .carousel-indicators {
+    top: 20px;
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    width: auto;
+    margin: 0;
+    padding: 9px 14px;
+    gap: 6px;
+    border-radius: 999px;
+    background: rgba(6, 11, 20, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transform: translateX(-50%);
+}
+
+#portfolio .carousel-indicators [data-bs-target] {
+    width: 24px;
+    height: 3px;
+    margin: 0;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 0;
+    opacity: 0.45;
+}
+
+#portfolio .carousel-indicators .active {
+    background-color: var(--brand);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(92, 169, 251, 0.8);
+}
+
+#portfolio .section-title p {
+    color: var(--ink-soft);
+}
+
+@media (max-width: 767.98px) {
+    .image-container {
+        aspect-ratio: 4 / 3;
+    }
+
+    .portfolio-item .hover-text {
+        padding: 40px 18px 14px;
+    }
 }

@@ -1,11 +1,106 @@
+/* ==========================================================================
+   Design tokens + base layer
+   Dark navy canvas with the Hydra Power blue as the accent.
+   ========================================================================== */
+
+:root {
+    /* Surfaces, darkest to lightest */
+    --navy-950: #060b14;
+    --navy-900: #0a1220;
+    --navy-850: #0d1727;
+    --navy-800: #111d31;
+    --navy-700: #17263f;
+
+    /* Text */
+    --ink: #e9effa;
+    --ink-soft: #c3d0e4;
+    --muted: #8b9dba;
+    --muted-dim: #6d7f9c;
+
+    /* Brand blue (unchanged brand colour, kept as the accent) */
+    --brand: #5ca9fb;
+    --brand-strong: #2f7fd6;
+    --brand-deep: #6372ff;
+    --brand-grad: linear-gradient(135deg, #6372ff 0%, #5ca9fb 100%);
+
+    /* Hairlines */
+    --line: rgba(148, 179, 226, 0.14);
+    --line-strong: rgba(148, 179, 226, 0.26);
+
+    /* Depth */
+    --shadow-sm: 0 2px 6px rgba(2, 6, 14, 0.45);
+    --shadow-md: 0 16px 34px -16px rgba(2, 6, 14, 0.75);
+    --shadow-lg: 0 32px 70px -28px rgba(2, 6, 14, 0.9);
+    --glow: 0 0 0 1px rgba(92, 169, 251, 0.18),
+        0 18px 50px -22px rgba(92, 169, 251, 0.45);
+
+    --radius-sm: 10px;
+    --radius: 14px;
+    --radius-lg: 20px;
+    --nav-h: 78px;
+
+    /* The old stylesheet asked for 'Open Sans' / 'Raleway' but never loaded
+       them, so the site has always rendered the system sans. This stack makes
+       that explicit and adds modern faces where available. */
+    --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+        'Helvetica Neue', 'Noto Sans', Arial, sans-serif;
+    --font-display: var(--font-sans);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* Stops the fixed navbar covering section headings on anchor/scroll jumps */
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-h);
+}
+
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        'Helvetica Neue', sans-serif;
+    background-color: var(--navy-950);
+    color: var(--ink-soft);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+::selection {
+    background: rgba(92, 169, 251, 0.32);
+    color: #fff;
+}
+
+:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Dark scrollbar so it doesn't glare against the navy */
+* {
+    scrollbar-color: var(--navy-700) var(--navy-950);
+    scrollbar-width: thin;
+}
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+*::-webkit-scrollbar-track {
+    background: var(--navy-950);
+}
+*::-webkit-scrollbar-thumb {
+    background: var(--navy-700);
+    border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-strong);
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: ui-monospace, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }

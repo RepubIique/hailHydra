@@ -1,28 +1,13 @@
 .footer {
-    background-color: #f8f9fa;
-    padding: 20px;
+    background-color: var(--navy-950);
+    border-top: 1px solid var(--line);
+    padding: 26px 0;
     width: 100%;
-    height: 80px;
+    height: auto;
 }
 
-/* .footer h5 {
-    margin-bottom: 15px;
+.footer p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
 }
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer ul li {
-    margin-bottom: 5px;
-}
-
-.footer a {
-    color: #333;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-} */

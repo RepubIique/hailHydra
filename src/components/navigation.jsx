@@ -27,7 +27,6 @@ export const Navigation = (props) => {
             expand="lg"
             fixed="top"
             id="menu"
-            className="bg-body-tertiary"
             expanded={menuActive}
         >
             <Container>
