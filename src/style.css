@@ -468,6 +468,18 @@ section[id] {
         background-color: rgba(255, 255, 255, 0.96);
         border-top: 1px solid var(--line);
         backdrop-filter: blur(8px);
+        /* Hidden until the hero's own quote button has scrolled away, so the
+           first screen never carries the same call to action twice. */
+        transform: translateY(100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.28s ease, opacity 0.28s ease;
+    }
+
+    .mobile-cta.is-visible {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .mobile-cta .btn {
@@ -478,5 +490,11 @@ section[id] {
 
     .mobile-cta__call {
         width: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mobile-cta {
+        transition: none;
     }
 }
