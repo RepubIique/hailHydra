@@ -94,4 +94,12 @@
     .footer-grid {
         grid-template-columns: minmax(0, 1fr);
     }
+
+    /* The phone number and email are the reason the footer exists — give them
+       a realistic tap target rather than an 18px line of text. */
+    .footer-list a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+    }
 }

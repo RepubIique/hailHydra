@@ -45,6 +45,14 @@
     color: var(--white);
 }
 
+/* Full height of the bar on touch screens — a 21px-tall phone number is not
+   a realistic tap target. */
+@media (max-width: 991.98px) {
+    .utility-bar__item {
+        min-height: var(--utility-h);
+    }
+}
+
 /* ----------------------------------------------------------------- header */
 
 .site-header {

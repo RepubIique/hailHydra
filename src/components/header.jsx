@@ -54,7 +54,15 @@ export const Header = ({ data, counts = {}, location }) => {
                     <dl className="hero__stats-inner">
                         {stats.map((stat) => (
                             <div className="hero__stat" key={stat.label}>
-                                <dt>{stat.value}</dt>
+                                <dt
+                                    className={
+                                        typeof stat.value === 'number'
+                                            ? undefined
+                                            : 'hero__stat-text'
+                                    }
+                                >
+                                    {stat.value}
+                                </dt>
                                 <dd>{stat.label}</dd>
                             </div>
                         ))}

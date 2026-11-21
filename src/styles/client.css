@@ -119,12 +119,41 @@
     }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
+    /* A swipeable row. Five stacked quotes was the largest single block of
+       scrolling on the page — over two and a half screens of near-identical
+       cards on a phone. */
     .testimonial-grid {
-        grid-template-columns: minmax(0, 1fr);
+        display: flex;
+        grid-template-columns: none;
+        gap: 14px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Run to the screen edges so the next card visibly peeks in. */
+        margin-inline: calc(var(--bs-gutter-x) / -2);
+        padding: 4px calc(var(--bs-gutter-x) / 2) 12px;
+        scroll-padding-inline-start: calc(var(--bs-gutter-x) / 2);
+    }
+
+    .testimonial-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .testimonial-card {
+        flex: 0 0 82%;
         padding: 22px;
+        scroll-snap-align: start;
+    }
+
+    /* Cards park off-screen inside the scroller, so they must never start
+       hidden — the observer only sees them once swiped, and a card that faded
+       in mid-swipe would look broken. Specificity has to beat the shared
+       `.js-reveal [data-reveal]` rule. */
+    .js-reveal .testimonial-grid [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
     }
 }

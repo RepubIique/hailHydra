@@ -118,7 +118,7 @@ img {
 
 @media (max-width: 767.98px) {
     :root {
-        --section-y: 68px;
+        --section-y: 60px;
         --nav-h: 64px;
     }
 }

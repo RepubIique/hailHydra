@@ -165,4 +165,11 @@
         grid-template-columns: minmax(0, 1fr);
         gap: 0;
     }
+
+    /* Phone and email need a realistic tap target on a phone. */
+    .contact-details__list a.contact-details__value {
+        display: inline-flex;
+        align-items: center;
+        min-height: 40px;
+    }
 }

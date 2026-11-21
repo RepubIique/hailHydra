@@ -44,13 +44,13 @@ export const AppShell = () => {
                                 location="Miri, Sarawak"
                             />
 
+                            <Workshop />
+
                             <Suspense fallback={null}>
                                 <Services data={landingPageData.Services} />
                             </Suspense>
 
                             <Sectors />
-
-                            <Workshop />
 
                             <Suspense fallback={null}>
                                 <About data={landingPageData.About} />

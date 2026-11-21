@@ -121,11 +121,56 @@
 
 @media (max-width: 767.98px) {
     .services-grid {
-        gap: 20px;
+        gap: 12px;
     }
 
     .service-cell,
     .service-cell--feature {
         grid-column: span 12;
+    }
+
+    /* Compact rows: six full-width photo cards turned this into nearly four
+       screens of scrolling where the image dominated and the text was a
+       footnote. A thumbnail plus the words reads far better on a phone. */
+    .service-card {
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        padding: 12px;
+    }
+
+    .service-card:hover {
+        transform: none;
+    }
+
+    .service-card__media,
+    .service-cell--feature .service-card__media {
+        flex: 0 0 84px;
+        aspect-ratio: 1 / 1;
+        border-radius: var(--radius-sm);
+    }
+
+    .service-card:hover .service-card__media img {
+        transform: none;
+    }
+
+    .service-card__body,
+    .service-cell--feature .service-card__body {
+        gap: 2px;
+        padding: 0;
+    }
+
+    .service-card__num {
+        font-size: 0.7rem;
+    }
+
+    .service-card__body h3,
+    .service-cell--feature .service-card__body h3 {
+        font-size: 1.04rem;
+    }
+
+    .service-card__body p {
+        font-size: 0.86rem;
+        line-height: 1.5;
     }
 }

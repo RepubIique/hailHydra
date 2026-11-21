@@ -445,7 +445,14 @@ section[id] {
 @media (max-width: 767.98px) {
     /* Room for the sticky mobile action bar */
     body {
-        padding-bottom: 64px;
+        padding-bottom: 76px;
+    }
+
+    /* Bootstrap declares --bs-gutter-x on .container itself, so setting it on
+       :root has no effect — it has to be set here. Slightly more side padding
+       than the default, which reads cramped against a phone edge. */
+    .container {
+        --bs-gutter-x: 2rem;
     }
 
     .mobile-cta {
