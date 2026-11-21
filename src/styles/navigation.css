@@ -51,9 +51,9 @@
     position: sticky;
     top: 0;
     z-index: 1030;
-    background-color: rgba(255, 255, 255, 0.94);
-    backdrop-filter: saturate(180%) blur(12px);
-    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    /* Fully opaque: the page now carries dark full-bleed bands directly below
+       the header, and a translucent bar over them reads as murky. */
+    background-color: var(--white);
     border-bottom: 1px solid var(--line);
     transition: box-shadow 0.2s ease;
 }

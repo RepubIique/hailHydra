@@ -3,12 +3,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Navigation } from './components/navigation'
 import { Header } from './components/header'
 import { Sectors } from './components/sectors'
+import { Workshop } from './components/workshop'
 import { Clients } from './components/clients'
 import { Member } from './components/member'
 import { Contact } from './components/contact'
 import JsonData from './data/data.json'
 import { ProductList } from './components/productList'
 import Footer from './components/footer'
+import { MobileCta } from './components/mobileCta'
 
 // Below-the-fold sections are code-split so the hero paints first
 const About = React.lazy(() => import('./components/about'))
@@ -39,6 +41,7 @@ export const AppShell = () => {
                             <Header
                                 data={landingPageData.Header}
                                 counts={counts}
+                                location="Miri, Sarawak"
                             />
 
                             <Suspense fallback={null}>
@@ -46,6 +49,8 @@ export const AppShell = () => {
                             </Suspense>
 
                             <Sectors />
+
+                            <Workshop />
 
                             <Suspense fallback={null}>
                                 <About data={landingPageData.About} />
@@ -76,6 +81,8 @@ export const AppShell = () => {
                 )}
                 contact={landingPageData.Contact || {}}
             />
+
+            <MobileCta phone={landingPageData.Contact?.phone} />
         </>
     )
 }

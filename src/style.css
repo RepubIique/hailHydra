@@ -1,48 +1,55 @@
 /* ==========================================================================
-   Shared typography, section shells and components
+   Shared layer — typography, section rhythm, buttons, reveal, breadcrumbs
+   Every section stylesheet builds on the tokens in index.css.
    ========================================================================== */
+
+/* ------------------------------------------------------------- typography */
 
 h1,
 h2,
 h3,
 h4,
 h5 {
+    margin: 0 0 0.6em;
     color: var(--text-strong);
-    font-family: var(--font-sans);
-    line-height: 1.2;
-    margin-top: 0;
-    letter-spacing: -0.015em;
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
 }
 
+h3,
+h4,
+h5 {
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+}
+
+/* Display sizes — the headline is meant to carry the page, not whisper. */
 h1 {
-    font-size: clamp(2.1rem, 4.4vw, 3.35rem);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.025em;
-    margin-bottom: 22px;
+    font-size: clamp(2.5rem, 5.4vw, 4.35rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
 }
 
 h2 {
-    font-size: clamp(1.65rem, 3vw, 2.35rem);
-    font-weight: 750;
-    letter-spacing: -0.022em;
-    margin-bottom: 18px;
+    font-size: clamp(1.95rem, 3.6vw, 3rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
 }
 
 h3 {
-    font-size: 1.2rem;
-    font-weight: 650;
-    margin-bottom: 10px;
+    font-size: 1.16rem;
 }
 
 h4 {
     font-size: 1.05rem;
-    font-weight: 650;
 }
 
 p {
     color: var(--text);
-    margin-top: 0;
+    margin: 0 0 1rem;
 }
 
 p:last-child {
@@ -79,45 +86,142 @@ strong {
     font-weight: 650;
 }
 
-/* ------------------------------------------------------------------ layout */
+/* ---------------------------------------------------------------- eyebrow */
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 0 0 1.1rem;
+    color: var(--brand-700);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+/* Numbered index — reads like a drawing sheet reference. */
+.eyebrow__num {
+    color: var(--ink-400);
+    font-family: var(--font-display);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.08em;
+}
+
+.eyebrow::after {
+    content: '';
+    width: 34px;
+    height: 1px;
+    flex: 0 0 auto;
+    background-color: var(--line-strong);
+}
+
+.eyebrow--light {
+    color: var(--brand-200);
+}
+
+.eyebrow--light::after {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ---------------------------------------------------------------- section */
 
 .section {
-    padding: var(--section-y) 0;
     position: relative;
+    padding: var(--section-y) 0;
 }
 
 .section--paper {
     background-color: var(--paper);
 }
 
-/* ------------------------------------------------------------- section head */
-
-.eyebrow {
-    display: inline-block;
-    margin-bottom: 14px;
-    color: var(--brand-600);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+.section--tight {
+    padding: calc(var(--section-y) * 0.62) 0;
 }
 
+.section--flush {
+    padding-bottom: 0;
+}
+
+/* The dark anchor band. */
+.section--deep {
+    background-color: var(--deep);
+    color: var(--on-deep);
+}
+
+.section--deep h1,
+.section--deep h2,
+.section--deep h3,
+.section--deep h4 {
+    color: var(--on-deep-strong);
+}
+
+.section--deep .eyebrow {
+    color: var(--brand-200);
+}
+
+.section--deep .eyebrow::after {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Hairline rule that separates stacked bands. */
+.rule {
+    height: 1px;
+    border: 0;
+    margin: 0;
+    background-color: var(--line);
+    opacity: 1;
+}
+
+/* ----------------------------------------------------------- section head */
+
 .section-head {
-    max-width: 720px;
-    margin-bottom: 52px;
+    max-width: 60ch;
+    margin-bottom: 56px;
 }
 
 .section-head--center {
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 66ch;
+    margin-inline: auto;
     text-align: center;
 }
 
+.section-head--center .eyebrow {
+    justify-content: center;
+}
+
+/* Headline left, supporting copy right — the editorial variant. */
+.section-head--split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 24px 64px;
+    align-items: end;
+    max-width: none;
+    margin-bottom: 56px;
+}
+
+.section-head--split .eyebrow {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.section-head--split h2 {
+    margin-bottom: 0;
+}
+
+.section-head--split .section-head__lede {
+    margin-bottom: 0.35rem;
+}
+
 .section-head__lede {
-    color: var(--text-muted);
-    font-size: 1.075rem;
+    color: var(--ink-600);
+    font-size: 1.08rem;
     line-height: 1.7;
     margin-bottom: 0;
+}
+
+.section--deep .section-head__lede {
+    color: var(--on-deep);
 }
 
 /* ---------------------------------------------------------------- buttons */
@@ -127,22 +231,39 @@ strong {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    padding: 0.72rem 1.3rem;
     border: 1px solid transparent;
-    border-radius: var(--radius-sm);
-    font-size: 0.95rem;
+    border-radius: 999px;
+    font-family: var(--font-sans);
+    font-size: 0.94rem;
     font-weight: 600;
     line-height: 1.2;
-    padding: 0.72rem 1.35rem;
     text-align: center;
-    transition: background-color 0.18s ease, border-color 0.18s ease,
-        color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease,
+        color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.btn-lg {
+    padding: 0.95rem 1.7rem;
+    font-size: 1rem;
+}
+
+.btn-block {
+    width: 100%;
 }
 
 .btn-brand {
     background-color: var(--brand-600);
     border-color: var(--brand-600);
     color: var(--white);
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 8px 20px -10px rgba(18, 105, 159, 0.75);
 }
 
 .btn-brand:hover,
@@ -150,35 +271,40 @@ strong {
     background-color: var(--brand-700);
     border-color: var(--brand-700);
     color: var(--white);
-    transform: translateY(-1px);
-    box-shadow: var(--shadow);
+}
+
+.btn-brand:disabled {
+    opacity: 0.62;
+    cursor: not-allowed;
+    transform: none;
 }
 
 .btn-ghost {
-    background-color: var(--white);
+    background-color: transparent;
     border-color: var(--line-strong);
     color: var(--ink-800);
 }
 
 .btn-ghost:hover,
 .btn-ghost:focus {
-    border-color: var(--brand-400);
+    border-color: var(--brand-500);
+    background-color: var(--brand-50);
     color: var(--brand-800);
-    transform: translateY(-1px);
 }
 
-.btn-lg {
-    font-size: 1rem;
-    padding: 0.9rem 1.7rem;
+/* On a dark band or over imagery. */
+.btn-outline-light {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.55);
+    color: var(--white);
+    backdrop-filter: blur(2px);
 }
 
-.btn-block {
-    width: 100%;
-}
-
-.btn:disabled {
-    opacity: 0.65;
-    transform: none;
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--ink-900);
 }
 
 /* A text link with a trailing arrow, used to lead into deeper pages */
@@ -233,6 +359,40 @@ strong {
     color: var(--ink-800);
 }
 
+/* --------------------------------------------------------- reveal on entry */
+
+/* The hidden state only applies once JS has claimed the document, so content
+   is never left invisible if the script fails or is blocked. */
+.js-reveal [data-reveal] {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1)
+            var(--reveal-delay, 0ms),
+        transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1)
+            var(--reveal-delay, 0ms);
+}
+
+.js-reveal [data-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js-reveal [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
+/* ---------------------------------------------------- sticky mobile CTA bar */
+
+.mobile-cta {
+    display: none;
+}
+
+/* ------------------------------------------------------------- breadcrumbs */
+
 .breadcrumbs {
     display: flex;
     justify-content: flex-start;
@@ -263,8 +423,53 @@ section[id] {
     scroll-margin-top: 92px;
 }
 
+/* --------------------------------------------------------------- responsive */
+
 @media (max-width: 991.98px) {
+    .section-head--split {
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+        gap: 18px;
+    }
+
+    .section-head,
+    .section-head--split {
+        margin-bottom: 40px;
+    }
+
     section[id] {
         scroll-margin-top: 76px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Room for the sticky mobile action bar */
+    body {
+        padding-bottom: 64px;
+    }
+
+    .mobile-cta {
+        position: fixed;
+        z-index: 60;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+        background-color: rgba(255, 255, 255, 0.96);
+        border-top: 1px solid var(--line);
+        backdrop-filter: blur(8px);
+    }
+
+    .mobile-cta .btn {
+        width: 100%;
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .mobile-cta__call {
+        width: auto;
     }
 }

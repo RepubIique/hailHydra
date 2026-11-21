@@ -1,38 +1,57 @@
 /* ==========================================================================
-   Sectors served — slim chip band
+   Sectors served — a typographic index, set like a drawing schedule
    ========================================================================== */
 
 .sectors-band {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 24px 56px;
+    align-items: start;
 }
 
 .sectors-band__label {
+    margin: 0;
+    padding-top: 15px;
     color: var(--ink-500);
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    margin-bottom: 0;
 }
 
 .sectors-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 40px;
 }
 
 .sectors-list li {
-    padding: 8px 18px;
-    background-color: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    color: var(--ink-700);
-    font-size: 0.87rem;
+    padding: 15px 0;
+    border-top: 1px solid var(--line-strong);
+    color: var(--ink-800);
+    font-family: var(--font-display);
+    font-size: 1.04rem;
     font-weight: 500;
-    white-space: nowrap;
+    letter-spacing: -0.01em;
+}
+
+@media (max-width: 991.98px) {
+    .sectors-band {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .sectors-band__label {
+        padding-top: 0;
+    }
+
+    .sectors-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575.98px) {
+    .sectors-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }

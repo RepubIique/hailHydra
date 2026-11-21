@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import emailjs from '@emailjs/browser'
 import LazyGoogleMaps from './lazyLoadGoogleMaps'
+import useReveal from '../hooks/useReveal'
 import '../styles/contact.css'
 
 const EMPTY_FORM = { name: '', email: '', message: '' }
@@ -17,6 +18,7 @@ const EMPTY_FORM = { name: '', email: '', message: '' }
 const telHref = (value) => `tel:${(value || '').replace(/[^\d+]/g, '')}`
 
 export const Contact = ({ data }) => {
+    const revealRef = useReveal()
     const [form, setForm] = useState(EMPTY_FORM)
     const [status, setStatus] = useState('idle')
 
@@ -78,10 +80,13 @@ export const Contact = ({ data }) => {
     ].filter(Boolean)
 
     return (
-        <section id="contact" className="section">
+        <section id="contact" className="section" ref={revealRef}>
             <Container>
-                <div className="section-head">
-                    <p className="eyebrow">Get in touch</p>
+                <div className="section-head section-head--split">
+                    <p className="eyebrow">
+                        <span className="eyebrow__num">06</span>
+                        Get in touch
+                    </p>
                     <h2>Request a quote</h2>
                     <p className="section-head__lede">
                         Tell us what you need manufactured, repaired or
@@ -91,7 +96,11 @@ export const Contact = ({ data }) => {
                 </div>
 
                 <div className="contact-grid">
-                    <form className="contact-form" onSubmit={handleSubmit}>
+                    <form
+                        className="contact-form"
+                        onSubmit={handleSubmit}
+                        data-reveal
+                    >
                         <div className="contact-form__row">
                             <div className="contact-field">
                                 <label htmlFor="contact-name">Name</label>
@@ -141,7 +150,9 @@ export const Contact = ({ data }) => {
                                 className="btn btn-brand btn-lg"
                                 disabled={status === 'sending'}
                             >
-                                {status === 'sending' ? 'Sending…' : 'Send enquiry'}
+                                {status === 'sending'
+                                    ? 'Sending…'
+                                    : 'Send enquiry'}
                             </button>
 
                             {status === 'sending' && (
@@ -166,7 +177,7 @@ export const Contact = ({ data }) => {
                         </div>
                     </form>
 
-                    <aside className="contact-details">
+                    <aside className="contact-details" data-reveal>
                         <h3>Contact details</h3>
                         <ul className="contact-details__list">
                             {details.map((entry) => (
@@ -197,7 +208,7 @@ export const Contact = ({ data }) => {
                     </aside>
                 </div>
 
-                <div className="contact-map">
+                <div className="contact-map" data-reveal>
                     <LazyGoogleMaps />
                 </div>
             </Container>
