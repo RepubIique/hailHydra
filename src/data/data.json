@@ -1,13 +1,13 @@
 {
     "Header": {
-        "title": "Engineering, Design, Fabrication & Services",
-        "paragraph": "At Hydra Power Engineering Services, we employs cutting-edge solutions across various sectors. We strive to be more than just a fabricator; we aim to be a trusted partner in your success."
+        "title": "Precision hydraulics and fabrication since 1994",
+        "paragraph": "Hydra Power Engineering Services Sdn. Bhd. designs, machines and fabricates hydraulic cylinders, gears and steel components in Miri, Sarawak, for construction, offshore and agricultural operations."
     },
     "About": {
-        "paragraph": "Hydra Power Engineering Services Sdn. Bhd., in operation since 1994, offers comprehensive suite of solutions that encompass Engineering, Design, Fabrication, and Services to sectors including construction, offshore and agricultural. Our expertise spans across hydraulic cylinder, Gear cutting and various machining works. In addition, we handle steel fabrication tasks for diverse applications. Leveraging two decades of experience and highly skilled operator, we deliver high-quality products, rapid response, punctual deliveries, and competitive pricing. Our primary commitment is to meet customers' needs and ensure their satisfaction, earning their trust to continually service their business.",
+        "paragraph": "Hydra Power Engineering Services Sdn. Bhd. has been in operation since 1994, delivering engineering, design, fabrication and services to the construction, offshore and agricultural sectors. Our expertise covers hydraulic cylinders, gear cutting and general machining, alongside steel fabrication for a wide range of applications. Three decades of experience and a highly skilled team let us deliver high-quality products, rapid response, punctual deliveries and competitive pricing. Our commitment is to meet our customers' needs, earn their trust, and keep serving their business.",
         "Why": [
-            "Two decades of proven industry experience",
-            "Expertise in diverse engineering and machining task",
+            "Three decades of proven engineering experience",
+            "Hydraulic cylinders, gear cutting and general machining expertise",
             "Consistently high-quality product delivery",
             "Flexible and rapid response to customer needs"
         ],
@@ -20,43 +20,43 @@
     },
     "Services": [
         {
-            "img": "img/servicesimg/milling.webp",
-            "imgm": "img/servicesimg/milling-s.webp",
+            "img": "/img/servicesimg/milling.webp",
+            "imgm": "/img/servicesimg/milling-s.webp",
             "alt": "CNC machining equipment",
             "name": "CNC Machining",
             "text": "Providing CNC lathe and milling for precise mass production to meet your needs."
         },
         {
-            "img": "img/servicesimg/design.webp",
-            "imgm": "img/servicesimg/design-s.webp",
+            "img": "/img/servicesimg/design.webp",
+            "imgm": "/img/servicesimg/design-s.webp",
             "alt": "Product design and engineering",
             "name": "Product Design, Engineering & Fabrication",
             "text": "We excel in product design, prototyping, and engineering. Coupled with our top-notch fabrication facilities, we ensure durability and precision in every product."
         },
         {
-            "img": "img/servicesimg/maintenance.webp",
-            "imgm": "img/servicesimg/maintenance-s.webp",
+            "img": "/img/servicesimg/maintenance.webp",
+            "imgm": "/img/servicesimg/maintenance-s.webp",
             "alt": "Maintenance and repair tools",
             "name": "Maintenance & Repair",
             "text": "We understand the importance of minimizing downtime. That’s why we offer rapid and reliable maintenance and repair services, ensuring your hydraulic systems operate efficiently and trouble-free."
         },
         {
-            "img": "img/servicesimg/warranty.webp",
-            "imgm": "img/servicesimg/warranty-s.webp",
+            "img": "/img/servicesimg/warranty.webp",
+            "imgm": "/img/servicesimg/warranty-s.webp",
             "alt": "Warranty services badge",
             "name": "Warranty Services",
             "text": "Providing warranties for products and handling related claims and repairs."
         },
         {
-            "img": "img/servicesimg/safety.webp",
-            "imgm": "img/servicesimg/safety-s.webp",
+            "img": "/img/servicesimg/safety.webp",
+            "imgm": "/img/servicesimg/safety-s.webp",
             "alt": "Quality control and inspection",
             "name": "Quality Control and Inspection",
             "text": "Implementing rigorous quality control processes to ensure that products meet certain standards and specifications."
         },
         {
-            "img": "img/servicesimg/sourcing.webp",
-            "imgm": "img/servicesimg/sourcing-s.webp",
+            "img": "/img/servicesimg/sourcing.webp",
+            "imgm": "/img/servicesimg/sourcing-s.webp",
             "alt": "Material sourcing",
             "name": "Material Sourcing",
             "text": "Identifying and procuring the necessary raw materials and components to fit with customers product specifications."
@@ -65,75 +65,75 @@
     "Portfolio": [
         {
             "title": "Gear Shaft",
-            "image": "img/portfolio/gearshaft.webp",
-            "imgm": "img/portfolio/gearshaft-m.webp",
+            "image": "/img/portfolio/gearshaft.webp",
+            "imgm": "/img/portfolio/gearshaft-m.webp",
             "alt": "Gear shaft for vehicle"
         },
         {
             "title": "Spur Gear",
-            "image": "img/portfolio/spurgear.webp",
-            "imgm": "img/portfolio/spurgear-m.webp",
+            "image": "/img/portfolio/spurgear.webp",
+            "imgm": "/img/portfolio/spurgear-m.webp",
             "alt": "Spur Gear for vehicle"
         },
 
         {
             "title": "Trailer",
-            "image": "img/portfolio/trailer.webp",
-            "imgm": "img/portfolio/trailer-m.webp",
+            "image": "/img/portfolio/trailer.webp",
+            "imgm": "/img/portfolio/trailer-m.webp",
             "alt": "Custom Trailer for Garbage Truck"
         },
         {
             "title": "Trailer",
-            "image": "img/portfolio/trailer2.webp",
-            "imgm": "img/portfolio/trailer2-m.webp",
+            "image": "/img/portfolio/trailer2.webp",
+            "imgm": "/img/portfolio/trailer2-m.webp",
             "alt": "Custom Trailer for Garbage Truck"
         },
         {
             "title": "Trailer",
-            "image": "img/portfolio/trailer3.webp",
-            "imgm": "img/portfolio/trailer3-m.webp",
+            "image": "/img/portfolio/trailer3.webp",
+            "imgm": "/img/portfolio/trailer3-m.webp",
             "alt": "Custom Trailer for Garbage Truck"
         }
     ],
     "Clients": [
         {
-            "img": "img/testimonials/01.webp",
-            "imgm": "img/testimonials/01-s.webp",
+            "img": "/img/testimonials/01.webp",
+            "imgm": "/img/testimonials/01-s.webp",
             "alt": "Picture of Lee Xian How",
             "text": "Hydra Power is a reliable manufacturer of hydraulic cylinders in the market. I am thoroughly impressed with the quality and durability of their products. The precision engineering and attention to detail are exceptional. Communication was smooth, and they delivered on time, making them a reliable choice.",
             "name": "Lee Xian How, Construction Sector"
         },
         {
-            "img": "img/testimonials/02.webp",
-            "imgm": "img/testimonials/02-s.webp",
+            "img": "/img/testimonials/02.webp",
+            "imgm": "/img/testimonials/02-s.webp",
             "alt": "Picture of Wain Ng",
             "text": "We have been working with Hydra Power Engineering Services since 2005. Their top-notch engineering and commitment to customer service have made them a reliable partner for our offshore projects. They always meet our needs and ensure our satisfaction.",
             "name": "Wain Ng, Offshore Sector"
         },
         {
-            "img": "img/testimonials/03.webp",
-            "imgm": "img/testimonials/03-s.webp",
+            "img": "/img/testimonials/03.webp",
+            "imgm": "/img/testimonials/03-s.webp",
             "alt": "Picture of Kenneth Lau",
             "text": "In the agricultural sector, efficiency and reliability are critical. Hydra Power Engineering Services provides us with high-quality hydraulic systems that we can count on. Their high level of expertise and professionalism is truly appreciated.",
             "name": "Kenneth Lau, Agricultural Sector"
         },
         {
-            "img": "img/testimonials/04.webp",
-            "imgm": "img/testimonials/04-s.webp",
+            "img": "/img/testimonials/04.webp",
+            "imgm": "/img/testimonials/04-s.webp",
             "alt": "Picture of Yi Jao Chin",
             "text": "I am extremely satisfied for their expertise in gear manufacturing services. I had an urgent requirement for gears, and they rose to the occasion, delivering on time without any delays. The gears they provided were top quality. I highly recommend them for their efficiency, professionalism, and on time delivery.",
             "name": "Yi Kao Chin, Mobile & Industrial Sector"
         },
         {
-            "img": "img/testimonials/05.webp",
-            "imgm": "img/testimonials/05-s.webp",
+            "img": "/img/testimonials/05.webp",
+            "imgm": "/img/testimonials/05-s.webp",
             "alt": "Picture of Calvin Ong",
             "text": "Working with Hydra Power Engineering Services has been a great experience. Their expertise in hydraulic cylinder fabrication, gear manufacturing, and machining works has significantly benefited our business. They have a highly skilled team that always delivers on time.",
             "name": "Calvin Ong, Hydraulic Equipment Manufacturing"
         },
         {
-            "img": "img/testimonials/06.webp",
-            "imgm": "img/testimonials/06-s.webp",
+            "img": "/img/testimonials/06.webp",
+            "imgm": "/img/testimonials/06-s.webp",
             "alt": "Picture of Sheryl Lee",
             "text": "Hydra Power Engineering Services is an expert in steel fabrication tasks for diverse applications. They always ensure high-quality products and their customer service is always excellent. Their commitment to meeting customer needs is evident in every project they undertake.",
             "name": "Sheryl Lee, Steel Fabrication Sector"
@@ -141,36 +141,36 @@
     ],
     "Team": [
         {
-            "img": "img/team/Director.webp",
-            "imgm": "img/team/Director-s.webp",
+            "img": "/img/team/Director.webp",
+            "imgm": "/img/team/Director-s.webp",
             "alt": "Picture of Managing Director",
             "name": "Tong Chu Hua",
             "job": "Managing Director"
         },
         {
-            "img": "img/team/GM.webp",
-            "imgm": "img/team/GM-s.webp",
+            "img": "/img/team/GM.webp",
+            "imgm": "/img/team/GM-s.webp",
             "alt": "Picture of General Manager",
             "name": "Sim Siaw Hock",
             "job": "General Manager"
         },
         {
-            "img": "img/team/ProductionManager.webp",
-            "imgm": "img/team/ProductionManager-s.webp",
+            "img": "/img/team/ProductionManager.webp",
+            "imgm": "/img/team/ProductionManager-s.webp",
             "alt": "Picture of Production Manager",
             "name": "Eu Tian Jyh",
             "job": "Production Manager"
         },
         {
-            "img": "img/team/ProcurementSpecialist.webp",
-            "imgm": "img/team/ProcurementSpecialist-s.webp",
+            "img": "/img/team/ProcurementSpecialist.webp",
+            "imgm": "/img/team/ProcurementSpecialist-s.webp",
             "alt": "Picture of Procurement Specialist",
             "name": "Tang Hong Moi",
             "job": "Procurement Specialist"
         },
         {
-            "img": "img/team/AccountingManager.webp",
-            "imgm": "img/team/AccountingManager-s.webp",
+            "img": "/img/team/AccountingManager.webp",
+            "imgm": "/img/team/AccountingManager-s.webp",
             "alt": "Picture of Accounting Manager",
             "name": "Lucy Tong Wen Ping",
             "job": "Accounting Manager"
@@ -185,11 +185,11 @@
     "Product": [
         {
             "name": "Round Bar",
-            "image": "../img/products/round.png",
+            "image": "/img/products/round.png",
             "variants": [
                 {
                     "name": "1045 | S45C | EN9 Carbon Steel",
-                    "image": "../../../img/products/1045.2.webp",
+                    "image": "/img/products/1045.2.webp",
                     "overview": "S45C is a medium carbon steel under the Japanese standard JIS G4051. With a carbon content of 0.42%-0.48%, it is commonly used in machinery manufacturing. S45C is known for its good strength and hardness properties, and it can be hardened through quenching and tempered processes. Typical applications include gears, shafts, and bolts. Depending on its intended use, S45C may undergo various heat treatments such as annealing, hardening, and tempering to achieve desired mechanical properties.",
                     "keyFeatures": [
                         {
@@ -293,7 +293,7 @@
                 },
                 {
                     "name": "4140 | 709 | EN19",
-                    "image": "../../../img/products/4140.png",
+                    "image": "/img/products/4140.png",
                     "overview": "709 steel, also known as chromoly steel, is a chromium-molybdenum alloy steel recognized for its outstanding strength, toughness, and versatility. With its exceptional hardness and resistance to wear, it has been extensively utilized in various industrial applications, making it one of the preferred choices for manufacturers worldwide.",
                     "keyFeatures": [
                         {
@@ -330,7 +330,7 @@
                         "Copper": "up to 0.06%",
                         "Nickel": "up to 0.04%",
                         "Chromium": "0.80-1.10%",
-                        "Molydenum": "0.15-0,25%"
+                        "Molybdenum": "0.15-0,25%"
                     },
                     "mechanicalPropertiesTable": [
                         {
@@ -539,11 +539,11 @@
         },
         {
             "name": "Hollow Bar",
-            "image": "../img/products/hollow.png",
+            "image": "/img/products/hollow.png",
             "variants": [
                 {
                     "name": "4140 | 709 | EN19",
-                    "image": "../../../img/products/4140.png",
+                    "image": "/img/products/4140.png",
                     "overview": "709 steel, also known as chromoly steel, is a chromium-molybdenum alloy steel recognized for its outstanding strength, toughness, and versatility. With its exceptional hardness and resistance to wear, it has been extensively utilized in various industrial applications, making it one of the preferred choices for manufacturers worldwide.",
                     "keyFeatures": [
                         {
@@ -580,7 +580,7 @@
                         "Copper": "up to 0.06%",
                         "Nickel": "up to 0.04%",
                         "Chromium": "0.80-1.10%",
-                        "Molydenum": "0.15-0,25%"
+                        "Molybdenum": "0.15-0,25%"
                     },
                     "mechanicalPropertiesTable": [
                         {
@@ -789,11 +789,11 @@
         },
         {
             "name": "Chrome Bar",
-            "image": "../img/products/chrome.png",
+            "image": "/img/products/chrome.png",
             "variants": [
                 {
                     "name": "1045 | S45C | EN9 Carbon Steel",
-                    "image": "../../../img/products/1045.webp",
+                    "image": "/img/products/1045.webp",
                     "overview": "S45C is a medium carbon steel that adheres to the Japanese standard JIS G4051. It is characterized by a carbon content ranging from 0.42% to 0.48%, making it a popular choice in machinery manufacturing. The steel boasts a typical hard chrome-plated surface hardness of HV 1000 - 1150, which is known for its extremely smooth surface finish. This feature, combined with excellent wear and corrosion resistance, grants it a high level of durability. Moreover, the base material offers good strength and impact properties, enhancing its utility in various applications.S45C also offers good machinability and reasonable weldability, making it a versatile material in manufacturing. It is extensively used in the hydraulic and pneumatic industries, and finds applications in other sectors as well.",
                     "commonApplication": [
                         "Agricultural Equipment",
@@ -826,7 +826,7 @@
                     },
                     "hardChromePlating": {
                         "Surface Hardness": "HV 1000 -1150",
-                        "Surface Smnoothness umRA (Microns)": "0.10-0.30",
+                        "Surface smoothness (µm RA)": "0.10-0.30",
                         "Surface Deposit (mm)": "0.025-0.050"
                     },
                     "relatedSpecifications": {

@@ -1,12 +1,13 @@
-import { Col, Card } from 'react-bootstrap'
+import React from 'react'
 
-export const ProductCard = ({ item, onClick }) => (
-    <Col xl={3} className="products">
-        <Card className="card" border="white" onClick={onClick}>
-            <Card.Img className="product-img" variant="top" src={item.image} />
-            <Card.Body className="product-body">
-                <Card.Title>{item.name}</Card.Title>
-            </Card.Body>
-        </Card>
-    </Col>
+export const ProductCard = ({ item, onClick, meta }) => (
+    <button type="button" className="product-card" onClick={onClick}>
+        <span className="product-card__media">
+            <img src={item.image} alt={item.name} loading="lazy" />
+        </span>
+        <span className="product-card__body">
+            <span className="product-card__title">{item.name}</span>
+            {meta ? <span className="product-card__meta">{meta}</span> : null}
+        </span>
+    </button>
 )

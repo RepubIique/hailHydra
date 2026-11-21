@@ -15,7 +15,9 @@ const GoogleMaps = () => {
     return (
         <div className="googleMaps">
             {!isLoaded ? (
-                <h1>Loading...</h1>
+                <div className="googleMaps__pending" role="status">
+                    Loading map…
+                </div>
             ) : (
                 <GoogleMap
                     mapContainerClassName="map-container"

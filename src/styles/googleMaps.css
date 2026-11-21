@@ -1,13 +1,10 @@
 .googleMaps {
-    /* Was 40vh tall and 100vw wide; the vw width caused a horizontal
-       scrollbar on every viewport. */
-    height: clamp(300px, 42vh, 440px);
+    height: clamp(280px, 38vh, 380px);
     width: 100%;
-    margin-bottom: 48px;
-    border-radius: var(--radius-lg);
     overflow: hidden;
+    background-color: var(--paper-2);
     border: 1px solid var(--line);
-    background-color: var(--navy-800);
+    border-radius: var(--radius);
 }
 
 .map-container {
@@ -15,10 +12,13 @@
     width: 100%;
 }
 
-.googleMaps h1 {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--muted);
-    padding: 24px;
-    margin: 0;
+/* Placeholder shown until the Maps API reports ready. Deliberately not a
+   heading — a duplicate h1 in the contact section hurts structure and SEO. */
+.googleMaps__pending {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--ink-500);
+    font-size: 0.92rem;
 }

@@ -1,72 +1,214 @@
 /* ==========================================================================
-   Product detail page
+   Product detail — technical specification sheet
    ========================================================================== */
 
-.product-container {
-    padding: 0 15px;
+.product-detail {
+    padding: 40px 0 var(--section-y);
 }
 
-.product-image {
+.product-detail__top {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(28px, 4vw, 56px);
+    align-items: start;
+    margin-bottom: 32px;
+}
+
+.product-detail__media {
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
+}
+
+.product-detail__media img {
+    display: block;
     width: 100%;
-    margin-bottom: 10px;
-    border-radius: var(--radius);
     border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background-color: var(--paper-2);
 }
 
-.product-card {
+.product-detail__name {
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    margin-bottom: 16px;
+}
+
+.spec-panel {
     padding: 24px;
-    margin: 0 0 20px;
-    border-radius: var(--radius);
-    background-color: var(--navy-800);
+    margin-bottom: 20px;
+    background-color: var(--white);
     border: 1px solid var(--line);
-    box-shadow: var(--shadow-md);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-xs);
 }
 
-.product-title {
-    color: var(--ink);
-    line-height: 1.4;
-    margin-bottom: 14px;
+.spec-panel h3 {
+    font-size: 1.02rem;
+    margin-bottom: 16px;
 }
 
-.product-list {
-    list-style-type: none;
-    margin-left: 0;
-    column-count: 1;
-    column-gap: 24px;
+.spec-panel__text {
+    color: var(--ink-600);
+    font-size: 0.96rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Key/value tables for composition, properties and specifications */
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.spec-table th,
+.spec-table td {
+    padding: 9px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.9rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.spec-table tr:last-child th,
+.spec-table tr:last-child td {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.spec-table th {
+    color: var(--ink-500);
+    font-weight: 600;
+}
+
+.spec-table td {
+    color: var(--ink-800);
+    font-family: var(--font-mono);
+    font-size: 0.86rem;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* Numeric matrix for the mechanical properties table */
+.spec-table--matrix td,
+.spec-table--matrix th {
+    text-align: right;
+}
+
+.spec-table--matrix th:first-child,
+.spec-table--matrix td:first-child {
     text-align: left;
 }
 
-.product-list li {
-    position: relative;
-    margin-bottom: 8px;
-    padding-left: 18px;
-    color: var(--ink-soft);
-    font-size: 0.93rem;
-    line-height: 1.6;
+/* Bulleted lists inside panels */
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-.product-list li::before {
+.spec-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px 24px;
+}
+
+.spec-list li {
+    position: relative;
+    padding-left: 18px;
+    color: var(--ink-700);
+    font-size: 0.93rem;
+    line-height: 1.55;
+}
+
+.spec-list li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 0.62em;
+    top: 0.58em;
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: var(--brand);
+    background-color: var(--brand-500);
 }
 
-.product-list strong {
-    color: var(--ink);
+/* Feature cards */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 28px;
 }
 
-/* Desktop styles */
-@media (min-width: 768px) {
-    .product-container {
-        padding: 0;
+.feature-item strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.95rem;
+}
+
+.feature-item span {
+    color: var(--ink-500);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Heat treatment: one card per process */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.process-card {
+    padding: 18px;
+    background-color: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+}
+
+.process-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: var(--brand-800);
+}
+
+.process-card dl {
+    margin: 0;
+    display: grid;
+    gap: 6px;
+}
+
+.process-card dt {
+    color: var(--ink-500);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+.process-card dd {
+    margin: 0 0 4px;
+    color: var(--ink-700);
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+@media (max-width: 991.98px) {
+    .product-detail__top {
+        grid-template-columns: minmax(0, 1fr);
     }
 
-    .product-list {
-        column-count: 2;
+    .product-detail__media {
+        position: static;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spec-list,
+    .feature-grid,
+    .process-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .spec-table td {
+        white-space: normal;
     }
 }

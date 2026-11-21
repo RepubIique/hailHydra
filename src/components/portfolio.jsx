@@ -1,40 +1,45 @@
-import { ImageComponent } from './image'
 import React from 'react'
-import { Container, Carousel } from 'react-bootstrap'
+import Container from 'react-bootstrap/Container'
 import '../styles/portfolio.css'
 
-export default function Portfolio(props) {
+export default function Portfolio({ data }) {
     return (
-        <div id="portfolio" className="text-center">
+        <section id="portfolio" className="section section--paper">
             <Container>
-                <div className="section-title">
-                    <h2>Portfolio</h2>
-                    <p>
-                        "Showcasing two decades of superior craftsmanship in
-                        hydraulic solutions, spanning diverse sectors and
-                        featuring innovative designs, precise manufacturing, and
-                        consistent client satisfaction."
+                <div className="section-head">
+                    <p className="eyebrow">Recent work</p>
+                    <h2>Parts and fabrications we&rsquo;ve delivered</h2>
+                    <p className="section-head__lede">
+                        Gear cutting and machining, alongside custom trailers
+                        fabricated for waste-collection vehicles.
                     </p>
                 </div>
-                <Carousel>
-                    {props.data
-                        ? props.data.map((d, i) => (
-                              <Carousel.Item
-                                  interval={6000}
-                                  key={`${d.title}-${i}`}
+
+                <div className="portfolio-grid">
+                    {data
+                        ? data.map((item, index) => (
+                              <figure
+                                  className="portfolio-card"
+                                  key={`${item.title}-${index}`}
                               >
-                                  <ImageComponent
-                                      title={d.title}
-                                      image={d.image}
-                                      imagem={d.imgm}
-                                      description={d.description}
-                                      alt={d.alt}
-                                  />
-                              </Carousel.Item>
+                                  <div className="portfolio-card__media">
+                                      <img
+                                          src={item.image}
+                                          srcSet={`${item.imgm} 400w, ${item.image} 1200w`}
+                                          sizes="(max-width: 575px) 100vw, (max-width: 991px) 50vw, 33vw"
+                                          alt={item.alt}
+                                          loading="lazy"
+                                      />
+                                  </div>
+                                  <figcaption className="portfolio-card__caption">
+                                      <h3>{item.title}</h3>
+                                      <p>{item.alt}</p>
+                                  </figcaption>
+                              </figure>
                           ))
-                        : 'Loading...'}
-                </Carousel>
+                        : null}
+                </div>
             </Container>
-        </div>
+        </section>
     )
 }

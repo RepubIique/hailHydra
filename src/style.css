@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Shared typography and components
+   Shared typography, section shells and components
    ========================================================================== */
 
 h1,
@@ -7,190 +7,264 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: var(--font-display);
-    color: var(--ink);
-    line-height: 1.25;
+    color: var(--text-strong);
+    font-family: var(--font-sans);
+    line-height: 1.2;
     margin-top: 0;
+    letter-spacing: -0.015em;
+}
+
+h1 {
+    font-size: clamp(2.1rem, 4.4vw, 3.35rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    margin-bottom: 22px;
 }
 
 h2 {
-    font-size: clamp(1.75rem, 3.4vw, 2.5rem);
-    font-weight: 800;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    font-size: clamp(1.65rem, 3vw, 2.35rem);
+    font-weight: 750;
+    letter-spacing: -0.022em;
+    margin-bottom: 18px;
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 650;
+    margin-bottom: 10px;
 }
 
 h4 {
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-h5 {
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+    font-size: 1.05rem;
+    font-weight: 650;
 }
 
 p {
-    font-size: 1rem;
-    color: var(--ink-soft);
+    color: var(--text);
     margin-top: 0;
 }
 
+p:last-child {
+    margin-bottom: 0;
+}
+
 a {
-    color: var(--brand);
-    font-weight: 500;
+    color: var(--brand-600);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.18s ease;
 }
 
 a:hover,
 a:focus {
-    color: #8ec4ff;
-    text-decoration: none;
+    color: var(--brand-800);
 }
 
 ul,
 ol {
-    list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 hr {
-    height: 3px;
-    width: 64px;
     border: 0;
-    border-radius: 2px;
-    background: var(--brand-grad);
-    margin: 0 auto 28px;
+    border-top: 1px solid var(--line);
+    margin: 32px 0;
     opacity: 1;
 }
 
-/* --------------------------------------------------------------- sections */
+strong {
+    color: var(--text-strong);
+    font-weight: 650;
+}
 
-/* Every major band sits on a navy surface; the alternation gives rhythm
-   without relying on bright background colours. */
-#services,
-#portfolio,
-#testimonials,
-#team,
-#about,
-#contact {
+/* ------------------------------------------------------------------ layout */
+
+.section {
+    padding: var(--section-y) 0;
     position: relative;
-    padding: 96px 0;
 }
 
-#services,
-#testimonials {
-    background: var(--navy-800);
+.section--paper {
+    background-color: var(--paper);
 }
 
-#portfolio,
-#about {
-    background: var(--navy-900);
+/* ------------------------------------------------------------- section head */
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--brand-600);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
 }
 
-#team {
-    background: var(--navy-850);
+.section-head {
+    max-width: 720px;
+    margin-bottom: 52px;
 }
 
-.section-title {
-    margin-bottom: 56px;
+.section-head--center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
-.section-title h2 {
-    position: relative;
-    padding-bottom: 20px;
-    margin-bottom: 22px;
-}
-
-.section-title h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 64px;
-    height: 3px;
-    border-radius: 2px;
-    transform: translateX(-50%);
-    background: var(--brand-grad);
-}
-
-.section-title p {
-    font-size: 1.05rem;
-    color: var(--muted);
-    max-width: 62ch;
-    margin: 0 auto;
-}
-
-#about .section-title h2::after {
-    left: 0;
-    transform: none;
+.section-head__lede {
+    color: var(--text-muted);
+    font-size: 1.075rem;
+    line-height: 1.7;
+    margin-bottom: 0;
 }
 
 /* ---------------------------------------------------------------- buttons */
 
 .btn {
-    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    font-size: 0.95rem;
     font-weight: 600;
-    letter-spacing: 0.01em;
-    padding: 0.7rem 1.6rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    line-height: 1.2;
+    padding: 0.72rem 1.35rem;
+    text-align: center;
+    transition: background-color 0.18s ease, border-color 0.18s ease,
+        color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
 
-.btn-primary,
-#header .btn {
-    background: var(--brand-grad);
-    border: 0;
-    color: #fff;
-    box-shadow: var(--glow);
+.btn-brand {
+    background-color: var(--brand-600);
+    border-color: var(--brand-600);
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-#header .btn:hover,
-#header .btn:focus {
-    color: #fff;
-    filter: brightness(1.08);
-    transform: translateY(-2px);
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--brand-700);
+    border-color: var(--brand-700);
+    color: var(--white);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+}
+
+.btn-ghost {
+    background-color: var(--white);
+    border-color: var(--line-strong);
+    color: var(--ink-800);
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus {
+    border-color: var(--brand-400);
+    color: var(--brand-800);
+    transform: translateY(-1px);
 }
 
 .btn-lg {
-    padding: 0.9rem 2.1rem;
     font-size: 1rem;
+    padding: 0.9rem 1.7rem;
 }
 
-/* ------------------------------------------------------------------ misc */
+.btn-block {
+    width: 100%;
+}
+
+.btn:disabled {
+    opacity: 0.65;
+    transform: none;
+}
+
+/* A text link with a trailing arrow, used to lead into deeper pages */
+.link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--brand-600);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.link-arrow svg {
+    transition: transform 0.18s ease;
+}
+
+.link-arrow:hover svg {
+    transform: translateX(3px);
+}
+
+/* ------------------------------------------------------------------ cards */
+
+.card-surface {
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-xs);
+}
+
+.card-surface--hover {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.card-surface--hover:hover {
+    border-color: var(--brand-200);
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+/* ------------------------------------------------------------------- misc */
 
 .main-content {
     position: relative;
 }
 
-/* Bootstrap's breadcrumb styling assumes a light page */
+/* Monospace data value, used throughout the steel specification tables */
+.spec {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-800);
+}
+
 .breadcrumbs {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .breadcrumb {
-    --bs-breadcrumb-divider-color: var(--muted-dim);
-    --bs-breadcrumb-item-active-color: var(--ink-soft);
+    --bs-breadcrumb-divider: '/';
+    --bs-breadcrumb-divider-color: var(--line-strong);
+    --bs-breadcrumb-item-active-color: var(--text-muted);
+    background: transparent;
     margin-bottom: 0;
+    padding: 0;
 }
 
 .breadcrumb-item a {
-    color: var(--brand);
-    text-decoration: none;
+    color: var(--brand-600);
 }
 
 .breadcrumb-item.active {
-    color: var(--ink-soft);
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Sticky-header clearance so an anchor jump doesn't hide the section heading
+   -------------------------------------------------------------------------- */
+
+section[id] {
+    scroll-margin-top: 92px;
+}
+
+@media (max-width: 991.98px) {
+    section[id] {
+        scroll-margin-top: 76px;
+    }
 }

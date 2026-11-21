@@ -1,74 +1,47 @@
 import React from 'react'
-import { Row, Col } from 'react-bootstrap'
-import '../styles/about.css'
+import Container from 'react-bootstrap/Container'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
-import champImg from '../assets/about.webp'
+import facilities from '../assets/about.webp'
+import '../styles/about.css'
 
-export default function About(props) {
+export default function About({ data }) {
+    const highlights = data
+        ? [...(data.Why || []), ...(data.Why2 || [])]
+        : []
+
     return (
-        <div id="about">
-            <Row>
-                <Col xs={12} lg={6}>
-                    <div
-                        className="champ"
-                        style={{ backgroundImage: `url(${champImg})` }}
-                    ></div>
-                </Col>
-                <Col xs={12} lg={6}>
-                    <div className="about-text">
-                        <h2>About Us</h2>
-                        <p>
-                            {props.data ? props.data.paragraph : 'loading...'}
-                        </p>
-                        <h3>Why Choose Us?</h3>
-                        <div className="list-style">
-                            <Row>
-                                <Col lg={6} sm={6} xs={12}>
-                                    <ul>
-                                        {props.data
-                                            ? props.data.Why.map((d, i) => (
-                                                  <li key={`${d}-${i}`}>
-                                                      <FontAwesomeIcon
-                                                          icon={faCheck}
-                                                          style={{
-                                                              color: '#5ca9fb',
-                                                              fontSize: '11px',
-                                                              paddingRight:
-                                                                  '8px',
-                                                          }}
-                                                      />
-                                                      {d}
-                                                  </li>
-                                              ))
-                                            : 'loading'}
-                                    </ul>
-                                </Col>
-                                <Col lg={6} sm={6} xs={12}>
-                                    <ul>
-                                        {props.data
-                                            ? props.data.Why2.map((d, i) => (
-                                                  <li key={`${d}-${i}`}>
-                                                      <FontAwesomeIcon
-                                                          icon={faCheck}
-                                                          style={{
-                                                              color: '#5ca9fb',
-                                                              fontSize: '11px',
-                                                              paddingRight:
-                                                                  '8px',
-                                                          }}
-                                                      />
-                                                      {d}
-                                                  </li>
-                                              ))
-                                            : 'loading'}
-                                    </ul>
-                                </Col>
-                            </Row>
-                        </div>
+        <section id="about" className="section">
+            <Container>
+                <div className="about-grid">
+                    <div className="about-media">
+                        <img
+                            src={facilities}
+                            alt="Hydra Power Engineering facilities"
+                            loading="lazy"
+                        />
                     </div>
-                </Col>
-            </Row>
-        </div>
+
+                    <div className="about-copy">
+                        <p className="eyebrow">About us</p>
+                        <h2>Three decades in Miri</h2>
+                        <p>{data ? data.paragraph : null}</p>
+
+                        <h3 className="about-subhead">Why choose us</h3>
+                        <ul className="about-list">
+                            {highlights.map((point, index) => (
+                                <li key={`${point}-${index}`}>
+                                    <FontAwesomeIcon
+                                        icon={faCheck}
+                                        size="sm"
+                                    />
+                                    <span>{point}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+            </Container>
+        </section>
     )
 }

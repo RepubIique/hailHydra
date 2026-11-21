@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Sectors served — slim chip band
+   ========================================================================== */
+
+.sectors-band {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    text-align: center;
+}
+
+.sectors-band__label {
+    color: var(--ink-500);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.sectors-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.sectors-list li {
+    padding: 8px 18px;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--ink-700);
+    font-size: 0.87rem;
+    font-weight: 500;
+    white-space: nowrap;
+}

@@ -1,71 +1,74 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
-// import videoSourceMobile from '../assets/CNC-m.mp4'
-// import videoSourceDesktop from '../assets/CNC.mp4'
+import Container from 'react-bootstrap/Container'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCogs } from '@fortawesome/free-solid-svg-icons'
 import bg from '../assets/background.png'
 import '../styles/header.css'
 
-export const Header = (props) => {
-    // const [videoSource, setVideoSource] = useState(videoSourceDesktop)
+const ESTABLISHED = 1994
 
-    // useEffect(() => {
-    //     setVideoSource(
-    //         window.innerWidth <= 600 ? videoSourceMobile : videoSourceDesktop
-    //     )
+export const Header = ({ data, counts = {} }) => {
+    // Derived rather than hard-coded, so the figure never goes stale.
+    const years = new Date().getFullYear() - ESTABLISHED
 
-    //     const handleResize = () => {
-    //         setVideoSource(
-    //             window.innerWidth <= 600
-    //                 ? videoSourceMobile
-    //                 : videoSourceDesktop
-    //         )
-    //     }
-
-    //     const videoElement = document.querySelector('video')
-    //     videoElement.addEventListener('loadeddata', () => {
-    //         videoElement.play()
-    //     })
-
-    //     window.addEventListener('resize', handleResize)
-
-    //     return () => {
-    //         window.removeEventListener('resize', handleResize)
-    //     }
-    // }, [videoSource])
+    const stats = [
+        { value: ESTABLISHED, label: 'Established in Miri' },
+        { value: years, label: 'Years in operation' },
+        { value: counts.services, label: 'Core services' },
+    ].filter((stat) => stat.value)
 
     return (
-        <header id="header">
-            <div className="intro">
-                {/* <video autoPlay muted playsInline loop>
-                    <source src={videoSource} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video> */}
-                <img loading="lazy" src={bg} className="header-image" />
-                <div className="overlay">
-                    <Container>
-                        <Row className="justify-content-md-center">
-                            <Col md={8} className="intro-text">
-                                <h1>
-                                    {props.data ? props.data.title : 'Loading'}
-                                    <span></span>
-                                </h1>
-                                <p>
-                                    {props.data
-                                        ? props.data.paragraph
-                                        : 'Loading'}
-                                </p>
-                                <Button
-                                    className="btn-lg button"
-                                    href="#contact"
+        <section id="header" className="hero">
+            <Container>
+                <div className="hero__grid">
+                    <div className="hero__copy">
+                        <p className="eyebrow">
+                            Engineering · Design · Fabrication
+                        </p>
+                        <h1>{data ? data.title : 'Hydra Power Engineering'}</h1>
+                        <p className="hero__lede">
+                            {data ? data.paragraph : ''}
+                        </p>
+
+                        <div className="hero__actions">
+                            <a className="btn btn-brand btn-lg" href="#contact">
+                                Request a quote
+                            </a>
+                            <a className="btn btn-ghost btn-lg" href="#services">
+                                See our capabilities
+                            </a>
+                        </div>
+
+                        <dl className="hero__proof">
+                            {stats.map((stat) => (
+                                <div
+                                    className="hero__proof-item"
+                                    key={stat.label}
                                 >
-                                    Ask us how we can help
-                                </Button>
-                            </Col>
-                        </Row>
-                    </Container>
+                                    <dt>{stat.value}</dt>
+                                    <dd>{stat.label}</dd>
+                                </div>
+                            ))}
+                        </dl>
+                    </div>
+
+                    <div className="hero__media">
+                        <img
+                            src={bg}
+                            alt="Industrial plant operating at dusk"
+                        />
+                        <div className="hero__badge">
+                            <span className="hero__badge-icon">
+                                <FontAwesomeIcon icon={faCogs} />
+                            </span>
+                            <span className="hero__badge-text">
+                                <strong>Hydraulic cylinders</strong>
+                                <span>Gears · Machining · Steel fabrication</span>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </Container>
+        </section>
     )
 }

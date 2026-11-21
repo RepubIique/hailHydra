@@ -2,64 +2,43 @@
    Team
    ========================================================================== */
 
-#team {
-    background: var(--navy-850);
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 24px;
 }
 
-#team .card {
-    height: 100%;
+.team-card__media {
+    aspect-ratio: 4 / 5;
     overflow: hidden;
-    background-color: var(--navy-800);
-    border: 1px solid var(--line) !important;
+    background-color: var(--paper-2);
     border-radius: var(--radius);
-    transition: transform 0.28s ease, border-color 0.28s ease,
-        box-shadow 0.28s ease;
+    border: 1px solid var(--line);
 }
 
-#team .card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(92, 169, 251, 0.5) !important;
-    box-shadow: var(--shadow-md);
-}
-
-#team .card-body {
-    background-color: transparent;
-    padding: 18px 16px 22px;
-}
-
-#team .card-title {
-    color: var(--ink);
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-
-#team .card-text {
-    color: var(--brand);
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 0;
-}
-
-.team-img {
+.team-card__media img {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     object-position: center top;
+    transition: transform 0.5s ease;
 }
 
-#team .section-title p {
-    color: var(--ink-soft);
+.team-card:hover .team-card__media img {
+    transform: scale(1.03);
 }
 
-#team h4 {
-    margin: 5px 0;
+.team-card h3 {
+    font-size: 1rem;
+    font-weight: 650;
+    margin: 14px 0 2px;
 }
 
-/* Spacing when the cards wrap onto a second row */
-#team .row > [class*='col-'] {
-    margin-bottom: 28px;
+.team-card p {
+    color: var(--brand-700);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
 }

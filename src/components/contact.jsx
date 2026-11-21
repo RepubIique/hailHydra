@@ -1,81 +1,34 @@
-import React, { useState, useRef, Suspense, useCallback } from 'react'
-import { Container, Row, Col, Form, Button, ListGroup } from 'react-bootstrap'
+import React, { useCallback, useState } from 'react'
+import Container from 'react-bootstrap/Container'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-    faMapMarker,
-    faPhone,
     faEnvelope,
     faFax,
+    faMapMarker,
+    faPhone,
+    faSpinner,
 } from '@fortawesome/free-solid-svg-icons'
+import emailjs from '@emailjs/browser'
 import LazyGoogleMaps from './lazyLoadGoogleMaps'
 import '../styles/contact.css'
-import emailjs from '@emailjs/browser'
 
-const ContactInfo = React.memo(({ data }) => (
-    <ListGroup>
-        <ListGroup.Item>
-            <h3>Contact Info</h3>
-            <p>
-                <span>
-                    <FontAwesomeIcon icon={faMapMarker} /> Address:
-                </span>
-                {data ? data.address : 'loading'}
-            </p>
-        </ListGroup.Item>
-        <ListGroup.Item>
-            <p>
-                <span>
-                    <FontAwesomeIcon icon={faPhone} /> Phone:
-                </span>{' '}
-                {data ? data.phone : 'loading'}
-            </p>
-        </ListGroup.Item>
-        <ListGroup.Item>
-            <p>
-                <span>
-                    <FontAwesomeIcon icon={faFax} /> Fax:
-                </span>{' '}
-                {data ? data.fax : 'loading'}
-            </p>
-        </ListGroup.Item>
-        <ListGroup.Item>
-            <p>
-                <span>
-                    <FontAwesomeIcon icon={faEnvelope} /> Email:
-                </span>{' '}
-                {data ? data.email : 'loading'}
-            </p>
-        </ListGroup.Item>
-    </ListGroup>
-))
+const EMPTY_FORM = { name: '', email: '', message: '' }
 
-export const Contact = (props) => {
-    const formRef = useRef()
-    const [form, setForm] = useState({
-        name: '',
-        email: '',
-        message: '',
-    })
+const telHref = (value) => `tel:${(value || '').replace(/[^\d+]/g, '')}`
 
-    const [loading, setLoading] = useState(false)
+export const Contact = ({ data }) => {
+    const [form, setForm] = useState(EMPTY_FORM)
+    const [status, setStatus] = useState('idle')
 
-    const handleChange = useCallback(
-        (e) => {
-            const { target } = e
-            const { name, value } = target
-
-            setForm({
-                ...form,
-                [name]: value,
-            })
-        },
-        [form]
-    )
+    const handleChange = useCallback((event) => {
+        const { name, value } = event.target
+        setForm((previous) => ({ ...previous, [name]: value }))
+    }, [])
 
     const handleSubmit = useCallback(
-        (e) => {
-            e.preventDefault()
-            setLoading(true)
+        (event) => {
+            event.preventDefault()
+            setStatus('sending')
 
             emailjs
                 .send(
@@ -92,99 +45,162 @@ export const Contact = (props) => {
                 )
                 .then(
                     () => {
-                        setLoading(false)
-                        alert(
-                            'Thank you. We will get back to you as soon as possible.'
-                        )
-
-                        setForm({
-                            name: '',
-                            email: '',
-                            message: '',
-                        })
+                        setStatus('sent')
+                        setForm(EMPTY_FORM)
                     },
-                    (error) => {
-                        setLoading(false)
-                        alert('Ahh, something went wrong. Please try again.')
+                    () => {
+                        setStatus('error')
                     }
                 )
         },
         [form]
     )
 
+    const details = [
+        data?.address && {
+            icon: faMapMarker,
+            label: 'Address',
+            value: data.address,
+        },
+        data?.phone && {
+            icon: faPhone,
+            label: 'Phone',
+            value: data.phone,
+            href: telHref(data.phone),
+        },
+        data?.fax && { icon: faFax, label: 'Fax', value: data.fax },
+        data?.email && {
+            icon: faEnvelope,
+            label: 'Email',
+            value: data.email,
+            href: `mailto:${data.email}`,
+        },
+    ].filter(Boolean)
+
     return (
-        <div id="contact" className="text-center">
+        <section id="contact" className="section">
             <Container>
-                <Col md={{ span: 8, offset: 2 }} className="section-title">
-                    <h2>Contact Us</h2>
-                </Col>
-                <Row>
-                    <Suspense fallback={<div>Loading map...</div>}>
-                        <LazyGoogleMaps />
-                    </Suspense>
-                </Row>
-                <Row>
-                    <Col md={8}>
-                        <div className="section-title">
-                            <h2>Inquiries</h2>
-                            <p>
-                                For any inquiries, questions or commendations,
-                                please call: +60 85-655 431 or fill out the
-                                following form
-                            </p>
-                        </div>
-                        <Form onSubmit={handleSubmit} ref={formRef}>
-                            <Row>
-                                <Col>
-                                    {' '}
-                                    <Form.Group controlId="name">
-                                        <Form.Control
-                                            type="text"
-                                            name="name"
-                                            placeholder="Name"
-                                            value={form.name}
-                                            required
-                                            onChange={handleChange}
-                                        />
-                                    </Form.Group>
-                                </Col>
-                                <Col>
-                                    {' '}
-                                    <Form.Group controlId="email">
-                                        <Form.Control
-                                            type="email"
-                                            name="email"
-                                            value={form.email}
-                                            placeholder="Email"
-                                            required
-                                            onChange={handleChange}
-                                        />
-                                    </Form.Group>
-                                </Col>
-                            </Row>
-                            <br />
-                            <Form.Group controlId="message">
-                                <Form.Control
-                                    as="textarea"
-                                    name="message"
-                                    value={form.message}
-                                    rows={4}
-                                    placeholder="Message"
-                                    required
+                <div className="section-head">
+                    <p className="eyebrow">Get in touch</p>
+                    <h2>Request a quote</h2>
+                    <p className="section-head__lede">
+                        Tell us what you need manufactured, repaired or
+                        supplied and we&rsquo;ll come back to you with a
+                        quotation.
+                    </p>
+                </div>
+
+                <div className="contact-grid">
+                    <form className="contact-form" onSubmit={handleSubmit}>
+                        <div className="contact-form__row">
+                            <div className="contact-field">
+                                <label htmlFor="contact-name">Name</label>
+                                <input
+                                    id="contact-name"
+                                    className="form-control"
+                                    type="text"
+                                    name="name"
+                                    placeholder="Your name"
+                                    value={form.name}
                                     onChange={handleChange}
+                                    required
                                 />
-                            </Form.Group>
-                            <br />
-                            <Button type="submit">
-                                {loading ? 'Sending' : 'Send'}
-                            </Button>
-                        </Form>
-                    </Col>
-                    <Col md={{ span: 3, offset: 1 }} className="contact-info">
-                        <ContactInfo data={props.data} />
-                    </Col>
-                </Row>
+                            </div>
+                            <div className="contact-field">
+                                <label htmlFor="contact-email">Email</label>
+                                <input
+                                    id="contact-email"
+                                    className="form-control"
+                                    type="email"
+                                    name="email"
+                                    placeholder="you@company.com"
+                                    value={form.email}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div className="contact-field">
+                            <label htmlFor="contact-message">Message</label>
+                            <textarea
+                                id="contact-message"
+                                className="form-control"
+                                name="message"
+                                rows={5}
+                                placeholder="Tell us about the job — part, material, quantity and timeline."
+                                value={form.message}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+
+                        <div className="contact-form__actions">
+                            <button
+                                type="submit"
+                                className="btn btn-brand btn-lg"
+                                disabled={status === 'sending'}
+                            >
+                                {status === 'sending' ? 'Sending…' : 'Send enquiry'}
+                            </button>
+
+                            {status === 'sending' && (
+                                <p className="contact-status contact-status--sending">
+                                    <FontAwesomeIcon icon={faSpinner} spin />
+                                    Sending your enquiry…
+                                </p>
+                            )}
+                            {status === 'sent' && (
+                                <p className="contact-status contact-status--sent">
+                                    Thank you. We will get back to you as soon
+                                    as possible.
+                                </p>
+                            )}
+                            {status === 'error' && (
+                                <p className="contact-status contact-status--error">
+                                    Something went wrong. Please try again, or
+                                    call us on{' '}
+                                    {data?.phone || 'our main line'}.
+                                </p>
+                            )}
+                        </div>
+                    </form>
+
+                    <aside className="contact-details">
+                        <h3>Contact details</h3>
+                        <ul className="contact-details__list">
+                            {details.map((entry) => (
+                                <li key={entry.label}>
+                                    <span className="contact-details__icon">
+                                        <FontAwesomeIcon icon={entry.icon} />
+                                    </span>
+                                    <span>
+                                        <span className="contact-details__label">
+                                            {entry.label}
+                                        </span>
+                                        {entry.href ? (
+                                            <a
+                                                className="contact-details__value"
+                                                href={entry.href}
+                                            >
+                                                {entry.value}
+                                            </a>
+                                        ) : (
+                                            <span className="contact-details__value">
+                                                {entry.value}
+                                            </span>
+                                        )}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </aside>
+                </div>
+
+                <div className="contact-map">
+                    <LazyGoogleMaps />
+                </div>
             </Container>
-        </div>
+        </section>
     )
 }

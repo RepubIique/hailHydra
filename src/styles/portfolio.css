@@ -1,35 +1,28 @@
 /* ==========================================================================
-   Portfolio
+   Portfolio / recent work
    ========================================================================== */
 
-#portfolio {
-    background: var(--navy-900);
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
 }
 
-.portfolio-item {
-    margin: 0;
-    padding: 0;
-}
-
-.portfolio-item .hover-bg {
+.portfolio-card {
     position: relative;
     overflow: hidden;
-    border-radius: var(--radius-lg);
+    background-color: var(--paper);
     border: 1px solid var(--line);
-    box-shadow: var(--shadow-lg);
-    background: var(--navy-950);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-xs);
 }
 
-.image-container {
-    width: 100%;
-    /* Was a hard 600px, which cropped tall photos and wasted space on short
-       ones. A fixed ratio scales cleanly instead. */
-    aspect-ratio: 16 / 9;
-    height: auto;
+.portfolio-card__media {
+    aspect-ratio: 4 / 3;
     overflow: hidden;
 }
 
-.portfolio-img {
+.portfolio-card__media img {
     display: block;
     width: 100%;
     height: 100%;
@@ -37,99 +30,47 @@
     transition: transform 0.6s ease;
 }
 
-.portfolio-item .hover-bg:hover .portfolio-img {
+.portfolio-card:hover .portfolio-card__media img {
     transform: scale(1.05);
 }
 
-/* The caption used to be positioned off-screen by CSS that was later
-   commented out, so the title leaked out below the image as stray text.
-   It is now a legible caption bar, so the information stays visible. */
-.portfolio-item .hover-text {
+/* Caption sits over a scrim so it stays legible on any photo */
+.portfolio-card__caption {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2;
-    /* Kept shallow because the indicators now live at the top of the frame */
-    padding: 48px 24px 20px;
+    padding: 48px 20px 16px;
     background: linear-gradient(
         180deg,
-        rgba(6, 11, 20, 0) 0%,
-        rgba(6, 11, 20, 0.85) 60%,
-        rgba(6, 11, 20, 0.96) 100%
+        rgba(15, 26, 38, 0) 0%,
+        rgba(15, 26, 38, 0.78) 62%,
+        rgba(15, 26, 38, 0.92) 100%
     );
-    text-align: left;
-    cursor: pointer;
 }
 
-.portfolio-item .hover-text > h4 {
-    margin: 0;
-    color: #fff;
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+.portfolio-card__caption h3 {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 650;
+    margin-bottom: 2px;
 }
 
-/* Carousel controls on a dark page */
-#portfolio .carousel-control-prev,
-#portfolio .carousel-control-next {
-    width: 8%;
-    opacity: 0.6;
+.portfolio-card__caption p {
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 0.82rem;
+    line-height: 1.4;
+    margin-bottom: 0;
 }
 
-#portfolio .carousel-control-prev:hover,
-#portfolio .carousel-control-next:hover {
-    opacity: 1;
-}
-
-/* Bootstrap emits .carousel-indicators BEFORE .carousel-inner, so the
-   caption overlay (also z-index 2, later in the DOM) paints straight over
-   them. Sitting them at the bottom of the frame therefore hides them no
-   matter how they are coloured. They get their own pill at the top of the
-   image, where nothing overlaps and they stay legible on any photo. */
-#portfolio .carousel-indicators {
-    top: 20px;
-    bottom: auto;
-    left: 50%;
-    right: auto;
-    width: auto;
-    margin: 0;
-    padding: 9px 14px;
-    gap: 6px;
-    border-radius: 999px;
-    background: rgba(6, 11, 20, 0.55);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    transform: translateX(-50%);
-}
-
-#portfolio .carousel-indicators [data-bs-target] {
-    width: 24px;
-    height: 3px;
-    margin: 0;
-    border-radius: 2px;
-    background-color: #fff;
-    border: 0;
-    opacity: 0.45;
-}
-
-#portfolio .carousel-indicators .active {
-    background-color: var(--brand);
-    opacity: 1;
-    box-shadow: 0 0 10px rgba(92, 169, 251, 0.8);
-}
-
-#portfolio .section-title p {
-    color: var(--ink-soft);
-}
-
-@media (max-width: 767.98px) {
-    .image-container {
-        aspect-ratio: 4 / 3;
+@media (max-width: 991.98px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+}
 
-    .portfolio-item .hover-text {
-        padding: 40px 18px 14px;
+@media (max-width: 575.98px) {
+    .portfolio-grid {
+        grid-template-columns: minmax(0, 1fr);
     }
 }

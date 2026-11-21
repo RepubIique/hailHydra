@@ -2,88 +2,168 @@
    Hero
    ========================================================================== */
 
-.intro {
+.hero {
     position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     overflow: hidden;
-    background: var(--navy-950);
+    padding: clamp(48px, 6vw, 80px) 0 clamp(56px, 7vw, 96px);
+    background: linear-gradient(180deg, var(--brand-50) 0%, var(--white) 68%);
 }
 
-.header-image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Scrim: the source photo is bright, and the old build sat white text
-   straight on top of it. */
-.intro::after {
+/* Soft brand wash behind the headline, so the light page doesn't read flat */
+.hero::before {
     content: '';
     position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(6, 11, 20, 0.94) 0%,
-        rgba(6, 11, 20, 0.74) 42%,
-        rgba(6, 11, 20, 0.97) 100%
+    top: -30%;
+    left: -10%;
+    width: 62%;
+    height: 140%;
+    background: radial-gradient(
+        closest-side,
+        rgba(22, 129, 195, 0.16) 0%,
+        rgba(22, 129, 195, 0) 72%
     );
+    pointer-events: none;
 }
 
-.intro video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translateX(-50%) translateY(-50%);
-    object-fit: cover;
-    z-index: -1;
-}
-
-.overlay {
+.hero .container {
     position: relative;
-    z-index: 1;
-    width: 100%;
 }
 
-.intro-text {
-    padding: 150px 0 110px;
-    text-align: center;
+.hero__grid {
+    display: grid;
+    grid-template-columns: 1.02fr 0.98fr;
+    gap: clamp(32px, 5vw, 68px);
+    align-items: center;
 }
 
-.intro h1 {
-    font-family: var(--font-display);
-    color: #fff;
-    font-size: clamp(2rem, 5.4vw, 3.6rem);
+.hero__lede {
+    color: var(--ink-600);
+    font-size: clamp(1.02rem, 1.4vw, 1.14rem);
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 56ch;
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 40px;
+}
+
+.hero__proof {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.25rem;
+    margin: 0;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
+}
+
+.hero__proof-item dt {
+    color: var(--ink-900);
+    font-size: 1.7rem;
     font-weight: 800;
+    letter-spacing: -0.03em;
     line-height: 1.1;
-    letter-spacing: -0.015em;
-    text-transform: uppercase;
-    margin: 0 auto 22px;
-    max-width: 20ch;
-    text-shadow: 0 2px 24px rgba(2, 6, 14, 0.6);
+    font-variant-numeric: tabular-nums;
 }
 
-.intro h1 span {
-    color: var(--brand);
-    font-weight: 800;
+.hero__proof-item dd {
+    margin: 4px 0 0;
+    color: var(--ink-500);
+    font-size: 0.84rem;
+    line-height: 1.4;
 }
 
-.intro p {
-    color: var(--ink-soft);
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    font-weight: 400;
-    line-height: 1.65;
-    margin: 0 auto 44px;
-    max-width: 62ch;
+/* --------------------------------------------------------------- the media */
+
+.hero__media {
+    position: relative;
 }
 
-@media (max-width: 767.98px) {
-    .intro-text {
-        padding: 130px 0 80px;
+.hero__media img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Overlaps the photo edge so the arrangement isn't a plain rectangle */
+.hero__badge {
+    position: absolute;
+    left: -20px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 14px 18px;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.hero__badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-sm);
+    background-color: var(--brand-50);
+    color: var(--brand-700);
+    flex-shrink: 0;
+}
+
+.hero__badge-text {
+    line-height: 1.3;
+}
+
+.hero__badge-text strong {
+    display: block;
+    font-size: 0.95rem;
+}
+
+.hero__badge-text span {
+    color: var(--ink-500);
+    font-size: 0.8rem;
+}
+
+/* ------------------------------------------------------------- responsive */
+
+@media (max-width: 991.98px) {
+    .hero__grid {
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+
+    .hero__media {
+        order: -1;
+    }
+
+    .hero__media img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .hero__badge {
+        left: 12px;
+        bottom: -18px;
+    }
+
+    .hero__actions .btn {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero__proof {
+        gap: 1.5rem;
+    }
+
+    .hero__proof-item dt {
+        font-size: 1.4rem;
     }
 }

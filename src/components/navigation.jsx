@@ -1,89 +1,172 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container'
-import { Nav, Navbar } from 'react-bootstrap'
-// eslint-disable-next-line
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+    faEnvelope,
+    faMapMarker,
+    faPhone,
+} from '@fortawesome/free-solid-svg-icons'
 import '../styles/navigation.css'
 
-export const Navigation = (props) => {
-    const [menuActive, setMenuActive] = useState(false)
+const NAV_ITEMS = [
+    { type: 'section', id: 'services', label: 'Services' },
+    { type: 'route', to: '/products', label: 'Products' },
+    { type: 'section', id: 'about', label: 'About' },
+    { type: 'section', id: 'portfolio', label: 'Portfolio' },
+    { type: 'section', id: 'testimonials', label: 'Clients' },
+    { type: 'section', id: 'team', label: 'Team' },
+    { type: 'section', id: 'contact', label: 'Contact' },
+]
+
+export const Navigation = ({ contact }) => {
+    const [open, setOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
     const navigate = useNavigate()
+    const { pathname } = useLocation()
 
-    const handleMenuClick = () => {
-        setMenuActive(!menuActive)
-    }
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 6)
+        onScroll()
+        window.addEventListener('scroll', onScroll, { passive: true })
+        return () => window.removeEventListener('scroll', onScroll)
+    }, [])
 
-    const handleNavLinkClick = (sectionId) => {
-        navigate('/') // Navigate to the home page
-        setTimeout(() => {
+    // Close the mobile panel whenever the route changes
+    useEffect(() => {
+        setOpen(false)
+    }, [pathname])
+
+    const goToSection = (sectionId) => {
+        setOpen(false)
+        const scroll = () => {
             const section = document.getElementById(sectionId)
-            if (section) section.scrollIntoView({ behavior: 'smooth' })
-        }, 0)
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+        }
+        // Section anchors only exist on the home route
+        if (pathname !== '/') {
+            navigate('/')
+            window.setTimeout(scroll, 80)
+        } else {
+            scroll()
+        }
     }
+
+    const phone = contact?.phone
+    const email = contact?.email
 
     return (
-        <Navbar
-            collapseOnSelect
-            expand="lg"
-            fixed="top"
-            id="menu"
-            expanded={menuActive}
-        >
-            <Container>
-                <Navbar.Brand onClick={() => handleNavLinkClick('header')}>
-                    <img
-                        loading="lazy"
-                        alt="Company Logo"
-                        src="/img/flogo.webp"
-                        height="60"
-                    />
-                </Navbar.Brand>
-                <button
-                    onClick={handleMenuClick}
-                    className={`McButton ${menuActive ? 'active' : ''}`}
-                    aria-label="Toggle navigation"
-                    style={{
-                        border: 'none',
-                        background: 'transparent',
-                        cursor: 'pointer',
-                    }}
-                >
-                    <b></b>
-                    <b></b>
-                    <b></b>
-                </button>
-                <Navbar.Collapse className="justify-content-end">
-                    <Nav navbarScroll className="ml-auto">
-                        <Nav.Link
-                            onClick={() => handleNavLinkClick('services')}
+        <>
+            <div className="utility-bar">
+                <Container>
+                    <div className="utility-bar__inner">
+                        <div className="utility-bar__group">
+                            {phone && (
+                                <a
+                                    className="utility-bar__item"
+                                    href={`tel:${phone.replace(/[^\d+]/g, '')}`}
+                                >
+                                    <FontAwesomeIcon icon={faPhone} />
+                                    {phone}
+                                </a>
+                            )}
+                            {email && (
+                                <a
+                                    className="utility-bar__item"
+                                    href={`mailto:${email}`}
+                                >
+                                    <FontAwesomeIcon icon={faEnvelope} />
+                                    {email}
+                                </a>
+                            )}
+                        </div>
+                        <span className="utility-bar__item utility-bar__address">
+                            <FontAwesomeIcon icon={faMapMarker} />
+                            Miri, Sarawak, Malaysia
+                        </span>
+                    </div>
+                </Container>
+            </div>
+
+            <header
+                className={`site-header ${
+                    scrolled ? 'site-header--scrolled' : ''
+                }`}
+            >
+                <Container>
+                    <div className="site-header__inner">
+                        <Link
+                            to="/"
+                            className="site-brand"
+                            aria-label="Hydra Power Engineering — home"
+                            onClick={() => setOpen(false)}
                         >
-                            Services
-                        </Nav.Link>
-                        <Link className="nav-link" to="/products">
-                            Products
+                            <img
+                                src="/img/flogo.webp"
+                                alt="Hydra Power Engineering"
+                                height="46"
+                            />
                         </Link>
-                        <Nav.Link onClick={() => handleNavLinkClick('about')}>
-                            About
-                        </Nav.Link>
-                        <Nav.Link
-                            onClick={() => handleNavLinkClick('portfolio')}
+
+                        <nav
+                            className={`site-nav${open ? ' is-open' : ''}`}
+                            aria-label="Main"
                         >
-                            Portfolio
-                        </Nav.Link>
-                        <Nav.Link
-                            onClick={() => handleNavLinkClick('testimonials')}
-                        >
-                            Clients
-                        </Nav.Link>
-                        <Nav.Link onClick={() => handleNavLinkClick('team')}>
-                            Team
-                        </Nav.Link>
-                        <Nav.Link onClick={() => handleNavLinkClick('contact')}>
-                            Contact
-                        </Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
+                            {NAV_ITEMS.map((item) =>
+                                item.type === 'route' ? (
+                                    <Link
+                                        key={item.to}
+                                        to={item.to}
+                                        className="site-nav__link"
+                                        onClick={() => setOpen(false)}
+                                    >
+                                        {item.label}
+                                    </Link>
+                                ) : (
+                                    <button
+                                        key={item.id}
+                                        type="button"
+                                        className="site-nav__link"
+                                        onClick={() => goToSection(item.id)}
+                                    >
+                                        {item.label}
+                                    </button>
+                                )
+                            )}
+                            {/* Mobile only — the desktop CTA lives beside the nav */}
+                            <a
+                                className="btn btn-brand site-nav__cta"
+                                href="#contact"
+                                onClick={() => setOpen(false)}
+                            >
+                                Request a quote
+                            </a>
+                        </nav>
+
+                        <div className="site-header__actions">
+                            <a
+                                className="btn btn-brand site-header__cta-desktop"
+                                href="#contact"
+                            >
+                                Request a quote
+                            </a>
+                            <button
+                                type="button"
+                                className={`menu-toggle ${
+                                    open ? 'is-open' : ''
+                                }`}
+                                aria-label="Toggle navigation"
+                                aria-expanded={open}
+                                onClick={() => setOpen((v) => !v)}
+                            >
+                                <span />
+                            </button>
+                        </div>
+                    </div>
+                </Container>
+            </header>
+        </>
     )
 }

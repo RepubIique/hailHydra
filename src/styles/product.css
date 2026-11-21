@@ -1,76 +1,129 @@
 /* ==========================================================================
-   Products listing
+   Steel catalogue
    ========================================================================== */
 
-#product {
-    position: relative;
-    /* Clears the fixed navbar, which used to rely on a 40px margin */
-    padding: 150px 0 100px;
-    margin-top: 0;
-    background: var(--navy-900);
-    color: var(--ink);
+.catalogue-head {
+    padding: 52px 0 40px;
+    background: linear-gradient(180deg, var(--brand-50) 0%, var(--white) 100%);
+    border-bottom: 1px solid var(--line);
 }
 
-#product::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-        55% 45% at 50% 0%,
-        rgba(92, 169, 251, 0.12) 0%,
-        transparent 70%
-    );
-    pointer-events: none;
+.catalogue-head h1 {
+    font-size: clamp(1.85rem, 3.4vw, 2.6rem);
+    margin-bottom: 14px;
 }
 
-#product .container {
-    position: relative;
-}
-
-#product .section-title p {
-    color: var(--ink-soft);
-}
-
-.products {
-    margin-bottom: 30px;
-}
-
-.product-img {
-    display: block;
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-}
-
-#product .card {
-    height: 100%;
-    overflow: hidden;
-    cursor: pointer;
-    background-color: var(--navy-800);
-    border: 1px solid var(--line) !important;
-    border-radius: var(--radius);
-    transition: transform 0.25s ease, border-color 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-#product .card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(92, 169, 251, 0.55) !important;
-    box-shadow: var(--shadow-md);
-}
-
-#product .card-body {
-    background-color: transparent;
-}
-
-#product .card-title {
-    color: var(--ink);
-    font-size: 1rem;
-    font-weight: 600;
+.catalogue-head__lede {
+    color: var(--ink-600);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 68ch;
     margin-bottom: 0;
 }
 
-.product-body {
-    text-align: center;
-    padding: 18px 14px;
+.catalogue-body {
+    padding: var(--section-y) 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+    text-align: left;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-xs);
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.product-card:hover {
+    border-color: var(--brand-200);
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+.product-card__media {
+    aspect-ratio: 4 / 3;
+    background-color: var(--paper-2);
+    overflow: hidden;
+}
+
+.product-card__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 18px 20px 20px;
+}
+
+.product-card__title {
+    display: block;
+    color: var(--ink-900);
+    font-family: var(--font-display);
+    font-size: 1.04rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.product-card__meta {
+    display: block;
+    color: var(--ink-500);
+    font-size: 0.82rem;
+}
+
+.catalogue-head__crumbs {
+    margin-top: 22px;
+}
+
+.breadcrumbs .breadcrumb {
+    margin-bottom: 0;
+    padding: 0;
+    background-color: transparent;
+    font-size: 0.87rem;
+}
+
+.breadcrumbs .breadcrumb-item a {
+    color: var(--brand-700);
+    text-decoration: none;
+}
+
+.breadcrumbs .breadcrumb-item a:hover {
+    color: var(--brand-600);
+    text-decoration: underline;
+}
+
+.breadcrumbs .breadcrumb-item.active {
+    color: var(--ink-500);
+}
+
+.breadcrumbs .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--ink-300);
+}
+
+@media (max-width: 991.98px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575.98px) {
+    .product-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
 }

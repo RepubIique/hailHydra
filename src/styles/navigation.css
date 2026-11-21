@@ -1,163 +1,266 @@
 /* ==========================================================================
-   Navigation
+   Header: utility bar, sticky navigation, mobile menu
+   Plain markup rather than Bootstrap's Navbar, so the layout is fully ours.
    ========================================================================== */
 
-#menu {
-    position: fixed;
+/* ------------------------------------------------------------ utility bar */
+
+.utility-bar {
+    background-color: var(--ink-900);
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 0.82rem;
+}
+
+.utility-bar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    min-height: var(--utility-h);
+}
+
+.utility-bar__group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.utility-bar__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    white-space: nowrap;
+}
+
+.utility-bar__item svg {
+    color: var(--brand-300);
+    font-size: 0.78rem;
+}
+
+.utility-bar a {
+    color: inherit;
+}
+
+.utility-bar a:hover {
+    color: var(--white);
+}
+
+/* ----------------------------------------------------------------- header */
+
+.site-header {
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    padding: 10px 0;
-    background: rgba(6, 11, 20, 0.82);
-    backdrop-filter: saturate(160%) blur(14px);
-    -webkit-backdrop-filter: saturate(160%) blur(14px);
-    border-bottom: 1px solid var(--line);
     z-index: 1030;
+    background-color: rgba(255, 255, 255, 0.94);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--line);
+    transition: box-shadow 0.2s ease;
 }
 
-#menu .container {
-    display: flex;
-    align-items: center;
-}
-
-/* The supplied logo has dark grey "POWER" lettering, which disappears on
-   navy. Rather than recolour the company mark, it sits on a light plaque. */
-#menu .navbar-brand {
-    display: flex;
-    align-items: center;
-    padding: 6px 12px;
-    margin-right: 12px;
-    background: rgba(255, 255, 255, 0.97);
-    border-radius: var(--radius-sm);
+.site-header--scrolled {
     box-shadow: var(--shadow-sm);
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    min-height: var(--nav-h);
+}
+
+/* The logo is legible as-is on white — no plaque needed now. */
+.site-brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.site-brand img {
+    display: block;
+    height: 46px;
+    width: auto;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.site-nav__link {
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-xs);
+    color: var(--ink-700);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.55rem 0.75rem;
+    transition: color 0.18s ease, background-color 0.18s ease;
+    white-space: nowrap;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus {
+    background-color: var(--brand-50);
+    color: var(--brand-700);
+}
+
+.site-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+
+/* The CTA lives beside the nav on desktop and inside the panel on mobile */
+.site-nav__cta {
+    display: none;
+}
+
+/* ------------------------------------------------------- mobile menu toggle */
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
     cursor: pointer;
 }
 
-#menu .navbar-brand img {
-    height: 42px;
-    width: auto;
-    display: block;
-}
-
-/* ------------------------------------------------------------ nav links */
-
-#menu .nav-link {
+.menu-toggle span {
     position: relative;
-    color: var(--ink-soft);
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 0.09em;
-    text-transform: uppercase;
-    margin: 0 2px;
-    padding: 12px 12px;
-    background: transparent;
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--ink-800);
+    transition: background-color 0.2s ease;
 }
 
-#menu .nav-link::after {
+.menu-toggle span::before,
+.menu-toggle span::after {
     content: '';
     position: absolute;
-    left: 12px;
-    right: 12px;
-    bottom: 6px;
+    left: 0;
+    width: 18px;
     height: 2px;
     border-radius: 2px;
-    background: var(--brand-grad);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.25s ease;
+    background-color: var(--ink-800);
+    transition: transform 0.22s ease, top 0.22s ease;
 }
 
-#menu .nav-link:hover,
-#menu .nav-link:focus {
-    color: #fff;
+.menu-toggle span::before {
+    top: -6px;
 }
 
-#menu .nav-link:hover::after,
-#menu .nav-link:focus::after {
-    transform: scaleX(1);
+.menu-toggle span::after {
+    top: 6px;
 }
 
-/* ------------------------------------------------------- hamburger button */
-
-.McButton {
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    width: 44px;
-    height: 34px;
-    padding: 0;
-    transform: translateY(-50%);
-    cursor: pointer;
-    display: none;
-    z-index: 10;
+.menu-toggle.is-open span {
+    background-color: transparent;
 }
 
-.McButton b {
-    position: absolute;
-    left: 6px;
-    width: 32px;
-    height: 2px;
-    border-radius: 2px;
-    background-color: var(--ink);
-    transition: all 0.3s ease;
+.menu-toggle.is-open span::before {
+    top: 0;
+    transform: rotate(45deg);
 }
 
-.McButton b:nth-child(1) {
-    top: 9px;
-}
-.McButton b:nth-child(2) {
-    top: 16px;
-}
-.McButton b:nth-child(3) {
-    top: 23px;
-}
-
-.McButton.active {
-    transform: translateY(-50%) rotate(135deg);
-}
-
-.McButton.active b:nth-child(1) {
-    top: 16px;
-}
-.McButton.active b:nth-child(2) {
-    opacity: 0;
-}
-.McButton.active b:nth-child(3) {
-    top: 16px;
-    transform: rotate(90deg);
+.menu-toggle.is-open span::after {
+    top: 0;
+    transform: rotate(-45deg);
 }
 
 /* ------------------------------------------------------------- responsive */
 
+@media (max-width: 1199.98px) {
+    .site-nav__link {
+        font-size: 0.86rem;
+        padding: 0.55rem 0.6rem;
+    }
+}
+
 @media (max-width: 991.98px) {
-    .McButton {
-        display: block;
+    .utility-bar__inner {
+        min-height: 36px;
+        font-size: 0.78rem;
     }
 
-    #menu .navbar-collapse {
+    .utility-bar__address {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .site-header__cta-desktop {
+        display: none;
+    }
+
+    /* Panel drops below the sticky bar, hidden until toggled */
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 16px 18px;
+        background-color: var(--white);
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow);
+    }
+
+    .site-nav.is-open {
+        display: flex;
+        animation: nav-drop 0.16s ease-out;
+    }
+
+    .site-nav__link {
+        text-align: left;
+        padding: 0.85rem 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .site-nav__link + .site-nav__link {
+        border-top: 1px solid var(--line);
+    }
+
+    .site-nav__cta {
+        display: inline-flex;
         margin-top: 12px;
-        padding: 10px;
-        background: var(--navy-900);
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow-md);
+    }
+}
+
+@keyframes nav-drop {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
     }
 
-    #menu .nav-link {
-        text-align: center;
-        padding: 12px;
-    }
-
-    #menu .nav-link::after {
-        left: 50%;
-        right: auto;
-        width: 40px;
-        margin-left: -20px;
-        transform-origin: center;
-    }
-
-    #menu .navbar-brand img {
-        height: 38px;
+    .site-nav {
+        animation: none;
     }
 }

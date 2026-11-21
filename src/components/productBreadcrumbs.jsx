@@ -1,43 +1,35 @@
 import React from 'react'
-import { Breadcrumb } from 'react-bootstrap'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-export const ProductBreadcrumb = () => {
-    const { productName, variantName, subVariantName } = useParams()
-
-    return (
-        <Breadcrumb className="breadcrumbs">
-            <Breadcrumb.Item linkAs={Link} linkProps={{ to: '/products' }}>
-                Product
-            </Breadcrumb.Item>
-            {productName && (
-                <Breadcrumb.Item
-                    linkAs={Link}
-                    linkProps={{ to: `/products/${productName}` }}
-                >
-                    {productName}
-                </Breadcrumb.Item>
+export const ProductBreadcrumb = ({ product, variant }) => (
+    <nav aria-label="Breadcrumb" className="breadcrumbs">
+        <ol className="breadcrumb">
+            <li className="breadcrumb-item">
+                <Link to="/">Home</Link>
+            </li>
+            <li className={`breadcrumb-item ${product ? '' : 'active'}`}>
+                {product ? (
+                    <Link to="/products">Steel catalogue</Link>
+                ) : (
+                    'Steel catalogue'
+                )}
+            </li>
+            {product && (
+                <li className={`breadcrumb-item ${variant ? '' : 'active'}`}>
+                    {variant ? (
+                        <Link
+                            to={`/products/${encodeURIComponent(product.name)}`}
+                        >
+                            {product.name}
+                        </Link>
+                    ) : (
+                        product.name
+                    )}
+                </li>
             )}
-            {variantName && (
-                <Breadcrumb.Item
-                    linkAs={Link}
-                    linkProps={{
-                        to: `/products/${productName}/${variantName}`,
-                    }}
-                >
-                    {variantName}
-                </Breadcrumb.Item>
+            {variant && (
+                <li className="breadcrumb-item active">{variant.name}</li>
             )}
-            {subVariantName && (
-                <Breadcrumb.Item
-                    linkAs={Link}
-                    linkProps={{
-                        to: `/products/${productName}/${variantName}/${subVariantName}`,
-                    }}
-                >
-                    {subVariantName}
-                </Breadcrumb.Item>
-            )}
-        </Breadcrumb>
-    )
-}
+        </ol>
+    </nav>
+)

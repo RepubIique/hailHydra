@@ -1,42 +1,63 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import Container from 'react-bootstrap/Container'
 import '../styles/client.css'
 
-export const Clients = (props) => {
-    return (
-        <div id="testimonials">
-            <Container>
-                <div className="section-title text-center">
-                    <h2>What our clients say</h2>
-                </div>
-                <Row>
-                    {props.data
-                        ? props.data.map((d, i) => (
-                              <Col key={`${d.name}-${i}`} md={4}>
-                                  <div className="testimonial">
-                                      <div className="testimonial-image">
-                                          {' '}
-                                          <img
-                                              loading="lazy"
-                                              src={d.img}
-                                              alt={d.alt}
-                                              srcSet={`${d.imgm} 400w, ${d.img} 1200w`}
-                                              sizes="(max-width: 768px) 480px, 1200px"
-                                          />{' '}
-                                      </div>
-                                      <div className="testimonial-content">
-                                          <p>"{d.text}"</p>
-                                          <div className="testimonial-meta">
-                                              {' '}
-                                              - {d.name}{' '}
-                                          </div>
-                                      </div>
-                                  </div>
-                              </Col>
-                          ))
-                        : 'loading'}
-                </Row>
-            </Container>
-        </div>
-    )
+// The data stores the attribution as "Name, Sector" in one field.
+const splitAttribution = (value) => {
+    const [name, sector] = (value || '').split(',')
+    return { name: (name || '').trim(), sector: (sector || '').trim() }
 }
+
+export const Clients = ({ data }) => (
+    <section id="testimonials" className="section">
+        <Container>
+            <div className="section-head section-head--center">
+                <p className="eyebrow">Client feedback</p>
+                <h2>What our clients say</h2>
+                <p className="section-head__lede">
+                    References from across construction, offshore, agriculture
+                    and steel fabrication.
+                </p>
+            </div>
+
+            <div className="testimonial-grid">
+                {data
+                    ? data.map((entry, index) => {
+                          const { name, sector } = splitAttribution(
+                              entry.name
+                          )
+                          return (
+                              <figure
+                                  className="testimonial-card"
+                                  key={`${entry.name}-${index}`}
+                              >
+                                  <span
+                                      className="testimonial-card__mark"
+                                      aria-hidden="true"
+                                  >
+                                      &ldquo;
+                                  </span>
+                                  <blockquote>{entry.text}</blockquote>
+                                  <figcaption className="testimonial-card__author">
+                                      <img
+                                          src={entry.img}
+                                          srcSet={`${entry.imgm} 400w, ${entry.img} 1200w`}
+                                          sizes="44px"
+                                          alt={entry.alt}
+                                          loading="lazy"
+                                      />
+                                      <span>
+                                          <strong>{name}</strong>
+                                          <span>{sector}</span>
+                                      </span>
+                                  </figcaption>
+                              </figure>
+                          )
+                      })
+                    : null}
+            </div>
+        </Container>
+    </section>
+)
+
+export default Clients
