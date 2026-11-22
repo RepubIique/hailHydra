@@ -14,8 +14,6 @@ const NAV_ITEMS = [
     { type: 'route', to: '/products', label: 'Products' },
     { type: 'section', id: 'about', label: 'About' },
     { type: 'section', id: 'portfolio', label: 'Portfolio' },
-    { type: 'section', id: 'testimonials', label: 'Clients' },
-    { type: 'section', id: 'team', label: 'Team' },
     { type: 'section', id: 'contact', label: 'Contact' },
 ]
 

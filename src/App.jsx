@@ -4,8 +4,6 @@ import { Navigation } from './components/navigation'
 import { Header } from './components/header'
 import { Sectors } from './components/sectors'
 import { Workshop } from './components/workshop'
-import { Clients } from './components/clients'
-import { Member } from './components/member'
 import { Contact } from './components/contact'
 import JsonData from './data/data.json'
 import { ProductList } from './components/productList'
@@ -26,7 +24,6 @@ export const AppShell = () => {
 
     const counts = {
         services: landingPageData.Services?.length,
-        team: landingPageData.Team?.length,
     }
 
     return (
@@ -57,8 +54,6 @@ export const AppShell = () => {
                                 <Portfolio data={landingPageData.Portfolio} />
                             </Suspense>
 
-                            <Clients data={landingPageData.Clients} />
-                            <Member data={landingPageData.Team} />
                             <Contact data={landingPageData.Contact} />
                         </main>
                     }

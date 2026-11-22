@@ -6,8 +6,6 @@ import '../styles/footer.css'
 const COMPANY_LINKS = [
     { id: 'about', label: 'About us' },
     { id: 'portfolio', label: 'Portfolio' },
-    { id: 'testimonials', label: 'Clients' },
-    { id: 'team', label: 'Our team' },
 ]
 
 const telHref = (value) => `tel:${(value || '').replace(/[^\d+]/g, '')}`
